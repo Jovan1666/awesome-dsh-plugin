@@ -56,6 +56,28 @@ function replaceBlock(text, [open, close], body, file) {
   return text.slice(0, i + open.length) + '\n' + body + '\n' + text.slice(j)
 }
 
+/**
+ * Every entry line build-site.mjs would parse out of a README, wherever it
+ * sits. Replacing the marker blocks only guarantees what's inside them, so
+ * this catches an entry smuggled in outside — e.g. a second
+ * `### UI Enhancements` after `<!-- END PLUGINS -->`, which the site would
+ * happily publish even though no YAML file backs it.
+ */
+function parsedUrls(loc) {
+  const urls = new Set()
+  let cat = null
+  for (const line of fs.readFileSync(loc.readme, 'utf8').split('\n')) {
+    const h = line.match(/^#{2,3} (.+)$/)
+    if (h) {
+      cat = CAT_IDS.find((id) => h[1].includes(loc.categories[id])) ?? null
+      continue
+    }
+    const m = line.match(/^- \[(.+?)\]\((https:\/\/github\.com\/[^)]+)\) ([—-]) (.+)$/)
+    if (m && cat) urls.add(m[2])
+  }
+  return urls
+}
+
 const entries = readEntries()
 const problems = validateEntries(entries)
 if (problems.length) {
@@ -93,17 +115,27 @@ for (const loc of LOCALES) {
   let after = replaceBlock(before, MARKERS.toc, toc, loc.readme)
   after = replaceBlock(after, MARKERS.plugins, plugins, loc.readme)
 
-  if (before === after) {
+  if (before !== after) {
+    if (CHECK) {
+      console.error(`${loc.readme} is out of sync with data/plugins/`)
+      stale = true
+      continue
+    }
+    fs.writeFileSync(loc.readme, after)
+    console.log(`${loc.readme}: regenerated (${ordered.length} entries)`)
+  } else {
     console.log(`${loc.readme}: up to date (${ordered.length} entries)`)
-    continue
   }
-  if (CHECK) {
-    console.error(`${loc.readme} is out of sync with data/plugins/`)
-    stale = true
-    continue
-  }
-  fs.writeFileSync(loc.readme, after)
-  console.log(`${loc.readme}: regenerated (${ordered.length} entries)`)
+
+  // Set check: the README as a whole (markers or not) must parse to exactly
+  // the URLs data/plugins declares — no smuggled or missing entries anywhere.
+  const inReadme = parsedUrls(loc)
+  const inData = new Set(ordered.map((e) => e.url))
+  const smuggled = [...inReadme].filter((u) => !inData.has(u))
+  const missing = [...inData].filter((u) => !inReadme.has(u))
+  for (const u of smuggled) console.error(`${loc.readme}: ${u} appears in the README but has no data/plugins file`)
+  for (const u of missing) console.error(`${loc.readme}: ${u} is declared in data/plugins but the README doesn't list it`)
+  if (smuggled.length || missing.length) stale = true
 }
 
 if (stale) {

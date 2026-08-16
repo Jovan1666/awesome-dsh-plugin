@@ -14,6 +14,7 @@
 //   node scripts/check-submission.mjs --base <sha> [--pr-created <iso>] [--json out.json]
 import { execSync } from 'node:child_process'
 import fs from 'node:fs'
+import path from 'node:path'
 import { PLUGINS_DIR, readEntries } from './lib/entries.mjs'
 
 const MIN_AGE_DAYS = 1
@@ -32,7 +33,8 @@ const arg = (name) => {
 const BASE = arg('--base')
 const PR_CREATED = arg('--pr-created')
 const JSON_OUT = arg('--json')
-const DIR = arg('--dir') // read entries from elsewhere (testing)
+const DIR = arg('--dir') // read entries from elsewhere (CI extracts the PR's files here)
+const ONLY_LIST = arg('--only-list') // file of basenames to restrict the run to
 const ALL = process.argv.includes('--all')
 
 const TOKEN = process.env.GITHUB_TOKEN
@@ -61,13 +63,27 @@ function decompose(url) {
 
 const b64 = (s) => Buffer.from(s, 'base64').toString('utf8')
 
+/** Parse a base64 package.json; null when it isn't valid JSON. */
+function parsePkg(content) {
+  try {
+    const j = JSON.parse(b64(content))
+    return j && typeof j === 'object' ? j : null
+  } catch {
+    return null
+  }
+}
+
 async function hasBundle(repo, sub) {
   // The entry may point straight at a subpackage — that manifest is authoritative.
   const direct = await api(`repos/${repo}/contents/${sub ? `${sub}/` : ''}package.json`)
   if (direct.status === 200 && direct.body?.content) {
-    const dsh = JSON.parse(b64(direct.body.content)).dsh ?? {}
+    const pkg = parsePkg(direct.body.content)
+    // An unparseable manifest must not fall through to "looks fine" — it is
+    // exactly as uninstallable as a missing one.
+    if (!pkg) return { ok: false, why: `\`${sub ? `${sub}/` : ''}package.json\` is not valid JSON` }
+    const dsh = pkg.dsh ?? {}
     if (dsh.bundle) return { ok: true }
-    if (sub) return { ok: false, why: dsh.client ? 'declares only `dsh.client` — that alone is not installable' : `\`${sub}/package.json\` has no \`dsh.bundle\``, }
+    if (sub) return { ok: false, why: dsh.client ? 'declares only `dsh.client` — that alone is not installable' : `\`${sub}/package.json\` has no \`dsh.bundle\`` }
   }
 
   const tree = await api(`repos/${repo}/git/trees/HEAD?recursive=1`)
@@ -79,12 +95,9 @@ async function hasBundle(repo, sub) {
   for (const p of pkgs) {
     const f = await api(`repos/${repo}/contents/${p}`)
     if (f.status !== 200 || !f.body?.content) continue
-    let dsh
-    try {
-      dsh = JSON.parse(b64(f.body.content)).dsh ?? {}
-    } catch {
-      continue
-    }
+    const pkg = parsePkg(f.body.content)
+    if (!pkg) continue
+    const dsh = pkg.dsh ?? {}
     if (dsh.bundle) return { ok: true, at: p }
     if (dsh.client) sawClient = true
   }
@@ -142,7 +155,12 @@ function changedEntryFiles(base) {
 
 const entries = DIR ? readEntries(DIR) : readEntries()
 let targets = entries
-if (!ALL && BASE) {
+if (ONLY_LIST) {
+  const want = new Set(
+    fs.readFileSync(ONLY_LIST, 'utf8').split('\n').map((s) => s.trim()).filter(Boolean),
+  )
+  targets = entries.filter((e) => want.has(path.basename(e.file)))
+} else if (!ALL && BASE) {
   try {
     const changed = changedEntryFiles(BASE)
     targets = entries.filter((e) => changed.has(e.file))
