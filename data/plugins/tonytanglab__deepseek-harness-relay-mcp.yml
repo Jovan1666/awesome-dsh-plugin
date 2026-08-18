@@ -1,5 +1,5 @@
-url: https://github.com/tonytanglab/deepseek-harness-relay-mcp/tree/main/plugins/dsh-relay
-name: tonytanglab/deepseek-harness-relay-mcp#dsh-relay
+url: https://github.com/tonytanglab/deepseek-harness-relay-mcp
+name: tonytanglab/deepseek-harness-relay-mcp
 category: remote
 tarball: https://github.com/tonytanglab/deepseek-harness-relay-mcp/releases/latest/download/dsh-relay-0.1.0.tgz
 description:
