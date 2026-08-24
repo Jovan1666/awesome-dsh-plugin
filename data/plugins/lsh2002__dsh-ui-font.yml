@@ -1,0 +1,7 @@
+url: https://github.com/lsh2002/dsh-ui-font
+name: lsh2002/dsh-ui-font
+category: ui
+tarball: https://github.com/lsh2002/dsh-ui-font/releases/latest/download/dsh-ui-font-1.0.0.tgz
+description:
+  en: Customize the UI's Chinese and English fonts on a settings page, with a live preview and one-click reset.
+  zh: 在设置页自定义界面中文字体与英文字体，实时预览，一键恢复默认。
