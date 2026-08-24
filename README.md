@@ -1182,6 +1182,13 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [zoahdev/dsh-artifacts](https://github.com/zoahdev/dsh-artifacts) - Render Markdown + JSON into self-contained HTML documents, cards, dashboards, and galleries (CLI + artifact_render tool).
 - [zp-home/dsh-recommend](https://github.com/zp-home/dsh-recommend) - Transparent rankings and recommendations for the DSH plugin ecosystem: daily auto-fetched topic data, an open scoring model, and rank/search/recommend tools with a settings-page leaderboard.
 - [ZRui-C/dsh-computer-use](https://github.com/ZRui-C/dsh-computer-use) - Text-first computer use for DSH: background Chromium control via Playwright/CDP plus accessibility-first macOS control; actions stay pinned to the right process and window without taking the user's pointer, ships a Developer ID signed, notarized Universal 2 DMG.
+- [988hj7tczd-oss/dsh-mcp-tunnel](https://github.com/988hj7tczd-oss/dsh-mcp-tunnel) - Expose a local MCP server to remote agents through an outbound-only tunnel stack (mcp-proxy + cloudflared Quick Tunnel), then register the public URL into dsh-mcp-client streamable-http config.
+- [988hj7tczd-oss/dsh-asciinema](https://github.com/988hj7tczd-oss/dsh-asciinema) - Record terminal/tool output as asciinema v2 (.cast), replay with an offline embedded player, and export HTML.
+- [988hj7tczd-oss/dsh-a11y-scan](https://github.com/988hj7tczd-oss/dsh-a11y-scan) - Native WCAG accessibility scanner: runs axe-core over local HTML files / build output / URLs and reports violations (rule id, impact, WCAG 2.1 mapping, element targeting, fix suggestions) as Markdown/HTML/JSON.
+- [988hj7tczd-oss/dsh-dep-vuln-scan](https://github.com/988hj7tczd-oss/dsh-dep-vuln-scan) - Scan project lockfiles (npm/pnpm/yarn/pip/go/cargo/maven/gradle/...) against the free OSV API and report confirmed dependency vulnerabilities with fix versions and remediation commands.
+- [988hj7tczd-oss/dsh-invoice-tools](https://github.com/988hj7tczd-oss/dsh-invoice-tools) - Parse Chinese e-invoice PDFs (XML attachment first, text-layer regex fallback) into structured JSON with amount cross-check, and generate expense reports (Markdown / xlsx).
+- [988hj7tczd-oss/dsh-pr-description](https://github.com/988hj7tczd-oss/dsh-pr-description) - Analyze the current branch diff and generate a Conventional Commits PR title, motivation/scheme/testing/risk description and a self-review checklist, write PR_DESCRIPTION.md, optionally open the PR via gh.
+- [988hj7tczd-oss/dsh-receipts](https://github.com/988hj7tczd-oss/dsh-receipts) - Mine local DSH session logs (JSONL) into personal usage & impact receipts: Markdown day/week/month reports plus a self-contained HTML receipt, cross-referenced with local git log — zero-network, privacy-first.
 
 ### Browser & Web
 
@@ -1467,6 +1474,9 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [zimai233/dsh-adhd-copilot](https://github.com/zimai233/dsh-adhd-copilot) - ADHD behavioral coaching skill: task breakdown, overwhelm management, launch rituals, and failure recovery.
 - [zjsthmjialin/commercial-ui-ux-codex-skill#dsh-commercial-ui-ux](https://github.com/zjsthmjialin/commercial-ui-ux-codex-skill/tree/main/dsh-commercial-ui-ux) - Registers the commercial-ui-ux skill for DSH: task-aware commercial UI/UX/GUI design, review, repair, and implementation (SaaS, dashboards, admin panels, forms, tables, design systems) with a reference-doc system and quality gates.
 - [zuoyunlai/lunheng-article-pipeline-dsh](https://github.com/zuoyunlai/lunheng-article-pipeline-dsh) - Multi-agent deep long-form article pipeline skill for DeepSeek Harness, running 8 roles across 5 phases with parallel literature/data/case retrieval, a critical-companion review, M-Gate mechanical final check, independent G0-G13 audit and human verification gates.
+- [988hj7tczd-oss/dsh-skill-creator](https://github.com/988hj7tczd-oss/dsh-skill-creator) - One-shot DSH skill (SKILL.md) generator: capture intent, draft, validate, package and distribute skills from inside a DeepSeek Harness session.
+- [988hj7tczd-oss/dsh-math-olympiad](https://github.com/988hj7tczd-oss/dsh-math-olympiad) - Competition math (IMO/Putnam/USAMO/AIME) solved with a pure-reasoning pass, an adversarial verifier in a fresh subagent context, and calibrated confidence output (high / medium / honest "no confident solution").
+- [988hj7tczd-oss/dsh-modernize-code](https://github.com/988hj7tczd-oss/dsh-modernize-code) - Legacy code modernization workflow (preflight -> assess -> map -> transform) with a Cordis mount plugin, offline Python scripts and smoke tests.
 
 ### Workflow & Automation
 
@@ -1587,6 +1597,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [ZSeven-W/dsh-crew](https://github.com/ZSeven-W/dsh-crew) - Dispatch work to DSH agents from Claude Code or Codex: native subagent progress, in-host worker sessions with per-tier presets, and a multimodal bridge for vision and image generation.
 - [ztl34245881-commits/dsh-task-planner](https://github.com/ztl34245881-commits/dsh-task-planner) - Task planning with experience muscle-memory: condition-reflex recall of past solutions, LLM capability matching, and auto-persisted lessons.
 - [zzhzz/dsh-ask-peer](https://github.com/zzhzz/dsh-ask-peer) - Peer-to-peer colleague-agent consultation for DSH: ask one or several configured peers, queue asynchronous questions, discover peers through signed friend cards, and review inbound requests in the Web UI.
+- [988hj7tczd-oss/dsh-workflow-templates](https://github.com/988hj7tczd-oss/dsh-workflow-templates) - Preset workflow template library: 12 reusable orchestration script templates with wf_template_list / search / run / validate tools and static template validation.
 
 ### Git & Code Review
 
@@ -1925,6 +1936,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [zoahdev/dsh-timesheet](https://github.com/zoahdev/dsh-timesheet) - Turn-based time tracking from dsh session logs: totals, per-day/project/provider/source rollups, tool-call counts, failure rates, and time-to-first-token — CLI plus an agent-callable timesheet tool, dsh-timesheet/v1 reports, zero runtime deps.
 - [zoahdev/dsh-unplug](https://github.com/zoahdev/dsh-unplug) - Plug/unplug any DeepSeek Harness plugin cleanly — list every mounted layer (bundles + patch rows), remove with full cleanup, disable/enable without deleting, and audit for orphaned/dangling state. CLI + agent-callable unplug tool. Read-only by default; destructive operations require explicit confirmation.
 - [ZSeven-W/dsh-ios](https://github.com/ZSeven-W/dsh-ios) - A live iOS Simulator — and a USB-connected iPhone — inside a DSH conversation: 21 agent tools to boot devices, build and run Xcode projects, drive the UI by accessibility identity, OCR text or list rows, read unified logs and inspect processes, backtraces and leaks, with a streaming sidebar panel you can tap, drag and rotate on.
+- [988hj7tczd-oss/dsh-lsp-packs](https://github.com/988hj7tczd-oss/dsh-lsp-packs) - Out-of-the-box per-language LSP configuration packs (12 languages: C/C++, C#, Go, Java, Kotlin, Lua, PHP, Pyright, Ruby, Rust, Swift, TS) reusing the shared @deepseek-ai/dsh-lsp-stdio + @deepseek-ai/dsh-tool-lsp base.
 
 ### Security & Permissions
 
