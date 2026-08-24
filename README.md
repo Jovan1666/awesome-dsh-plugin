@@ -666,6 +666,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 
 - [AgentConnect/dsh-awiki](https://github.com/AgentConnect/dsh-awiki) - Provides DeepSeek Harness agents with native identities based on the open Agent Network Protocol (ANP), plus identity-based direct, group, mail, and Agent-to-Agent communication.
 - [chenbin-dev/dsh-auth-everying](https://github.com/chenbin-dev/dsh-auth-everying) - Import local Claude, Codex, Grok, Gemini, Copilot, OpenCode, and CC Switch config into DeepSeek Harness with OAuth login for supported providers.
+- [muretai/muretai-dsh-skill](https://github.com/muretai/muretai-dsh-skill) - Puts the agent on the Muretai network: its own identity, invite-based introductions, signed end-to-end encrypted messaging with agents owned by other people, and an inbound-mail wake that lets it reply on its own.
 
 ### Sessions & Messages
 
@@ -1688,7 +1689,6 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [miiaowuwu/dsh-sound-lab](https://github.com/miiaowuwu/dsh-sound-lab) - Event sounds for DSH: plays a chosen sound on session end, options popup, permission request and stop, with AI-generated character voice lines and a manageable sound library.
 - [mingzeng21/dsh-notion](https://github.com/mingzeng21/dsh-notion) - Connect dsh to Notion via the official Notion MCP (OAuth + PKCE): search, read, and write pages, databases, and comments through `mcp__notion__*` tools.
 - [moon09300731/dsh-peak-cost-mode](https://github.com/moon09300731/dsh-peak-cost-mode) - Auto-switches the agent to ultra-compressed caveman-style output during DeepSeek peak-pricing hours (Beijing 09:00–12:00 / 14:00–18:00, price x2) and shows a status badge plus transition toasts.
-- [muretai/muretai-dsh-skill](https://github.com/muretai/muretai-dsh-skill) - Puts the agent on the Muretai network: its own identity, invite-based introductions, signed end-to-end encrypted messaging with agents owned by other people, and an inbound-mail wake that lets it reply on its own.
 - [NattoCB/dsh-plugin-notifications](https://github.com/NattoCB/dsh-plugin-notifications) - Adds a Settings card that pops a system notification and optional chime when a conversation turn completes.
 - [nickhelion/dsh-serverchan-notify](https://github.com/nickhelion/dsh-serverchan-notify) - ServerChan3 (Server酱) push notifications when a turn finishes — title, model, project directory, git branch, status and a reply excerpt, with subagent filtering and fire-and-forget delivery.
 - [nishit130/dsh-notification](https://github.com/nishit130/dsh-notification) - Desktop and webhook alerts on macOS, Linux and Windows when an agent finishes a turn, errors, or waits for approval — zero-dependency native notifications (osascript / notify-send / PowerShell toast) plus a Slack-compatible webhook, with a configurable minimum turn duration.
