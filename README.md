@@ -1,4 +1,4 @@
-﻿# Awesome DeepSeek Harness (DSH) Plugin [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) ![awesome · DSH plugin](https://awesome-dsh-plugin.com/badge.svg) ![plugin count](https://img.shields.io/endpoint?url=https%3A%2F%2Fawesome-dsh-plugin.com%2Fcount.json)
+# Awesome DeepSeek Harness (DSH) Plugin [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) ![awesome · DSH plugin](https://awesome-dsh-plugin.com/badge.svg) ![plugin count](https://img.shields.io/endpoint?url=https%3A%2F%2Fawesome-dsh-plugin.com%2Fcount.json)
 
 [![Awesome DSH Plugin](https://awesome-dsh-plugin.com/banner-en.png)](https://awesome-dsh-plugin.com)
 
@@ -1807,7 +1807,6 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [zzx-dear/dsh-capybara-notify](https://github.com/zzx-dear/dsh-capybara-notify) - Capybara secretary for DSH: desktop pet notifications with ding sound, alert inbox API, session-aware alerts (turn done / approval needed / turn blocked), check scripts, and daily high-star plugin recommendations.
 
 ### Development & Runtime
-- [chunfenxiazhi-collab/dsh-stability-audit](https://github.com/chunfenxiazhi-collab/dsh-stability-audit) — Stability audit for installed plugins: static grading (tool hook surface / startup heavy work / event listeners / packaging / deps / preflight) plus optional isolated install verification (temp DSH_HOME, zero side effects), output as a graded Markdown report — early warning for barricade/codegraph-class incidents.
 
 - [1123762794/dsh-web-restart](https://github.com/1123762794/dsh-web-restart) - One-click restart button for the DSH Web UI: a sidebar footer button that restarts the dsh web process with a single click and persists across the restart it triggers.
 - [2008924/dsh-progress-viz#plugin](https://github.com/2008924/dsh-progress-viz/tree/main/plugin) - Real-time stage, ETA & cost dashboard for headless dsh tasks: turns the black-box session event stream into a live multi-task grid (cordis plugin + standalone local dashboard, no API calls).
