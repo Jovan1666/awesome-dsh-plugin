@@ -1,0 +1,6 @@
+url: https://github.com/988hj7tczd-oss/dsh-lsp-packs
+name: 988hj7tczd-oss/dsh-lsp-packs
+category: dev
+description:
+  en: "Out-of-the-box per-language LSP configuration packs (12 languages: C/C++, C#, Go, Java, Kotlin, Lua, PHP, Pyright, Ruby, Rust, Swift, TS), one Cordis plugin per language, all reusing the shared @deepseek-ai/dsh-lsp-stdio + @deepseek-ai/dsh-tool-lsp base with zero base modifications; verified goToDefinition/hover against real clangd."
+  zh: "开箱即用的分语言 LSP 配置包（12 语言：C/C++、C#、Go、Java、Kotlin、Lua、PHP、Pyright、Ruby、Rust、Swift、TS），每语言一个 Cordis 插件，全部复用官方 @deepseek-ai/dsh-lsp-stdio + @deepseek-ai/dsh-tool-lsp 底座、底座零改动；已用真实 clangd 验证 goToDefinition/hover。"
