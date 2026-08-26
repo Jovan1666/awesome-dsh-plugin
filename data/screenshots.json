@@ -1,4 +1,8 @@
 {
+ "https://github.com/AKUSH99/dsh-balance-chip": [
+  "https://raw.githubusercontent.com/AKUSH99/dsh-balance-chip/main/assets/screenshot.png"
+ ],
+
  "https://github.com/fengb3/dsh-session-icons": [
   "https://raw.githubusercontent.com/fengb3/dsh-session-icons/master/docs/screenshot.png"
  ],
@@ -1331,3 +1335,4 @@
   "https://raw.githubusercontent.com/WSL043/dsh-native-reasoning-slider/main/docs/assets/mode-settings-dark-zh.png"
  ]
 }
+
