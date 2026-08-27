@@ -49,6 +49,27 @@ const FIRST_PARTY_PACKAGES = new Set([
 // the manifest check applies to them. Set to when the rule change landed.
 const GATE_EFFECTIVE_FROM = process.env.GATE_EFFECTIVE_FROM ?? '2026-08-16T00:00:00Z'
 
+// How many entries one pull request may add.
+//
+// Reviewing a submission means reading the plugin's source and checking every
+// claim in its description against it. That is per-entry work, and it does not
+// get cheaper in bulk — a pull request carrying 127 of them is not one
+// submission, it is 127 submissions wearing a coat, and the realistic outcome
+// is that none of them get read properly.
+//
+// Three is measured, not picked: of the last 100 merged pull requests, 92
+// added a single entry and 8 added two. None added three. So this rejects
+// nothing anyone has actually been doing, while still leaving room for the one
+// legitimate multi-entry shape — a monorepo whose subpackages are separate
+// installable plugins.
+//
+// awesome-go allows exactly one item per pull request; awesome-python
+// auto-closes any PR adding several, and separately auto-closes "multiple
+// related projects from the same author, across one or several PRs". Three is
+// the loose end of that range, not the strict one.
+const MAX_ENTRIES_PER_PR = Number(process.env.MAX_ENTRIES_PER_PR ?? 3)
+const BULK_RULE_FROM = process.env.BULK_RULE_FROM ?? '2026-08-20T00:00:00Z'
+
 const arg = (name) => {
   const i = process.argv.indexOf(name)
   return i === -1 ? null : process.argv[i + 1]
@@ -69,10 +90,61 @@ const HEADERS = { accept: 'application/vnd.github+json', authorization: `Bearer 
 
 const gateApplies = !PR_CREATED || new Date(PR_CREATED) >= new Date(GATE_EFFECTIVE_FROM)
 
-async function api(pathname, { raw = false } = {}) {
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
+
+// GitHub answers 403 to two unrelated questions: "may this token see that
+// repository" and "have you asked too fast". The second kind comes in two
+// flavours — a primary quota (x-ratelimit-remaining: 0, resets on the hour)
+// and a secondary/abuse limit from a burst, which sets retry-after and clears
+// in about a minute. The gate treated all three identically and gave up on the
+// first response, which is how eight submissions came to sit unverified on
+// 2026-08-25 naming nine repositories that were public and reachable the whole
+// time. Nothing was wrong with any of them; the gate simply asked during a
+// squeeze and reported "nothing checked".
+//
+// Retry only what a retry can fix, and wait exactly as long as GitHub asks.
+// A permission 403 carries neither header and is returned immediately, because
+// asking again would just spend another request to be told the same thing.
+const retryDelay = (r) => {
+  const after = Number(r.headers.get('retry-after'))
+  if (Number.isFinite(after) && after > 0) return after * 1000 + 1000
+  if (r.headers.get('x-ratelimit-remaining') === '0') {
+    const reset = Number(r.headers.get('x-ratelimit-reset'))
+    if (Number.isFinite(reset)) return Math.max(0, reset * 1000 - Date.now()) + 1000
+  }
+  return null
+}
+
+// Two budgets, because an unbounded backoff is its own outage. A primary quota
+// can be forty minutes from resetting, and a job holding a runner idle that
+// long is worse than reporting the entry unverified and letting regate.yml
+// re-run it later — which it already does, on a `neutral` conclusion.
+const MAX_WAIT_PER_CALL_MS = 75_000
+const MAX_WAIT_TOTAL_MS = 150_000
+let waited = 0
+
+async function api(pathname, { raw = false, attempt = 0 } = {}) {
   const r = await fetch(`https://api.github.com/${pathname}`, { headers: HEADERS, signal: AbortSignal.timeout(20000) })
   if (r.status === 404) return { status: 404 }
-  if (!r.ok) return { status: r.status }
+  if ((r.status === 403 || r.status === 429) && attempt < 3) {
+    const wait = retryDelay(r)
+    if (wait != null && wait <= MAX_WAIT_PER_CALL_MS && waited + wait <= MAX_WAIT_TOTAL_MS) {
+      waited += wait
+      console.log(`  ..  rate limited on ${pathname} — waiting ${Math.round(wait / 1000)}s (attempt ${attempt + 1}/3)`)
+      await sleep(wait)
+      return api(pathname, { raw, attempt: attempt + 1 })
+    }
+  }
+  // Keep what GitHub said. Discarding the body is what left "HTTP 403" as the
+  // only evidence in every summary, indistinguishable between a rate limit and
+  // a repository this token genuinely cannot read.
+  if (!r.ok) {
+    const reason = await r
+      .json()
+      .then((b) => (typeof b?.message === 'string' ? b.message : null))
+      .catch(() => null)
+    return { status: r.status, reason }
+  }
   return { status: 200, body: raw ? r : await r.json().catch(() => null), headers: r.headers }
 }
 
@@ -106,7 +178,12 @@ function decompose(url) {
   }
 }
 
-const b64 = (s) => Buffer.from(s, 'base64').toString('utf8')
+// Strip a leading BOM before any caller parses this. A package.json written by
+// a Windows editor begins U+FEFF; `JSON.parse` throws on it, `parsePkg` returns
+// null, and the gate then tells a contributor their manifest has no
+// `dsh.bundle` when it plainly does. npm installs such a package fine, so the
+// rejection would have been ours alone.
+const b64 = (s) => Buffer.from(s, 'base64').toString('utf8').replace(/^﻿/, '')
 
 /** Parse a base64 package.json; null when it isn't valid JSON. */
 function parsePkg(content) {
@@ -179,6 +256,19 @@ const scanTree = (repo) => once(`scan:${repo}`, async () => {
   return { ok: false, why: `no \`dsh.bundle\` in any of ${pkgs.length} package.json file(s)` }
 })
 
+/**
+ * Directories that contain a `package.json`, for suggesting a correction when
+ * an entry's subpath does not exist. Cheap: one tree read, memoised per
+ * repository, and only ever reached on the 404 path.
+ */
+const manifestDirs = (repo) => once(`dirs:${repo}`, async () => {
+  const tree = await api(`repos/${repo}/git/trees/HEAD?recursive=1`)
+  if (tree.status !== 200 || tree.body?.truncated) return []
+  return (tree.body?.tree ?? [])
+    .filter((t) => t.path?.endsWith('/package.json'))
+    .map((t) => t.path.replace(/\/package\.json$/, ''))
+})
+
 async function hasBundle(repo, sub) {
   // The entry may point straight at a subpackage — that manifest is
   // authoritative, and it is per-entry rather than per-repository, so it stays
@@ -192,6 +282,29 @@ async function hasBundle(repo, sub) {
     const dsh = pkg.dsh ?? {}
     if (dsh.bundle) return { ok: true }
     if (sub) return { ok: false, why: dsh.client ? 'declares only `dsh.client` — that alone is not installable' : `\`${sub}/package.json\` has no \`dsh.bundle\`` }
+  }
+
+  // A subpath that does not resolve is a different failure from a root-pointing
+  // entry, and reporting it as one sends the author somewhere wrong. #1794
+  // pointed at `packages/pet-bridge` — the real directory is
+  // `packages/dsh-pet-bridge` — and the fall-through below told it the entry
+  // "points at the repository root" and to switch to
+  // `packages/dsh-appearance-gallery`, which is a different plugin. An author
+  // who followed that advice would have listed the wrong one, and the gate
+  // would have gone green on it.
+  if (sub && direct.status === 404) {
+    const dirs = await manifestDirs(repo)
+    const leaf = sub.split('/').pop().toLowerCase()
+    const near = dirs.filter((d) => {
+      const l = d.split('/').pop().toLowerCase()
+      return l.includes(leaf) || leaf.includes(l)
+    })
+    const hint = near.length
+      ? ` Did you mean ${near.slice(0, 3).map((d) => `\`${d}\``).join(' or ')}?`
+      : dirs.length
+        ? ` Directories with a \`package.json\`: ${dirs.slice(0, 6).map((d) => `\`${d}\``).join(', ')}.`
+        : ''
+    return { ok: false, why: `the entry URL points at \`${sub}\`, which this repository does not have.${hint}` }
   }
 
   // The entry points at the repository root and the root does not declare a
@@ -228,14 +341,17 @@ async function hasBundle(repo, sub) {
   return scanned
 }
 
+// Goes through api() rather than fetching directly, so the commit-count bar
+// gets the same rate-limit backoff as everything else. It used to have its own
+// bare fetch, which meant a squeeze made a repository look like it had no
+// commit history rather than like it had not been asked.
 async function commitCount(repo) {
-  const r = await fetch(`https://api.github.com/repos/${repo}/commits?per_page=1`, { headers: HEADERS, signal: AbortSignal.timeout(20000) })
-  if (!r.ok) return null
+  const r = await api(`repos/${repo}/commits?per_page=1`)
+  if (r.status !== 200) return null
   const link = r.headers.get('link') ?? ''
   const m = link.match(/[?&]page=(\d+)>;\s*rel="last"/)
   if (m) return Number(m[1])
-  const body = await r.json().catch(() => [])
-  return Array.isArray(body) ? body.length : null
+  return Array.isArray(r.body) ? r.body.length : null
 }
 
 async function check(entry) {
@@ -250,7 +366,8 @@ async function check(entry) {
     // "passed" all the way out to the check-run summary, which is how
     // repositories under both bars came to sit green: a 403 during a quota
     // squeeze looked identical to a clean bill of health.
-    return { problems: [], unverified: [`nothing checked — repo lookup failed (HTTP ${meta.status})`] }
+    const why = meta.reason ? ` — ${meta.reason}` : ''
+    return { problems: [], unverified: [`nothing checked — repo lookup failed (HTTP ${meta.status})${why}`] }
   }
   const problems = []
   const unverified = []
@@ -282,7 +399,35 @@ function changedEntryFiles(base) {
   return new Set(out.split('\n').map((s) => s.trim()).filter(Boolean))
 }
 
-const entries = DIR ? readEntries(DIR) : readEntries()
+// A submission whose YAML does not parse is a submission problem, and
+// `readEntries` already explains it better than anything here could — it names
+// the file, the reason, and for the common `": "` case prints the corrected
+// line. Letting that throw escape kills the process before it writes its JSON
+// result, so the workflow falls back to "exited without producing a result …
+// this is a bug in the check, not in the submission" — telling the author to
+// re-run and wait, while the one message that would have fixed their entry in
+// ten seconds never reaches them. Catch it and report it as what it is.
+let entries
+try {
+  entries = DIR ? readEntries(DIR) : readEntries()
+} catch (e) {
+  // In CI, DIR is a scratch directory the workflow extracted the PR's files
+  // into, so the raw message would open with a runner temp path the author has
+  // never seen. Show the path they recognise.
+  const detail = String(e?.message ?? e).replaceAll(`${DIR ?? ''}/`, `${PLUGINS_DIR}/`)
+  console.error(detail)
+  if (JSON_OUT) {
+    fs.writeFileSync(
+      JSON_OUT,
+      JSON.stringify(
+        { ok: false, checked: 0, failures: [{ url: null, problems: [detail], unverified: [] }] },
+        null,
+        1,
+      ),
+    )
+  }
+  process.exit(1)
+}
 let targets = entries
 if (ONLY_LIST) {
   const want = new Set(
@@ -309,6 +454,33 @@ if (!targets.length) {
   process.exit(0)
 }
 console.log(`checking ${targets.length} entr${targets.length === 1 ? 'y' : 'ies'}` + (gateApplies ? '' : ' (age/commit gate not applied — PR predates the rule)'))
+
+// Checked before anything is fetched: if the pull request is over the cap it
+// is going back regardless of what the repositories look like, and probing
+// 127 of them first would spend the API quota to reach the same answer.
+// Existing submissions are judged by the rules that existed when they were
+// opened, same as the age/commit gate.
+const bulkRuleApplies = !PR_CREATED || new Date(PR_CREATED) >= new Date(BULK_RULE_FROM)
+if (bulkRuleApplies && targets.length > MAX_ENTRIES_PER_PR) {
+  const list = targets.map((e) => `- ${e.url}`).join('\n')
+  const body =
+    `This pull request adds ${targets.length} entries; the limit is ${MAX_ENTRIES_PER_PR}.\n\n` +
+    `Reviewing a submission means reading the plugin's source and checking every claim in\n` +
+    `its description against it. That work is per-entry and does not get cheaper in bulk, so\n` +
+    `a batch this size would either sit unreviewed or get waved through — and waving it\n` +
+    `through is how a curated list turns into a directory.\n\n` +
+    `Split this into separate pull requests, at most ${MAX_ENTRIES_PER_PR} entries each. If these are\n` +
+    `all yours, please also pick: send the ones you would keep if you could only keep a few,\n` +
+    `rather than everything that works.\n\n${list}\n`
+  console.error(body)
+  if (JSON_OUT) {
+    fs.writeFileSync(JSON_OUT, JSON.stringify({
+      ok: false, checked: 0, tooMany: { count: targets.length, limit: MAX_ENTRIES_PER_PR },
+      failures: [], incomplete: [],
+    }, null, 1))
+  }
+  process.exit(1)
+}
 
 const failures = []
 const incomplete = []
