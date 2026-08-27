@@ -2,5 +2,5 @@ url: https://github.com/Xiaofei-fei/dsh-prompt-history
 name: Xiaofei-fei/dsh-prompt-history
 category: ui
 description:
-  en: 'Terminal-style input for the DSH web composer — bash-like Up/Down prompt history (prefix search + Ctrl+R reverse search), selection toolbar with copy, quote (full text as a > blockquote) and copy-as-code, right-click paste, draggable chat TOC, and copy modes in Settings; fully internationalized (zh/en), history sourced from the session''s own message log (zero config, zero extra storage).'
-  zh: '为 DSH Web 输入框提供终端式输入：类 Linux shell 的 ↑/↓ 提示词历史（前缀搜索 + Ctrl+R 反向搜索）、选中工具栏（复制 / 引用完整内容 > 引用块 / 复制为代码块）、右键直接粘贴、可拖动的会话目录，设置面板可切换复制模式；界面全面国际化（中文/English），历史取自会话自身的消息记录（零配置、零额外存储）。'
+  en: 'Terminal-style input for the DSH web composer — bash-like Up/Down prompt history (prefix search + Ctrl+R reverse search), selection toolbar with copy, quote (full text as a > blockquote) and copy-as-code, right-click paste, toggleable draggable chat TOC, and copy modes in Settings; fully internationalized (zh/en), history sourced from the session''s own message log (zero config, zero extra storage).'
+  zh: '为 DSH Web 输入框提供终端式输入：类 Linux shell 的 ↑/↓ 提示词历史（前缀搜索 + Ctrl+R 反向搜索）、选中工具栏（复制 / 引用完整内容 > 引用块 / 复制为代码块）、右键直接粘贴、可开关的可拖动会话目录，设置面板可切换复制模式；界面全面国际化（中文/English），历史取自会话自身的消息记录（零配置、零额外存储）。'
