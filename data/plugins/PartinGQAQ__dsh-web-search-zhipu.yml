@@ -1,5 +1,5 @@
-url: https://github.com/PartinGQAQ/dsh-web-search-glm
-name: PartinGQAQ/dsh-web-search-glm
+url: https://github.com/PartinGQAQ/dsh-web-search-zhipu
+name: PartinGQAQ/dsh-web-search-zhipu
 category: browser
 description:
   en: 'GLM (Zhipu bigmodel) web search provider - routes ctx.web search through Zhipu''s Anthropic-compatible endpoint with the native web_search server tool, billing your existing GLM quota or Coding Plan instead of the DeepSeek platform. Includes a translation layer for Zhipu''s non-standard tool_result response layout.'
