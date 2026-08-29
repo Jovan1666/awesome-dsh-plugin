@@ -978,7 +978,7 @@ dsh plugin --profile web add dshmarket
 
 ### 🧠 记忆
 
-- [00080000/dsh-project-memory](https://github.com/00080000/dsh-project-memory) — dsh 项目级持久记忆。**读到即索引**：模型读文件时才索引，未读零开销。文档（PDF/MD/txt）LLM 摘要，代码（7 语言）零依赖正则出符号表。每条带 `path:line` 可回源。分片存储（每源文件 1 shard）+ 无锁同步事务，watch 计算提交分离，LLM 摘要不阻塞查询/记忆。BM25 三层检索，CJK 短语加分 (×1.5) + 同义词 + 精确链接边界。纯 JS，单依赖 pdfjs 懒加载，无数据库/向量库/后台服务。实测：5000 文件冷加载 64ms、热路径懒索引中位数 2.5ms、查询中位数 2.6ms (p95 5.6ms)、索引体积 ~0.3 KB/条目、157 项测试全绿。
+- [00080000/dsh-project-memory](https://github.com/00080000/dsh-project-memory) — dsh 项目级持久记忆。**读到即索引**：模型读文件时才建索引，未读零开销。文档自动摘要，代码零依赖出符号表，每条可回源验证。分片存储 + 无锁同步事务，LLM 摘要从不阻塞查询/记忆。纯 JS、单依赖懒加载，无数据库/向量库/后台服务。5000 文件冷启动 64ms，查询中位数 2.6ms，索引体积约 0.3KB/条目。
 - [398894496-arch/runtime36](https://github.com/398894496-arch/runtime36) — 把本地 Obsidian 库当作 Agent 知识库，并用只读 DSH 工具把状态、偏好、纠错、记忆、项目、搜索与建议路由到对应页面。
 - [863683348/dsh-memory-setup](https://github.com/863683348/dsh-memory-setup) — 解决 AI 金鱼脑：本地可审计的个人记忆层——偏好、项目约定、工作流与纠错教训，以带变更日志与完整性校验的 JSON 持久化在工作区，支持一次性设置、项目约定自动提取、证据化教训与快照恢复。
 - [863683348/dsh-plugin-focus](https://github.com/863683348/dsh-plugin-focus) — 为 DeepSeek Harness agent 提供持久化专注板：在会话工作区维护目标、约束与决策笔记，跨压缩与会话存活，支持自动注入上下文、清空归档与可选 Web 面板。
