@@ -2,5 +2,5 @@ url: https://github.com/Top-Celestial-Company-Ltd/dsh-dros-vajraclaw
 name: Top-Celestial-Company-Ltd/dsh-dros-vajraclaw
 category: security
 description:
-  en: 'Deterministic runtime execution governance & microsecond circuit-breaker gateway with W3C DID identity and local audit chains.'
-  zh: '確定性執行期治理與微秒級熔斷網關，具備 W3C DID 身分綁定與本機密碼學審計鏈。'
+  en: 'Local tool-call failsafe for DSH: blocks a fixed list of high-risk shell patterns and credential-file reads before execution, with a per-session hash-linked JSONL audit log, and an optional external Gateway for centralized policy.'
+  zh: 'DSH 本機工具調用防護外掛：攔截高風險 Shell 指令模式與敏感憑證讀取，具備持久化哈希鏈 JSONL 審計記錄，可選配外部 Gateway 集中治理。'
