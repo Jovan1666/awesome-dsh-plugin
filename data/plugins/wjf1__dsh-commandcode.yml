@@ -1,0 +1,6 @@
+url: https://github.com/wjf1/dsh-commandcode
+name: wjf1/dsh-commandcode
+category: model
+description:
+  en: 'DSH-Desktop LLM provider for Command Code: live model catalog, retry with backoff, multi-account rotation, usage dashboard, and bilingual settings UI.'
+  zh: 'DSH-Desktop 的 Command Code 模型接入插件：实时模型目录、带退避的重试、多账号轮换、用量看板与双语设置界面。'
