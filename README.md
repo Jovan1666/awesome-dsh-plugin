@@ -1568,6 +1568,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [173787247/dsh-wsl-cred](https://github.com/173787247/dsh-wsl-cred) - Safe Git Credential Manager hints for WSL without exposing secrets.
 - [173787247/dsh-wsl-distro](https://github.com/173787247/dsh-wsl-distro) - Reports the current WSL distro and warns about multi-distro setups.
 - [173787247/dsh-wsl-env](https://github.com/173787247/dsh-wsl-env) - Injects WSL distro, Linux path mapping, /mnt/c CRLF and git caveats, and NODE_USE_ENV_PROXY into the system prompt.
+- [173787247/dsh-wsl-expose](https://github.com/173787247/dsh-wsl-expose) - Advises or applies allowlisted Windows portproxy for a WSL listen port.
 - [173787247/dsh-wsl-github](https://github.com/173787247/dsh-wsl-github) - Uses a GitHub App to report open PRs and the latest Actions run for the current repo without returning secrets.
 - [173787247/dsh-wsl-gpu](https://github.com/173787247/dsh-wsl-gpu) - Probes nvidia-smi and GPU visibility inside WSL.
 - [173787247/dsh-wsl-launch](https://github.com/173787247/dsh-wsl-launch) - Launches allowlisted Windows apps such as VS Code, Explorer, and browsers from WSL.
