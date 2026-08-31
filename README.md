@@ -308,6 +308,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [lokih1028/dsh-prompt-optimizer](https://github.com/lokih1028/dsh-prompt-optimizer) - One-click prompt enhancement and structuring button for DSH composer.
 - [loyalchiiina/dsh-chat-image-lightbox](https://github.com/loyalchiiina/dsh-chat-image-lightbox) - Full-screen lightbox for chat images with zoom, drag pan, download, and keyboard or touch navigation.
 - [loyalchiiina/dsh-font-enhancer](https://github.com/loyalchiiina/dsh-font-enhancer) - DIY your DSH UI fonts and colors: per-region styling, unified overrides, theme save and switch, random font and color.
+- [lsh2002/dsh-custom-fonts](https://github.com/lsh2002/dsh-custom-fonts) - Customize the UI's Chinese and English fonts, code font, and global font-size offset on a settings page, with a live preview and one-click reset.
 - [lsq-dsh-plugins/dsh-workbench-layout](https://github.com/lsq-dsh-plugins/dsh-workbench-layout) - Rearranges DSH Web into a three-column workbench with file editing, Git views, Markdown preview, and workspace terminals.
 - [Luaphes/dsh-web-attention-badge](https://github.com/Luaphes/dsh-web-attention-badge) - Attention reminders: frame badge, tab-title count, and a status-colored whale favicon for sessions waiting for input or finished unopened.
 - [LWLAymh/dsh-tool-emoji](https://github.com/LWLAymh/dsh-tool-emoji) - Replace tool-card leading icons with emoji while preserving the original cards.
