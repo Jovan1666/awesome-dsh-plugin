@@ -2160,6 +2160,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 ### Git & Code Review
 
 - [7dgroup-ai/dsh-skill-7d-git-commit](https://github.com/7dgroup-ai/dsh-skill-7d-git-commit) - Checks git commit messages against the 7DGroup convention (Chinese type tags, length and punctuation rules) before committing, as a client-side guard before GitLab pre-receive hooks.
+- [Akimiya-z/codex-guard#dsh](https://github.com/Akimiya-z/codex-guard/tree/main/dsh) - Pre-submit pull-request hygiene checks inside DeepSeek Harness: scans the current diff for TODO leftovers, hardcoded secrets, and non-conventional commit subjects.
 - [alpacachen/dsh-worktree](https://github.com/alpacachen/dsh-worktree) - A minimal worktree management solution with only one button and one dialog.
 - [andyfan1094/dsh-github](https://github.com/andyfan1094/dsh-github) - GitHub account management plus a local Git workflow for the web GUI with clone, fast-forward pull, status, commit, push, and host-side push guards.
 - [Binaryinject/dsh-review-checkout](https://github.com/Binaryinject/dsh-review-checkout) - Codex-style review of session file changes: per-turn cards, a latest-turn review tab with syntax-highlighted diffs, 12 fully-wired color settings with light/dark presets that follow the DSH theme live (diff rows, turn cards and the running pill switch on the same tick), one-click revert via a built-in tool (works on DSH Desktop too), powered by the official history channel.
