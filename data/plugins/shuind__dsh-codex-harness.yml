@@ -2,5 +2,5 @@ url: https://github.com/shuind/dsh-codex-harness
 name: shuind/dsh-codex-harness
 category: model
 description:
-  en: 'Compact Codex coding preset for DSH: streamlined Codex prompts with light guardrails against GPT over-explaining, an editable and resettable full prompt, exec_command/write_stdin/apply_patch/update_plan tools, Fast requests, GPT image input, reasoning effort and context-capacity controls, live model/reply/compaction/latency status, and Responses-native apply_patch, hosted web_search, and remote compaction with DSH fallbacks.'
-  zh: '使用精简codex提示词；对gpt过度拉屎做了少量提示词约束。支持在设置中编辑/恢复完整提示词，提供 exec_command、write_stdin、apply_patch、update_plan 工具，支持 Fast 请求、GPT 图片、思考强度和上下文容量；实时显示请求模型、模型回复、上下文压缩状态与耗时；Responses 请求优先使用原生 apply_patch、hosted web_search 和远程压缩，失败时回退到 DSH 实现。'
+  en: 'Compact Codex coding mode for DSH: light prompt guardrails against GPT over-explaining, with an editable prompt and native Codex-style tools.'
+  zh: '使用精简codex提示词；对gpt过度拉屎做了少量提示词约束。在 DSH 中提供可编辑的 Codex 编码模式与原生工具体验。'
