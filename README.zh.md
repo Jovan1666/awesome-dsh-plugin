@@ -865,7 +865,7 @@ dsh plugin --profile web add dshmarket
 - [seriousz158/dsh-codex-use#dsh-codex-appserver](https://github.com/seriousz158/dsh-codex-use/tree/main/packages/dsh-codex-appserver) — 通过本机 Codex App Server，将 OpenAI Codex（ChatGPT）作为可选 DSH Provider。
 - [SeverusZh/dsh-plugin-subagent-director](https://github.com/SeverusZh/dsh-plugin-subagent-director) — 子代理 LLM 供应商/模型选择，支持角色模板。
 - [sharewiner/dsh-model-management](https://github.com/sharewiner/dsh-model-management) — 管理 DSH 默认模型、Provider 与模型可见性，并支持可选的 OpenAI Responses 联网搜索。
-- [shuind/dsh-codex-harness](https://github.com/shuind/dsh-codex-harness) — 使用精简codex提示词；对gpt过度拉屎做了少量提示词约束。
+- [shuind/dsh-codex-harness](https://github.com/shuind/dsh-codex-harness) — 使用精简codex提示词；对gpt过度拉屎做了少量提示词约束。支持在设置中编辑/恢复完整提示词，提供 exec_command、write_stdin、apply_patch、update_plan 工具，支持 Fast 请求、GPT 图片、思考强度和上下文容量；实时显示请求模型、模型回复、上下文压缩状态与耗时；Responses 请求优先使用原生 apply_patch、hosted web_search 和远程压缩，失败时回退到 DSH 实现。
 - [SnowAmberX/dsh-role-router](https://github.com/SnowAmberX/dsh-role-router) — 按 default、planner 和 subagent 角色将代理请求路由到可配置模型，在计划模式下自动使用 planner，并提供逐角色推理强度与 Web UI 配置。
 - [songoao25/dsh-chatgpt-subscription](https://github.com/songoao25/dsh-chatgpt-subscription) — 通过官方 OAuth 绑定你的 ChatGPT 账号，在 DSH 内直接使用 ChatGPT 模型对话，消耗 Plus/Pro 订阅额度。
 - [SpookySandwich/dsh-plugin-rollout-scout](https://github.com/SpookySandwich/dsh-plugin-rollout-scout) — 检测账号当前被分配到哪个对话模型：并发发起一次性探测会话，按段落开头的写法为流式思维链打分，读起来像旧模型的在数秒内中止。附带离线自检，用同一分类器回放 13 条人工标注的思维链。
