@@ -1417,6 +1417,7 @@ dsh plugin --profile web add dshmarket
 - [lxfu1/dsh-plugin-chart](https://github.com/lxfu1/dsh-plugin-chart) — 增强 DeepSeek Harness 数据可视化能力，根据用户输入自动选择图表类型并生成图片，支持趋势、比较、占比、关系和流程等可视化场景。
 - [lynote-ai/dsh-humanizer](https://github.com/lynote-ai/dsh-humanizer) — 写作工具：去除 AI 腔并贴合个人文风。8 个确定性工具扫描文本、从样本提取文风指纹，并返回改写 brief。
 - [lzszq/dsh-scholar](https://github.com/lzszq/dsh-scholar) — 学术助手插件。
+- [m1khal3v/dsh-tool-codegraph](https://github.com/m1khal3v/dsh-tool-codegraph) — 将 colbymchenry/codegraph 封装到代理工具中 - status、search、callers/callees、impact、explore 等等。
 - [maddogfinance/dsh-trading](https://github.com/maddogfinance/dsh-trading) — 只读交易研究工作台 bundle：带类型的行情数据接缝（含 CSV 参考数据源）、多周期指标 regime 快照与 OHLCV 工具、dsh web 交互式 K 线卡（模型标注需溯源并经价格区间校验）、以及在 tools/pre-execute 拦截下单形工具调用的 risk-guard。
 - [mafeis/dsh-net-proxy](https://github.com/mafeis/dsh-net-proxy) — 让 agent 的网络请求走本机 HTTP/CONNECT/SOCKS5 代理。
 - [mario03690/dsh-netcafe](https://github.com/mario03690/dsh-netcafe) — 托管工具服务器（MCP）：发票与银行流水提取并做代码内算术校验、按整数分对账、PDF 与表格转换、SQL 方言转写，以及从中国移动骨干网实测大陆可达性。
