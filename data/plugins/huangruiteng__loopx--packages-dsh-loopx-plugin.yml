@@ -2,6 +2,6 @@ url: https://github.com/huangruiteng/loopx/tree/main/packages/dsh-loopx-plugin
 name: huangruiteng/loopx#dsh-loopx-plugin
 category: workflow
 description:
-  en: 'LoopX integration that bootstraps the CLI and skills, continues admitted same-session work, and adds a local GoalBar for bound Goal and Todo status.'
-  zh: 'LoopX 集成：引导安装 CLI 与技能，续跑已准入的同会话任务，并为已绑定的 Goal 与 Todo 状态提供本地 GoalBar。'
+  en: 'Connects DeepSeek Harness to LoopX, the provider-neutral, local-first control plane for long-horizon agents, with CLI and skill bootstrap, governed same-session continuation, and a local GoalBar for bound Goal and Todo status.'
+  zh: '将 DeepSeek Harness 接入 LoopX——面向长周期 Agent 的供应商中立、本地优先控制平面，并提供 CLI 与技能引导安装、受治理的同会话续跑，以及展示已绑定 Goal 与 Todo 状态的本地 GoalBar。'
 tarball: https://github.com/huangruiteng/loopx/releases/download/dsh-loopx-plugin-v0.1.1-beta.3/dsh-loopx-plugin-0.1.1-beta.3.tgz
