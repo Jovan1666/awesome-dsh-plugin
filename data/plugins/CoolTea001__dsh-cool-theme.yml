@@ -2,5 +2,5 @@ url: https://github.com/CoolTea001/dsh-cool-theme
 name: CoolTea001/dsh-cool-theme
 category: theme
 description:
-  en: Transform DSH in one click — a curated gallery of beloved themes from crystal-clear light to immersive dark. Beautiful, eye-friendly, and instantly yours.
-  zh: 一键焕新 DSH！内置多款主流配色主题，从清透亮色到沉浸暗黑随心切换，颜值与护眼兼得，轻松打造你的专属风格。
+  en: Theme plugin for DSH with 11 built-in themes including Nord, One Dark and GitHub, with full light and dark mode support.
+  zh: DSH 主题切换插件，内置 11 款主流配色主题：Nord / One Dark / Github 等，深度适配浅色/深色模式。
