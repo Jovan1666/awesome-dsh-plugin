@@ -1,0 +1,19 @@
+# 收录申请条目 / catalog submission entry
+# 用途：把这个文件按原文件名放进 awesome-dsh-plugin 仓库的 data/plugins/ 目录，
+#       然后跑 `npm ci && node scripts/generate-readme.mjs`，把生成的两个 README
+#       连同本文件一起提 PR。文件名必须保持 <owner>__<repo>.yml 格式。
+#
+# ⚠️ 提交前把下面所有的 bjzkhy 换成你真实的 GitHub 用户名/仓库地址，
+#    并与 package.json 里的 repository.url 保持一致（CI 会核对）。
+#    npm 包名不需要写：目录是从仓库的 package.json 里读的。
+
+url: https://github.com/bjzkhy/dsh-token-ledger-pro
+name: bjzkhy/dsh-token-ledger-pro
+category: usage
+description:
+  en: 'Cost panel for DeepSeek Harness: meters every request from session events, prices it against a built-in catalog of 136 models across 16 providers, and shows the current model, account balance, session, today and month spend plus a monthly budget bar next to the composer. Bilingual zh/en.'
+  zh: 'DSH 费用统计面板：从 session 事件采集每次请求用量，按内置 16 家厂商 136 个模型的价格目录实时计费，在输入框旁展示当前模型、账户余额、本会话/今日/本月消费与月度预算横条。中英双语。'
+
+# 可选字段（当前不需要，留作备注）：
+# 你已发布 npm 包，所以不需要 tarball: 字段；发布 npm 还能让安装跳过 allowBuilds 授权。
+# tarball: https://github.com/bjzkhy/dsh-token-ledger-pro/releases/latest/download/dsh-token-ledger-pro.tgz
