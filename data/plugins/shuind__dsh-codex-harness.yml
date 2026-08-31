@@ -3,4 +3,4 @@ name: shuind/dsh-codex-harness
 category: model
 description:
   en: 'Compact Codex coding mode for DSH: light prompt guardrails against GPT over-explaining, with an editable prompt and native Codex-style tools.'
-  zh: '使用精简codex提示词和工具；对gpt过度拉屎做了少量提示词约束。在 DSH 中提供可微调的 Codex 模式，并进行了体验优化。'
+  zh: '在 DSH 中提供精简的 Codex 编码模式：使用精简的 codex 提示词与原生 Codex 风格工具，并用少量提示词约束抑制 GPT 的过度解释；提示词可自行编辑调整。'
