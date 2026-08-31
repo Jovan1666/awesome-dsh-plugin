@@ -158,6 +158,7 @@ dsh plugin --profile web add dshmarket
 - [Choi-Peng/dsh-footer-order](https://github.com/Choi-Peng/dsh-footer-order) — DSH 侧边栏页脚排序：将 sidebar.footer.action 槽位改为上下堆叠，并允许用户配置各条目自上而下的排列顺序。
 - [chongfengdy-dev/dsh-message-outline](https://github.com/chongfengdy-dev/dsh-message-outline) — 当前会话消息大纲（左缘横杠）——你的消息在对话区左缘显示一列细横杠，hover 展开完整大纲（行号+文本），点击瞬间定位到对话里那条消息。纯前端、零外部服务依赖、sessions 快照驱动零轮询。
 - [ChuanTianML/dsh-chat-tidy](https://github.com/ChuanTianML/dsh-chat-tidy) — 一张样式表，按实测的 Codex 版式重排 DSH 对话页：14/22 px 正文，收紧标题、列表与块级节奏，使用圆角引用条，并把表格补成带主题化表头、行列分隔、短表铺满和宽表容器内滚动的 Tidy Tables；无设置项、不改写 DOM，仓库内附真实前后对比图。
+- [ChuanTianML/dsh-open-with](https://github.com/ChuanTianML/dsh-open-with) — 从 Session 页头或 Workspace 菜单用检测到或配置的编辑器打开当前已登记 Workspace，支持热重新检测和浏览器首选项记忆。
 - [ChuanTianML/prompt-for-me](https://github.com/ChuanTianML/prompt-for-me) — DSH 输入框的上下文感知下一句建议：重复 Trigger 可持续换一条，发送前始终由用户确认。
 - [CNSeniorious000/dsh-generative-ui](https://github.com/CNSeniorious000/dsh-generative-ui) — 让 AI 在对话中或侧边栏里插入流式生成的 UI，以 TSX 书写——模型的母语之一，不必再教它一套 JSON schema。流式渲染不闪烁，状态跨帧保留、无硬刷新，对 UI 的点击直接驱动下一轮对话。inline 形态流式最重要，side canvas 形态更 agentic。卡片内部同样具备 agentic 能力——执行 bash、curl、调用模型、读写文件。
 - [coldcgh/dsh-deepseek-chat](https://github.com/coldcgh/dsh-deepseek-chat) — 网页对话入口插件：侧边栏一键打开 chat.deepseek.com 独立窗口（dsh-desktop 桥接），纯网页环境自动回退内嵌打开。
@@ -2253,7 +2254,6 @@ dsh plugin --profile web add dshmarket
 - [cerebrixos-org/tuning-engines-cli#tuningengines-dsh-plugin](https://github.com/cerebrixos-org/tuning-engines-cli/tree/main/packages/tuningengines-dsh-plugin) — 将不含原始内容的 DSH 回合、模型、工具、审批、重试和错误事件导出到 Tuning Engines，用于受治理的追踪、策略评估、成本分析和 Work Session 审阅，并提供磁盘持久化重试队列。
 - [cheesehaqi/dsh-qq-onebot-bridge](https://github.com/cheesehaqi/dsh-qq-onebot-bridge) — 基于 OneBot v11 反向 WebSocket 的 QQ 双向桥：每群/每私聊用户独立会话、@引用语音转文字、私聊图片/动画表情识图、表情与贴纸工具。
 - [chidaic/dsh-agent-notify](https://github.com/chidaic/dsh-agent-notify) — 任务完成或需要你输入/批准时弹出 Windows 系统通知（浏览器 Notification API）：完成/提问/审批/计划审阅提醒，点击气泡直达会话，支持后台模式，设置页在官方设置 → 任务提示。
-- [ChuanTianML/dsh-open-with](https://github.com/ChuanTianML/dsh-open-with) — 从 Web UI 使用检测到或配置的本机编辑器、终端或文件管理器打开已登记 Workspace，并在浏览器中记住首选项。
 - [DeepseekHarnessPlugins/Notification](https://github.com/DeepseekHarnessPlugins/Notification) — 任务完成通知推送：代理转入空闲、出错或阻塞时，经 macOS 通知中心、Windows Toast 及 Bark、ntfy、Server酱、通用 Webhook 发送系统通知。
 - [dingyi222666/dsh-session-notification](https://github.com/dingyi222666/dsh-session-notification) — 会话完成等四种状态的通知响应，支持浏览器提示。
 - [doncelee229-cmyk/dsh-plugin-approval-alert](https://github.com/doncelee229-cmyk/dsh-plugin-approval-alert) — 审批与选择方案的系统级桌面通知：通知显示所属工作区、点击跳转到对应工作区，多语言（简中/繁中/英文），附提示音。
