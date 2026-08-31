@@ -2734,6 +2734,7 @@ dsh plugin --profile web add dshmarket
 - [zhaenggg/dsh-ssh-remote](https://github.com/zhaenggg/dsh-ssh-remote) — SSH 远程执行插件集：把会话工作区指向 ssh:// 目录，文件读写、命令与 shell 全部在远程主机上执行。
 - [zhu1090093659/dsh-web-ui#packages/dsh-ssh](https://github.com/zhu1090093659/dsh-web-ui/tree/main/packages/dsh-ssh) — SSH 远程运维面板：Web 终端、SFTP 传输、本地端口转发与一条命令并发集群执行，Agent 与面板共用同一份主机配置。
 - [zhu1090093659/dsh-web#packages/dsh-remote-web-ui](https://github.com/zhu1090093659/dsh-web/tree/main/packages/dsh-remote-web-ui) — 手机/PC 远程操控 dsh web 工作区：扫码配对、令牌门控通道、SSE 实时同步，提供移动端与完整桌面 GUI 两种远程形态。
+- [ZSeven-W/dsh-android](https://github.com/ZSeven-W/dsh-android) — 在对话里直接操作 Android 设备——模拟器或 USB 手机，完全通过 adb 驱动：20 个 Agent 工具用于流式投屏、Gradle 构建运行、UI 树或 OCR 交互、logcat、进程与内存检查，并附带三键导航面板。
 - [zylzyqzz/dsh-mobile-pwa](https://github.com/zylzyqzz/dsh-mobile-pwa) — 基于 dsh-mobile-gate 的完整移动端 PWA：安全远程访问网关 + 可安装到主屏（manifest + service worker）+ 离线可用 + 触屏手势（下拉刷新/边缘返弹/捏合缩放字体）+ agent 完成推送 + 触屏优先布局，桌面零影响。
 
 ### 🛒 插件市场与管理
