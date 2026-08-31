@@ -1937,6 +1937,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [kobenfang/BigLead](https://github.com/kobenfang/BigLead) - B2B lead generation skill: search target companies by industry/product/region, cross-validate and extract contacts.
 - [kobenfang/BigPlan](https://github.com/kobenfang/BigPlan) - Product research skill: analyze market, technology and supply chain, then output three-tier product spec proposals.
 - [kobenfang/BigSeedSkill](https://github.com/kobenfang/BigSeedSkill) - Life-story skill: capture moments and fragments, build a user profile and generate novels, scripts or autobiographies.
+- [kobenfang/BigTimer](https://github.com/kobenfang/BigTimer) - Scheduled tasks and message push manager: cron scheduling with auto push to Feishu and multi-channel, dual-env (OpenClaw/DSH).
 - [kobenfang/Eyes](https://github.com/kobenfang/Eyes) - Global news monitoring skill: track world events and analyze impact across industries, currencies and commodities.
 - [kobenfang/FruitPi](https://github.com/kobenfang/FruitPi) - Fruit price tracking skill: collect and query global wholesale fruit prices with RMB/kg conversion.
 - [kobenfang/ListForm](https://github.com/kobenfang/ListForm) - Smart form skill: structured record-keeping for bills, ledgers and logs with auto-categorization and periodic reports.
