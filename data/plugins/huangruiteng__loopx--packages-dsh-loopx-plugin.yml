@@ -1,0 +1,7 @@
+url: https://github.com/huangruiteng/loopx/tree/main/packages/dsh-loopx-plugin
+name: huangruiteng/loopx#dsh-loopx-plugin
+category: workflow
+description:
+  en: 'LoopX integration that bootstraps the CLI and skills, continues admitted same-session work, and adds a local GoalBar for bound Goal and Todo status.'
+  zh: 'LoopX 集成：引导安装 CLI 与技能，续跑已准入的同会话任务，并为已绑定的 Goal 与 Todo 状态提供本地 GoalBar。'
+tarball: https://github.com/huangruiteng/loopx/releases/download/dsh-loopx-plugin-v0.1.1-beta.3/dsh-loopx-plugin-0.1.1-beta.3.tgz
