@@ -2011,6 +2011,7 @@ dsh plugin --profile web add dshmarket
 - [alpacachen/dsh-kanban](https://github.com/alpacachen/dsh-kanban) — 一个由用户与 DSH Agent 共同维护的工作区看板，通过看板标签页和 kanban 工具管理任务。
 - [apheli0os/deepseek-harness-orchestrate](https://github.com/apheli0os/deepseek-harness-orchestrate) — DSH 声明式任务 DAG 编排：校验依赖图，通过工作流子智能体并行执行拓扑任务层，并确定性传播失败。
 - [Asif2BD/JARVIS-Mission-Control-DeepSeek#dsh-plugin-mission-control](https://github.com/Asif2BD/JARVIS-Mission-Control-DeepSeek/tree/main/integrations/deepseek-harness/dsh-plugin-mission-control) — 把 DeepSeek Harness 的会话、消息、工具活动与每轮结果实时推送到 JARVIS Mission Control 看板，附任务状态与人工复核。
+- [baosfeng/my-dsh-plugins#dsh-task-reliability](https://github.com/baosfeng/my-dsh-plugins/tree/main/plugins/dsh-task-reliability) — 任务可靠性：模型超时/请求失败自动重试、任务未完成自动继续、独立完成度校验、思考重复检测打断、休眠/重启后任务自动恢复、自主决策模式、远程触发接口（npm: `dsh-task-reliability`）。
 - [BillyChen123/qdd](https://github.com/BillyChen123/qdd) — 面向 DeepSeek Harness 的 Question-Driven Discovery 科研工作流，提供 QDD Agent Preset、持久化 Human 和 Auto 运行，以及可审计的研究面板。
 - [biociao/dsh-science](https://github.com/biociao/dsh-science) — 面向 DSH 的 Claude Science 式科研工作台：ReAct 研究循环引擎（research_* 工具）、带溯源的版本化工件（artifact_* 工具）与面向基因组/病原体/生物信息的 10 个科研技能。
 - [bpc-oss/dsh-verification#dsh-verification](https://github.com/bpc-oss/dsh-verification/tree/main/packages/dsh-verification) — DSH agent 完成验证闸门：每条验收标准必须有服务端标记的真实工具证据才能完成（advisory 审计 / enforce 拦截 / 持久 permit）。
@@ -2247,6 +2248,7 @@ dsh plugin --profile web add dshmarket
 - [andyfan1094/dsh-feishu](https://github.com/andyfan1094/dsh-feishu) — 接入飞书自建应用，把每个飞书会话映射到独立的 DSH Agent，经卡片 JSON 2.0 流式回复，不可用时回退纯文本。
 - [aokamoaki/dsh-notify](https://github.com/aokamoaki/dsh-notify) — 对话完成通知：回合完成/出错/目标完成/提问/审批时弹出 Windows toast 与提示音，仅后台提醒，会话头部铃铛即控制中心。
 - [baisama-cloud/dsh-omni-bridge](https://github.com/baisama-cloud/dsh-omni-bridge) — 多通道消息桥接插件：将微信 ClawBot / QQ / 飞书的消息接入 DSH agent，并把回复回传给发送者，按通道独立会话、回复去重。
+- [baosfeng/my-dsh-plugins#dsh-notify](https://github.com/baosfeng/my-dsh-plugins/tree/main/plugins/dsh-notify) — 会话（本轮）结束 / agent 询问 / 等待审批时弹浏览器通知 + 滴声，点击通知跳转会话；预留远程触发接口与 SSE 实时通道（npm: `bsfeng-dsh-notify`）。
 - [BiBoyang/dsh-im-bridge](https://github.com/BiBoyang/dsh-im-bridge) — 微信（iLink）双向桥：turn 完成/批准请求推送、聊天内批准与消息注入、持久去重与长回复收敛分段；通道层为多 IM 预留。
 - [bill9109/dsh-web-ui-notify](https://github.com/bill9109/dsh-web-ui-notify) — 桌面通知提醒。
 - [bill9109/dsh-webbridge](https://github.com/bill9109/dsh-webbridge) — DSH 结合 Kimi WebBridge。
@@ -2378,6 +2380,7 @@ dsh plugin --profile web add dshmarket
 - [bainianlaoyao/bash-on-windows](https://github.com/bainianlaoyao/bash-on-windows) — 让 Windows 上可用的 bash 工具限制为 Git Bash,并禁用 PowerShell。
 - [baisama-cloud/dsh-conflict-guardian](https://github.com/baisama-cloud/dsh-conflict-guardian) — DSH 启动时扫描加载器中的插件冲突（重复挂载、启动失败、依赖缺失、配置行 id 重复），自动停用或恢复冲突插件，并在 Web 界面弹出冲突报告。
 - [baosfeng/my-dsh-plugins#dsh-file-activity](https://github.com/baosfeng/my-dsh-plugins/tree/main/plugins/dsh-file-activity) — DSH 侧边栏文件活动页签：记录 agent 与侧边栏的文件读取/新增/修改事件（含 bash 命令中隐含的文件操作），按会话隔离、重启后恢复，点击文件浮窗预览（npm: `dsh-file-activity`）。
+- [baosfeng/my-dsh-plugins#dsh-guardian](https://github.com/baosfeng/my-dsh-plugins/tree/main/plugins/dsh-guardian) — 插件治理：新装/更新插件先进候选区，启动完成后热挂载——成功自动转正，失败自动禁用，连续失败冻结，一键安全模式，侧边栏诊断面板（npm: `bsfeng-dsh-guardian`）。
 - [Bcy2020/dsh-cc-ecosystem](https://github.com/Bcy2020/dsh-cc-ecosystem) — 运行时把 Claude Code 全家桶原样加载进 DSH：.claude/ 的技能、斜杠命令、规则、权限（deny/ask/allow）、子代理与 hooks，以及 Claude Code 插件（plugin.json / marketplace / 技能 / 代理 / MCP）——内存 IR 解析层，.claude 始终是唯一事实来源，零回写。六个可安装包：loader、skills、permissions、agents、hooks、mcp。
 - [BiBoyang/dsh-eval-harness](https://github.com/BiBoyang/dsh-eval-harness) — DSH 插件评测框架：YAML 用例驱动真实 headless agent，断言工具调用/参数/返回与 token 用量，baseline 门禁做 CI 回归。
 - [BigBlueBaby/codex2dsh](https://github.com/BigBlueBaby/codex2dsh) — 把 Codex（OpenAI Codex CLI / Desktop）的 MCP 服务器、技能、全局指令、记忆与会话历史迁移进 DeepSeek Harness（DSH），支持可视化面板与命令行，带 dry-run 预览。
