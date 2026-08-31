@@ -1,5 +1,5 @@
-url: https://github.com/SISCHOI/daruma
-name: SISCHOI/daruma
+url: https://github.com/SISCHOI/daruma/tree/main/packages/dsh-daruma
+name: SISCHOI/daruma#dsh-daruma
 category: model
 description:
   en: 'Automatic failover and backup channels for flaky LLM subscriptions: rides after the in-box retry, trips a persistent circuit breaker on repeated 429/5xx or terminal errors, and switches the next request to another channel in your chain, with a web panel to pick the backup manually.'
