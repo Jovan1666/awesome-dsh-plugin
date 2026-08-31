@@ -872,8 +872,8 @@ dsh plugin --profile web add dshmarket
 - [seriousz158/dsh-codex-use#dsh-codex-appserver](https://github.com/seriousz158/dsh-codex-use/tree/main/packages/dsh-codex-appserver) — 通过本机 Codex App Server，将 OpenAI Codex（ChatGPT）作为可选 DSH Provider。
 - [SeverusZh/dsh-plugin-subagent-director](https://github.com/SeverusZh/dsh-plugin-subagent-director) — 子代理 LLM 供应商/模型选择，支持角色模板。
 - [sharewiner/dsh-model-management](https://github.com/sharewiner/dsh-model-management) — 管理 DSH 默认模型、Provider 与模型可见性，并支持可选的 OpenAI Responses 联网搜索。
-- [SISCHOI/daruma](https://github.com/SISCHOI/daruma) — LLM 订阅抽风时的自动故障转移与备用渠道：在内置重试放弃后接管，对连续 429/5xx 或终止性错误跳闸持久化断路器，把下一个请求切到链上的其他渠道，并配有 Web 面板手动挑选备用渠道。
 - [shuind/dsh-codex-harness](https://github.com/shuind/dsh-codex-harness) — 在 DSH 中提供精简的 Codex 编码模式：使用精简的 codex 提示词与原生 Codex 风格工具，并用少量提示词约束抑制 GPT 的过度解释；提示词可自行编辑调整。
+- [SISCHOI/daruma](https://github.com/SISCHOI/daruma) — LLM 订阅抽风时的自动故障转移与备用渠道：在内置重试放弃后接管，对连续 429/5xx 或终止性错误跳闸持久化断路器，把下一个请求切到链上的其他渠道，并配有 Web 面板手动挑选备用渠道。
 - [SnowAmberX/dsh-role-router](https://github.com/SnowAmberX/dsh-role-router) — 按 default、planner 和 subagent 角色将代理请求路由到可配置模型，在计划模式下自动使用 planner，并提供逐角色推理强度与 Web UI 配置。
 - [songoao25/dsh-chatgpt-subscription](https://github.com/songoao25/dsh-chatgpt-subscription) — 通过官方 OAuth 绑定你的 ChatGPT 账号，在 DSH 内直接使用 ChatGPT 模型对话，消耗 Plus/Pro 订阅额度。
 - [SpookySandwich/dsh-plugin-rollout-scout](https://github.com/SpookySandwich/dsh-plugin-rollout-scout) — 检测账号当前被分配到哪个对话模型：并发发起一次性探测会话，按段落开头的写法为流式思维链打分，读起来像旧模型的在数秒内中止。附带离线自检，用同一分类器回放 13 条人工标注的思维链。
