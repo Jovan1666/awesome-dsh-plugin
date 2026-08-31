@@ -903,6 +903,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 ### Identity & Communication
 
 - [AgentConnect/dsh-awiki](https://github.com/AgentConnect/dsh-awiki) - Provides DeepSeek Harness agents with native identities based on the open Agent Network Protocol (ANP), plus identity-based direct, group, mail, and Agent-to-Agent communication.
+- [cayan0x/Lume](https://github.com/cayan0x/Lume) - Named personas with long-term memory and evolving style — switch identities, create new personas through dialogue, and let each persona remember facts across sessions.
 - [chenbin-dev/dsh-auth-everying](https://github.com/chenbin-dev/dsh-auth-everying) - Import local Claude, Codex, Grok, Gemini, Copilot, OpenCode, and CC Switch config into DeepSeek Harness with OAuth login for supported providers.
 - [lw-storm/dsh-plugin-masterprompt](https://github.com/lw-storm/dsh-plugin-masterprompt) - Per-conversation persona / master prompt plugin: create, edit, switch and delete persona templates from the composer toolbar, with highest-priority system-prompt injection, fixed interaction guardrails, subagent inheritance, new-conversation default, and local JSON persistence.
 - [MengYuil/dsh-ponytail](https://github.com/MengYuil/dsh-ponytail) - Port of ponytail: an always-on lazy-senior-developer coding persona with intensity levels, persistence of the default level, and review, audit, debt, gain and help skills for DeepSeek Harness.
