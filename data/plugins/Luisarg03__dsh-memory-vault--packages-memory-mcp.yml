@@ -1,0 +1,5 @@
+url: https://github.com/Luisarg03/dsh-memory-vault/tree/main/packages/memory-mcp
+name: Luisarg03/dsh-memory-vault#memory-mcp
+category: memory
+description:
+  en: 'Bridges the agent to a persistent OKF memory vault over MCP stdio: a Python server (SQLite FTS5 + Markdown) with 10 tools for searching and storing decisions, facts, learnings, conventions, profiles and sources.'

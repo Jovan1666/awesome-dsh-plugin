@@ -1,0 +1,5 @@
+url: https://github.com/Luisarg03/dsh-memory-vault/tree/main/packages/memory-auto
+name: Luisarg03/dsh-memory-vault#memory-auto
+category: memory
+description:
+  en: 'Session-memory autopilot: watches DSH sessions and digests transcripts into the OKF vault at idle, commit and compaction checkpoints, spawning a configurable LLM digest script (uv + opencode CLI).'
