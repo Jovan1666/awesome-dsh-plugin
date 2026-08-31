@@ -3,4 +3,4 @@ name: shuind/dsh-codex-harness
 category: model
 description:
   en: Codex coding preset with customizable prompts and tools for DSH.
-  zh: 为 DSH 提供可自定义提示词与工具的 Codex 编码模式。
+  zh: 使用精简codex提示词；对gpt过度拉屎做了少量提示词约束。
