@@ -1155,6 +1155,7 @@ dsh plugin --profile web add dshmarket
 - [KLRSL/dsh-biomemory](https://github.com/KLRSL/dsh-biomemory) — 为 DeepSeek Harness 打造的生物仿生记忆系统：纯 Markdown 数据层、memory 工具、冻结快照注入、分级审批门、结构化审计、记忆代谢（dream）、记忆钉、语义检索、/memory 命令与跨会话召回。
 - [lanyun077/dsh-project](https://github.com/lanyun077/dsh-project) — 把多个文件夹与会话收纳为「项目」，共享 PROJECT.md 记忆与 AGENTS.md 指令并注入每个会话，附带项目树侧边栏。
 - [lemoncat7/dsh-knowledge](https://github.com/lemoncat7/dsh-knowledge) — 提供本地与远程知识库，支持项目和会话范围检索、可控回写以及内嵌 Web 管理台。
+- [LFM097384/Context-Prism](https://github.com/LFM097384/Context-Prism) — 面向 DeepSeek Harness 的项目级本地上下文引擎：对历史、代码、文件、用户偏好和 Agent 轨迹做检索/压缩/优先级排序，为任意 LLM 生成动态上下文窗口。
 - [lgquan/dsh-workspace-memory](https://github.com/lgquan/dsh-workspace-memory) — 为 DSH 提供工作区隔离的持久化记忆，让每个工作区拥有可检索、可审计、可纠错和可删除的独立记忆，并支持受控的全局记忆。
 - [liangxiaobing520/dsh-local-vector-memory](https://github.com/liangxiaobing520/dsh-local-vector-memory) — DSH 全本地向量记忆:本地 embedding、SQLite 存储、自动召回注入、去重与冲突检测、软删除回收站、在线备份,可选 LLM 提取。
 - [LittleBlackTong/dsh-plugin-memory](https://github.com/LittleBlackTong/dsh-plugin-memory) — 带 LLM Wiki 结构与 SOUL 人格文件的长期 markdown 记忆库：会话启动强制注入 boot 块，含 remember/recall/consolidate/forget 工作流、内嵌 memory 技能、pack/unpack 迁移工具，以及空闲时以第一人称主动追忆（recall nudge）的拟人化能力。
