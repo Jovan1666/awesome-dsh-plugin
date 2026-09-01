@@ -944,7 +944,6 @@ dsh plugin --profile web add dshmarket
 ### 🆔 身份与通信
 
 - [AgentConnect/dsh-awiki](https://github.com/AgentConnect/dsh-awiki) — 为 DeepSeek Harness 智能体提供基于开放协议ANP的原生身份，以及基于该身份的私聊、群聊、邮件和智能体间通信能力。
-- [cayan0x/Lume](https://github.com/cayan0x/Lume) — 具名、带长期记忆与进化风格的人设——切换身份、通过对话创建新人设，并让每个人设跨会话记住事实。
 - [chenbin-dev/dsh-auth-everying](https://github.com/chenbin-dev/dsh-auth-everying) — 把本机的 Claude、Codex、Grok、Gemini、Copilot、OpenCode 与 CC Switch 配置导入 DeepSeek Harness，支持的提供方可直接 OAuth 登录。
 - [Freakz2z/dsh-catgirl-plugin](https://github.com/Freakz2z/dsh-catgirl-plugin) — DeepSeek Harness 的省 token 人格运行时：本地渲染猫娘风味，并支持渐进式工具 schema 披露。
 - [lw-storm/dsh-plugin-masterprompt](https://github.com/lw-storm/dsh-plugin-masterprompt) — 每对话独立的人设 / 主提示词插件：在输入框工具栏创建、编辑、切换和删除人设模板，最高优先级系统提示注入，附带固定交互护栏、子代理继承、新对话默认继承与本地 JSON 持久化。
@@ -1313,6 +1312,7 @@ dsh plugin --profile web add dshmarket
 - [bwndlct/dsh-session-audit](https://github.com/bwndlct/dsh-session-audit) — 会话执行分析：步骤、工具调用、失败、重复动作、token 用量与验证信号，输出 text/Markdown/JSON 报告。
 - [bx33661/dsh-omv](https://github.com/bx33661/dsh-omv) — 面向 DeepSeek Harness 的证据优先漏洞研究工作台：原生审计视图、29 个 OMV 工具、Evidence.v1 Finding、可复现 Run、Campaign 工作流和隔离 PoC 证据。
 - [caoyiwei850/dsh-ssh-ops](https://github.com/caoyiwei850/dsh-ssh-ops) — DSH SSH 运维终端：在主对话中直接指挥已连接的服务器（ssh_connect/ssh_exec/ssh_read/ssh_write/ssh_disconnect），右侧保留可交互的 xterm.js 终端。
+- [cayan0x/Lume](https://github.com/cayan0x/Lume) — DSH Desktop 增强插件：思维逻辑引擎（P0-P3）与人设系统（具名角色、记忆、蒸馏、切换）。
 - [cerebrixos-org/dsh-asimovbox](https://github.com/cerebrixos-org/dsh-asimovbox) — 通过 API 密钥认证的工具将 DeepSeek Harness 连接到 AsimovBox，用于创建、更新、渲染和完成视频。
 - [changingwang/dsh-stage-gate](https://github.com/changingwang/dsh-stage-gate) — 阶段门治理工具：模型可直接调用的 gate_open / gate_check / gate_list / gate_close，为多阶段工作提供内存态、按会话隔离的验收核对与通过/阻塞结论。
 - [Chaos-Hyper/dsh-econ-tools](https://github.com/Chaos-Hyper/dsh-econ-tools) — 计量经济学研究助手：6 个工具覆盖方法选择、数据预处理、模型设定、实证分析（含 Python/R/Stata 代码模板）、稳健性检验与结果报告。
