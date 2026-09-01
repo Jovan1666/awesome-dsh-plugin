@@ -463,6 +463,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [vibeinging/dsh-turn-navigator](https://github.com/vibeinging/dsh-turn-navigator) - Turn navigation for the DSH Web UI.
 - [vlln/dsh-navbar](https://github.com/vlln/dsh-navbar) - Conversation node navigation bar for quick jumps between user messages.
 - [vlln/dsh-task-status](https://github.com/vlln/dsh-task-status) - Background task status bar: progress plus live output tail on the chat page.
+- [vollegrewar/dsh-tool-highlight](https://github.com/vollegrewar/dsh-tool-highlight) - Layered syntax highlighting for bash/pwsh command and read code output in the DSH web GUI (VS Code Dark+ palette: keywords/strings/numbers/functions/comments each get a color); colors only what it recognizes, keeps tables/logs plain; pure frontend, zero token overhead.
 - [vvvspec/better-reasoning-slider](https://github.com/vvvspec/better-reasoning-slider) - Official-style composer model trigger with a floating reasoning-effort slider popup.
 - [w4xxx/dsh-xia-plugins#packages/client-gameassist-knowledge](https://github.com/w4xxx/dsh-xia-plugins/tree/main/packages/client-gameassist-knowledge) - Knowledge-base browser panel: tree browsing plus drag-to-cite (path-only or full content) into the composer.
 - [waknow/dsh-web-icon-indicator](https://github.com/waknow/dsh-web-icon-indicator) - Browser tab favicon mirrors the DSH session state (idle / running / asking / done), recolored and animated from one base SVG entirely in the browser, with colors and effects configurable from the Settings page.
