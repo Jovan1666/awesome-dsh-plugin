@@ -1,5 +1,5 @@
-url: https://github.com/Eternalloveone/dsh-palm
-name: Eternalloveone/dsh-palm
+url: https://github.com/Eternalloveone/dsh-palm/tree/main/packages/dsh-palm
+name: Eternalloveone/dsh-palm#dsh-palm
 category: ui
 description:
   en: "Standalone mobile surface for dsh: scan-to-pair device trust, realtime SSE sync, task plan & background jobs, offline outbox, PWA; a native narrow-screen phone UI, not a desktop adaptation."
