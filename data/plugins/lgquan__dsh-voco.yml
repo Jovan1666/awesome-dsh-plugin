@@ -1,5 +1,5 @@
-url: https://github.com/lgquan/dsh-voco/tree/main/packages/voice-app
-name: lgquan/dsh-voco#voice-app
+url: https://github.com/lgquan/dsh-voco
+name: lgquan/dsh-voco
 category: voice
 description:
   en: Continuous voice conversations for DSH with hands-free listening, push-to-talk, speech recognition, TTS replies, and background Agent delegation.
