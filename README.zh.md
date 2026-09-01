@@ -1452,6 +1452,7 @@ dsh plugin --profile web add dshmarket
 - [ListenJ/axiom-dre-dsh](https://github.com/ListenJ/axiom-dre-dsh) — 为 dsh 提供确定性推理引擎（DRE）：dre__* 工具覆盖知识验证（三段甄别）、确定性认知闭环、约束求解、心智模型与突触记忆，强化信息确定能力。
 - [ListenJ/axiom-kb-dsh](https://github.com/ListenJ/axiom-kb-dsh) — 为 dsh 提供知识库（Vault 记忆 + 知识图谱）：kb__* 工具覆盖确定性记忆检索/写入、知识图谱节点/边/子图/遍历、文档入图谱与跨存储统一查询（KAL），不含联网检索工具。
 - [literaf/dsh-ai4scholar](https://github.com/literaf/dsh-ai4scholar) — AI4Scholar 学术检索：覆盖 Semantic Scholar、PubMed、Google Scholar、arXiv、bioRxiv/medRxiv 与 DOI 解析的 38 个工具（搜索、引用图谱、作者、推荐、PDF 全文分片、自动引用、科研绘图），跨平台去重统一搜索，设置页 API Key 卡片，按次积分统计与 `/ai4scholar` 余额卡。
+- [LittleBeaverStudio/agnes-media](https://github.com/LittleBeaverStudio/agnes-media) — Agnes AI 生图生视频插件。
 - [littleblakew/msds-chain-mcp#dsh](https://github.com/littleblakew/msds-chain-mcp/tree/main/plugins/dsh) — 通过托管的 MSDS Chain MCP 端点接入化学品安全数据：23 个工具覆盖相容性与投料顺序、GHS 危害、PPE、储存、废弃处置、职业接触限值、运输分类、多法域合规、SDS 查询与版本比对、签名审计报告；每条回答都标注其依据的供应商 SDS 与版本日期。
 - [liwuzhan/agent-native-trade#dsh-plugin](https://github.com/liwuzhan/agent-native-trade/tree/main/packages/dsh-plugin) — 为模型原生交易提供目录检索、交易方联络、合同签名、结算协调、人工任务交接和签名评价回执工具。
 - [liwuzhan/cad-tool#dsh-cad-studio](https://github.com/liwuzhan/cad-tool/tree/main/packages/dsh-cad-studio) — 为 DSH 添加参数化 CAD 建模、几何验证、预览、设计历史和 STEP/STL 导出能力。
