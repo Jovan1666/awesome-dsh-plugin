@@ -1586,6 +1586,7 @@ dsh plugin --profile web add dshmarket
 - [wjt0321/dsh-git-proxy](https://github.com/wjt0321/dsh-git-proxy) — Web UI 按需 GitHub 代理：一键开关 git/SSH 代理并测试连通性。
 - [wly8691-jpg/dsh-office-com](https://github.com/wly8691-jpg/dsh-office-com) — COM 驱动真实 Microsoft Office 实例的 DeepSeek Harness 插件：经 OfficeMCP 操作运行中的 Excel/Word——VBA 宏、透视表、活公式重算、文档深度排版；含会计场景（复式记账分录 + 借贷平衡校验、SUMIF 科目总账）。
 - [wly8691-jpg/knowlp-rag](https://github.com/wly8691-jpg/knowlp-rag) — Markdown 笔记的双知识图谱 RAG，带半衰期记忆衰减：前置依赖 + 相似关联双图（P/S-Agent 遍历）、段落级匹配、ngram/embedding 混合检索、显式权重反馈闭环——原生 Cordis 插件，npm 包 @eqman00003/knowlp-rag。
+- [WODE25500/dsh-lan-share](https://github.com/WODE25500/dsh-lan-share) — 通过浏览器把 DSH 工作区分享到局域网：手机、平板、其它电脑可浏览、下载、上传文件，无需 DSH 登录。带令牌门卫、路径边界、只读模式与速率限制，零依赖(node:http)。
 - [wodongx123/dsh-language-control](https://github.com/wodongx123/dsh-language-control) — 让 Agent 的思考过程也自动使用中文。在每步推理前向 System Prompt 最顶部注入语言约束，强制思维链、规划、工具调用推理全部使用中文，防止工具返回英文内容后发生语言漂移。支持在设置面板中实时编辑约束文本。
 - [wulun811/LiuHe#bundle](https://github.com/wulun811/LiuHe/tree/master/malong/dsh/bundle) — 将 LiuHe MCP 代码工具集（44 个工具）桥接进 dsh web：repo_map、符号搜索、带容错匹配的 edit_batch、带撤销日志的事务性编辑，以及确定性质量门禁——由崩溃隔离的 Rust tree-sitter 解析守护进程和 SQLite 索引支撑。
 - [wxkingstar/SpecFusion](https://github.com/wxkingstar/SpecFusion) — 通过五个只读工具和一个运行时 Skill，搜索 20 个中国开放平台的 65,600+ 篇 API 文档。
@@ -2579,8 +2580,10 @@ dsh plugin --profile web add dshmarket
 - [WODE25500/dsh-codex](https://github.com/WODE25500/dsh-codex) — OpenAI Codex CLI 封装：一次性任务、仓库审查与会话续接，默认只读沙箱。
 - [WODE25500/dsh-k6](https://github.com/WODE25500/dsh-k6) — Grafana k6 压测：先冒烟再跑脚本，从 JSON 汇总读百分位数。
 - [WODE25500/dsh-kubectl](https://github.com/WODE25500/dsh-kubectl) — Kubernetes 运维：JSON 结构化查资源、describe、日志、exec、apply/delete（需确认）与端口转发。
+- [WODE25500/dsh-maf](https://github.com/WODE25500/dsh-maf) — DeepSeek Harness 的 Microsoft Agent Framework (MAF) 插件：验证、运行、搭建 declarative agents 与 workflows(YAML)。
 - [WODE25500/dsh-terraform](https://github.com/WODE25500/dsh-terraform) — 基础设施即代码：plan/apply 门控、state/output 检查与配置校验。
 - [WODE25500/dsh-winget](https://github.com/WODE25500/dsh-winget) — Windows 包管理器：搜索、安装、升级、卸载、导入导出与版本固定。
+- [WODE25500/dsh-wsl](https://github.com/WODE25500/dsh-wsl) — DeepSeek Harness 的 WSL(Windows Subsystem for Linux)桥接：跑 Linux 命令、管理发行版、路径转换与跨系统复制。
 - [worksAssistant/dsh-quickref](https://github.com/worksAssistant/dsh-quickref) — 开发者速查工具箱：12 个主题 195 条速查 + 6 个零依赖工具（正则实时测试、JSON 格式化、时间戳转换、Base64/URL 编解码、Cron 生成、行 diff），设置页可搜索查阅。
 - [x2802490130-prog/dsh-guard](https://github.com/x2802490130-prog/dsh-guard) — 开发配套守护：滚动快照、插件失败自动回退、启动失败救援、设置页管理面板。
 - [x2802490130-prog/dsh-shield](https://github.com/x2802490130-prog/dsh-shield) — 脱手模式安全网：agent 删除的目录先进回收站、链接绝不跟随，零审批。
