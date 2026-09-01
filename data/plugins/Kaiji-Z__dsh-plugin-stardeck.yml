@@ -1,5 +1,5 @@
-url: https://github.com/Kaiji-Z/dsh-plugin-warroom
-name: Kaiji-Z/dsh-plugin-warroom
+url: https://github.com/Kaiji-Z/dsh-plugin-stardeck
+name: Kaiji-Z/dsh-plugin-stardeck
 category: workflow
 description:
   en: 'An RTS-style orchestration dashboard where commands replace chats: a resident commander agent decomposes each order into task briefs with acceptance criteria, typed subagent troops (recon/engineer/medic/scribe) execute them across isolated workspaces, and every session is indexed by the order that started it.'
