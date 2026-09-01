@@ -1643,6 +1643,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [173787247/dsh-wsl-notify](https://github.com/173787247/dsh-wsl-notify) - Shows a Windows MessageBox when a long WSL task finishes.
 - [173787247/dsh-wsl-open](https://github.com/173787247/dsh-wsl-open) - Opens WSL Linux paths from DeepSeek Harness chat in the Windows default app or Explorer.
 - [173787247/dsh-wsl-path](https://github.com/173787247/dsh-wsl-path) - Converts Linux and Windows paths with /mnt/c caveats for WSL.
+- [173787247/dsh-wsl-picker](https://github.com/173787247/dsh-wsl-picker) - Browses WSL directories under / and /mnt for workspace picking.
 - [173787247/dsh-wsl-port](https://github.com/173787247/dsh-wsl-port) - Diagnoses WSL port listening and Windows localhost forwarding.
 - [173787247/dsh-wsl-workspace](https://github.com/173787247/dsh-wsl-workspace) - Lists WSL distros and validates a Linux workspace path for DSH.
 - [6Mikao9/dsh-wsl-workspace](https://github.com/6Mikao9/dsh-wsl-workspace) - Add a WSL workspace from the web GUI without needing to install dsh or related tools again inside WSL. Bash commands and file read/write operations run within the local WSL distribution on the host machine, while Windows files remain accessible.
