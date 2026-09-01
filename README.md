@@ -899,6 +899,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [omdsh-dev/Qwen-MM-Plugins](https://github.com/omdsh-dev/Qwen-MM-Plugins) - Qwen multi-modal plugin support.
 - [OPaimon/dsh-model-gate](https://github.com/OPaimon/dsh-model-gate) - Single-model disable gate: hides denied models from DSH catalogs, blocks direct dispatch with an in-protocol error chunk, and exposes a settings UI for the denylist.
 - [OpenTritium/dsh-codex-shim](https://github.com/OpenTritium/dsh-codex-shim) - Simulates a Codex environment for selected model routes to improve GPT-family model tool-call success.
+- [oppnc/dsh-kernel-mesh](https://github.com/oppnc/dsh-kernel-mesh) - Registers Kimi, Grok, Codex, and MiniMax as DeepSeek Harness model routes, vendor subagent recipes, and kernel_status / kernel_run / kernel_switch tools.
 - [passingby000/dsh-nl-model-switch](https://github.com/passingby000/dsh-nl-model-switch) - Switch the current DSH session's model with a natural-language sentence, on web, TUI, or IM bridges (WeChat, Feishu), without touching the panel.
 - [penguin-oo/dsh-delegate-router](https://github.com/penguin-oo/dsh-delegate-router) - Automatic Flash/Pro routing for DeepSeek Harness subagent calls: light tasks run on a cheap model (e.g. V4 Flash), heavy tasks stay on the strong model — with per-call overrides and /delegate session modes.
 - [PerryLink/dsh-local-ai](https://github.com/PerryLink/dsh-local-ai) - Ollama provider for DeepSeek Harness with model management, health checks, rule-based local routing, and cloud fallback.
