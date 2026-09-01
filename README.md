@@ -1681,6 +1681,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [6Mikao9/dsh-wsl-workspace](https://github.com/6Mikao9/dsh-wsl-workspace) - Add a WSL workspace from the web GUI without needing to install dsh or related tools again inside WSL. Bash commands and file read/write operations run within the local WSL distribution on the host machine, while Windows files remain accessible.
 - [jack-ranbo/dsh-wsl-expose](https://github.com/jack-ranbo/dsh-wsl-expose) - Expose the DSH Web GUI over IPv6 or IPv4 from WSL2 through a reverse proxy (Lucky): /wan up sets up the socat relay, Windows portproxy, firewall, and trusted-host fence, with a Settings card plus commands to configure the domain and ports.
 - [liyu34/dsh-wsl-tray](https://github.com/liyu34/dsh-wsl-tray) - Windows desktop shortcut and system-tray launcher for DSH running in WSL, with fully hidden startup, tray open/restart/exit menu, and a plugin-configuration card to manage the shortcut.
+- [lucifergzsz414/dsh-windows-native](https://github.com/lucifergzsz414/dsh-windows-native) - Injects native-Windows (non-WSL) PowerShell, encoding, filesystem, and cross-platform-build gotchas into the system prompt.
 - [WilliamShi666/dsh-wsl-workspace-picker](https://github.com/WilliamShi666/dsh-wsl-workspace-picker) - Enhanced workspace directory browser for the web UI: one-click access to /mnt Windows drives under WSL, full breadcrumb ancestry and an always-visible path input.
 
 ### Browser & Web
