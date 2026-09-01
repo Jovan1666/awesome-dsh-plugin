@@ -1645,6 +1645,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [173787247/dsh-wsl-path](https://github.com/173787247/dsh-wsl-path) - Converts Linux and Windows paths with /mnt/c caveats for WSL.
 - [173787247/dsh-wsl-picker](https://github.com/173787247/dsh-wsl-picker) - Browses WSL directories under / and /mnt for workspace picking.
 - [173787247/dsh-wsl-port](https://github.com/173787247/dsh-wsl-port) - Diagnoses WSL port listening and Windows localhost forwarding.
+- [173787247/dsh-wsl-tray](https://github.com/173787247/dsh-wsl-tray) - Writes a Windows shortcut and script to start dsh web inside WSL.
 - [173787247/dsh-wsl-workspace](https://github.com/173787247/dsh-wsl-workspace) - Lists WSL distros and validates a Linux workspace path for DSH.
 - [6Mikao9/dsh-wsl-workspace](https://github.com/6Mikao9/dsh-wsl-workspace) - Add a WSL workspace from the web GUI without needing to install dsh or related tools again inside WSL. Bash commands and file read/write operations run within the local WSL distribution on the host machine, while Windows files remain accessible.
 - [jack-ranbo/dsh-wsl-expose](https://github.com/jack-ranbo/dsh-wsl-expose) - Expose the DSH Web GUI over IPv6 or IPv4 from WSL2 through a reverse proxy (Lucky): /wan up sets up the socat relay, Windows portproxy, firewall, and trusted-host fence, with a Settings card plus commands to configure the domain and ports.

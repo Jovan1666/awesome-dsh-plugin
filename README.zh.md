@@ -1645,6 +1645,7 @@ dsh plugin --profile web add dshmarket
 - [173787247/dsh-wsl-path](https://github.com/173787247/dsh-wsl-path) — 在 WSL 下转换 Linux 与 Windows 路径，并说明 /mnt/c 注意点。
 - [173787247/dsh-wsl-picker](https://github.com/173787247/dsh-wsl-picker) — 浏览 / 与 /mnt 下的 WSL 目录，便于挑选工作区。
 - [173787247/dsh-wsl-port](https://github.com/173787247/dsh-wsl-port) — 诊断 WSL 端口监听与 Windows localhost 转发。
+- [173787247/dsh-wsl-tray](https://github.com/173787247/dsh-wsl-tray) — 生成 Windows 快捷方式与脚本，用于在 WSL 中启动 dsh web。
 - [173787247/dsh-wsl-workspace](https://github.com/173787247/dsh-wsl-workspace) — 列出 WSL 发行版并校验可用于 DSH 的 Linux 工作区路径。
 - [6Mikao9/dsh-wsl-workspace](https://github.com/6Mikao9/dsh-wsl-workspace) — 从 Web GUI 添加 WSL 工作区，无需在 WSL 之中再次安装 dsh 以及相关工具，bash 命令与文件读写运行在本机 WSL 发行版内，Windows 文件仍可访问。
 - [jack-ranbo/dsh-wsl-expose](https://github.com/jack-ranbo/dsh-wsl-expose) — 从 WSL2 走 IPv6/IPv4 经反向代理（Lucky）把 DSH Web GUI 暴露到公网：/wan up 一键建立 socat 中继、Windows portproxy、防火墙与 trusted-host 白名单；域名与端口可在设置卡片或命令中配置。
