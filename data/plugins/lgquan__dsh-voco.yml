@@ -1,6 +1,5 @@
 url: https://github.com/lgquan/dsh-voco
 name: lgquan/dsh-voco
-npm: '@flowingspring/dsh-voco'
 category: voice
 description:
   en: Continuous voice conversations for DSH with hands-free listening, push-to-talk, speech recognition, TTS replies, and background Agent delegation.
