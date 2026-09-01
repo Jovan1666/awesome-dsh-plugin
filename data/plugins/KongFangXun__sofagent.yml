@@ -1,1 +1,6 @@
-@/tmp/adp-plugin.yml
+url: https://github.com/KongFangXun/sofagent
+name: KongFangXun/sofagent
+category: security
+description:
+  en: 'Commit-time audit harness for AI coding agents: 24 git-diff rules (secrets, out-of-scope edits, prompt injection), HMAC-signed audit trail, snapshot rollback, and an MCP server with 79 tools. Ships as 9 Cordis plugins installable via dsh plugin add.'
+  zh: '面向 AI 编程 agent 的提交时审计 harness——24 条 git diff 规则（密钥泄漏、越界改动、提示注入）、HMAC 签名审计链、快照回滚、79 工具 MCP server；以 9 个 Cordis 插件形态发布，dsh plugin add 即装。'
