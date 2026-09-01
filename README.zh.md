@@ -500,6 +500,7 @@ dsh plugin --profile web add dshmarket
 - [xiaoshihou514/dsh-tui](https://github.com/xiaoshihou514/dsh-tui) — 干净简单的终端交互式界面。
 - [xiaosurongjia/dsh-improved-inline-edit](https://github.com/xiaosurongjia/dsh-improved-inline-edit) — 为 DeepSeek Harness Web 提供运行中修改要求输入条：agent 工作时在 composer 上方弹出输入框，通过 agent.steer() 将修改要求注入下一步决策而无需停止对话；输入草稿按会话持久化，消息气泡旁可撤回未被读取的注入，支持可选注入引导前缀。
 - [xiaoyangcheng84-svg/dsh-skin-manager](https://github.com/xiaoyangcheng84-svg/dsh-skin-manager) — DSH Web GUI 皮肤管理器：自动发现已安装皮肤，在独立设置页一键互斥切换，热载入无需重启。
+- [xiaoyi-xx/dsh-peak-status](https://github.com/xiaoyi-xx/dsh-peak-status) — DSH Web GUI 会话头部高峰指示灯，实时显示当前北京时间是否处于 DeepSeek API 高峰时段，附实时时钟与下一转折倒计时。
 - [xiaoyuer3921/dsh-showreel](https://github.com/xiaoyuer3921/dsh-showreel) — 把最近一次已完成的 DSH 任务生成为可分享的竖屏战报视频：五幕可编辑故事板、Host 侧脱敏、可选 AI 润色与配音，导出 MP4/WebM 和 PNG 封面。
 - [XiLuovo/dsh-session-timeline](https://github.com/XiLuovo/dsh-session-timeline) — 会话左侧的短横线时间轴：整个会话的用户消息一览、当前消息定位、悬停预览消息与回复、点击跳转，可收起展开。
 - [xing-shuyin/dsh-ui-tools](https://github.com/xing-shuyin/dsh-ui-tools) — dsh Web UI 开发者工具面板：文件浏览/预览/编辑与路径式文件提及、多终端（快捷命令）、Git 面板（提交/推送/拉取/分支）与后台任务管理。UI 移植自 pi-web-ui。
