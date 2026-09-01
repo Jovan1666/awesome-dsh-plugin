@@ -294,6 +294,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [lcthe/dsh-timeline-rail](https://github.com/lcthe/dsh-timeline-rail) - Message timeline rail for DeepSeek Harness web chat: evenly spaced ticks for each user message on the right edge, click to jump, hover to preview.
 - [lee259/dsh-workbench](https://github.com/lee259/dsh-workbench) - A right-side file workspace for DeepSeek Harness Web with source previews, captured DSH diffs, tabs, and a workspace tree.
 - [LeemanCheung/dsh-whale-animation](https://github.com/LeemanCheung/dsh-whale-animation) - A 60-frame theme-aware monochrome whale-dive animation with reactive water for the DSH Web turn status: embedded assets, seamless closed-loop playback, a reduced-motion PNG fallback, and lifecycle-clean removal.
+- [left0ver/dsh-file-review](https://github.com/left0ver/dsh-file-review) - Review agent file changes in a Diff panel, add comments for follow-up edits, and undo edited or newly created files.
 - [lemonorangeapple/dsh-effort-switcher](https://github.com/lemonorangeapple/dsh-effort-switcher) - A Codex-like effort switcher for Deepseek Harness.
 - [LHF198/dsh-prompt-optimizer](https://github.com/LHF198/dsh-prompt-optimizer) - Improve the current chat draft before sending with a confirm-before-apply comparison.
 - [liguobao/dsh-file-viewer](https://github.com/liguobao/dsh-file-viewer) - Read-only Web client file-preview panel with image, PDF, CSV/TSV, text, source-code, Markdown, JSON and YAML renderers, large-file range loading, and a provider API for non-local content.
