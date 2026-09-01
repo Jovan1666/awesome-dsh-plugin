@@ -1268,8 +1268,6 @@ dsh plugin --profile web add dshmarket
 
 ### 🛠️ 工具与能力
 
-- [LittleBeaverStudio/agnes-media](https://github.com/LittleBeaverStudio/agnes-media) — Agnes AI 生图生视频插件：文生图 (agnes-image-2.1-flash)、文生视频 (agnes-video-2.5-flash)、图生视频（单图/多图参考，最多 5 张）、429 限流重试、国内直连 apihub.agnes-ai.cn | `dsh plugin --profile web add github:LittleBeaverStudio/agnes-media`
-
 - [0xRabit/dsh-crypto-portfolio](https://github.com/0xRabit/dsh-crypto-portfolio) — 加密货币组合追踪器：BTC / EVM（DeBank 免费+付费双源）/ Solana / Hyperliquid L1 / CEX 余额，多 API 源自动切换、多 Profile 配置、每日定时刷新与趋势图（自带 Web 仪表盘）。
 - [1321928757/dsh-mysql](https://github.com/1321928757/dsh-mysql) — DeepSeek Harness 的 MySQL 连接插件：在设置页配置多套连接（每连接可配表白名单与写权限），输入栏一键切换当前会话的连接，并为所有 Agent 预设提供 mysql_query / mysql_tables / mysql_execute 工具。
 - [1na-ko/dsh-hdc-bridge](https://github.com/1na-ko/dsh-hdc-bridge) — 鸿蒙设备桥：hdc 截图/装包/日志/崩溃/UI 自动化闭环（配 read_image 看图），官方优先版本化 API 知识层（SDK .d.ts + 离线随包文档），以及 DevEco CLI 构建/签名/lint 通道。
@@ -1447,6 +1445,7 @@ dsh plugin --profile web add dshmarket
 - [ListenJ/axiom-dre-dsh](https://github.com/ListenJ/axiom-dre-dsh) — 为 dsh 提供确定性推理引擎（DRE）：dre__* 工具覆盖知识验证（三段甄别）、确定性认知闭环、约束求解、心智模型与突触记忆，强化信息确定能力。
 - [ListenJ/axiom-kb-dsh](https://github.com/ListenJ/axiom-kb-dsh) — 为 dsh 提供知识库（Vault 记忆 + 知识图谱）：kb__* 工具覆盖确定性记忆检索/写入、知识图谱节点/边/子图/遍历、文档入图谱与跨存储统一查询（KAL），不含联网检索工具。
 - [literaf/dsh-ai4scholar](https://github.com/literaf/dsh-ai4scholar) — AI4Scholar 学术检索：覆盖 Semantic Scholar、PubMed、Google Scholar、arXiv、bioRxiv/medRxiv 与 DOI 解析的 38 个工具（搜索、引用图谱、作者、推荐、PDF 全文分片、自动引用、科研绘图），跨平台去重统一搜索，设置页 API Key 卡片，按次积分统计与 `/ai4scholar` 余额卡。
+- [LittleBeaverStudio/agnes-media](https://github.com/LittleBeaverStudio/agnes-media) — Agnes AI 生图生视频插件。
 - [littleblakew/msds-chain-mcp#dsh](https://github.com/littleblakew/msds-chain-mcp/tree/main/plugins/dsh) — 通过托管的 MSDS Chain MCP 端点接入化学品安全数据：23 个工具覆盖相容性与投料顺序、GHS 危害、PPE、储存、废弃处置、职业接触限值、运输分类、多法域合规、SDS 查询与版本比对、签名审计报告；每条回答都标注其依据的供应商 SDS 与版本日期。
 - [liwuzhan/agent-native-trade#dsh-plugin](https://github.com/liwuzhan/agent-native-trade/tree/main/packages/dsh-plugin) — 为模型原生交易提供目录检索、交易方联络、合同签名、结算协调、人工任务交接和签名评价回执工具。
 - [liwuzhan/cad-tool#dsh-cad-studio](https://github.com/liwuzhan/cad-tool/tree/main/packages/dsh-cad-studio) — 为 DSH 添加参数化 CAD 建模、几何验证、预览、设计历史和 STEP/STL 导出能力。
