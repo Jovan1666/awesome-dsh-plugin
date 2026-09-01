@@ -1268,6 +1268,18 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 
 ### Tools & Capabilities
 
+- [LittleBeaverStudio/agnes-media](https://github.com/LittleBeaverStudio/agnes-media) — Agnes AI image and video generation plugin: text-to-image (agnes-image-2.1-flash), text-to-video (agnes-video-2.5-flash), image-to-video (single/multi reference, max 5 images), 429 retry, domestic endpoint apihub.agnes-ai.cn | `dsh plugin --profile web add github:LittleBeaverStudio/agnes-media`
+
+- [LittleBeaverStudio/agnes-media](https://github.com/LittleBeaverStudio/agnes-media) — Agnes AI image and video generation plugin: text-to-image (agnes-image-2.1-flash), text-to-video (agnes-video-2.5-flash), image-to-video (single/multi reference, max 5 images), 429 retry, domestic endpoint apihub.agnes-ai.cn | `dsh plugin --profile web add github:LittleBeaverStudio/agnes-media`
+
+- [LittleBeaverStudio/agnes-media](https://github.com/LittleBeaverStudio/agnes-media) — Agnes AI image and video generation plugin: text-to-image (agnes-image-2.1-flash), text-to-video (agnes-video-2.5-flash), image-to-video (single/multi reference, max 5 images), 429 retry, domestic endpoint apihub.agnes-ai.cn | `dsh plugin --profile web add github:LittleBeaverStudio/agnes-media`
+
+- [LittleBeaverStudio/agnes-media](https://github.com/LittleBeaverStudio/agnes-media) — Agnes AI image and video generation plugin: text-to-image (agnes-image-2.1-flash), text-to-video (agnes-video-2.5-flash), image-to-video (single/multi reference, max 5 images), 429 retry, domestic endpoint apihub.agnes-ai.cn | `dsh plugin --profile web add github:LittleBeaverStudio/agnes-media`
+
+- [LittleBeaverStudio/agnes-media](https://github.com/LittleBeaverStudio/agnes-media) — Agnes AI image and video generation plugin: text-to-image (agnes-image-2.1-flash), text-to-video (agnes-video-2.5-flash), image-to-video (single/multi reference, max 5 images), 429 retry, domestic endpoint apihub.agnes-ai.cn | `dsh plugin --profile web add github:LittleBeaverStudio/agnes-media`
+
+- [LittleBeaverStudio/agnes-media](https://github.com/LittleBeaverStudio/agnes-media) — Agnes AI image and video generation plugin: text-to-image (agnes-image-2.1-flash), text-to-video (agnes-video-2.5-flash), image-to-video (single/multi reference, max 5 images), 429 retry, domestic endpoint apihub.agnes-ai.cn | `dsh plugin --profile web add github:LittleBeaverStudio/agnes-media`
+
 - [0xRabit/dsh-crypto-portfolio](https://github.com/0xRabit/dsh-crypto-portfolio) - Crypto portfolio tracker for DSH: BTC / EVM (DeBank free+paid) / Solana / Hyperliquid L1 / CEX balances with multi-provider API failover, per-profile configs, scheduled daily refresh and trend charts (self-contained web dashboard).
 - [1321928757/dsh-mysql](https://github.com/1321928757/dsh-mysql) - MySQL connector for DeepSeek Harness: configure multiple connections in the settings page with per-connection table allowlist and write permission, switch the active connection from the composer, and expose mysql_query / mysql_tables / mysql_execute tools to every agent preset.
 - [1na-ko/dsh-hdc-bridge](https://github.com/1na-ko/dsh-hdc-bridge) - HarmonyOS device bridge: hdc screenshot/install/log/crash/UI automation loop with read_image, official-first versioned API knowledge (SDK .d.ts + offline bundled docs), and a DevEco CLI build/sign/lint lane.
