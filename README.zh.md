@@ -2760,6 +2760,7 @@ dsh plugin --profile web add dshmarket
 - [wikkd/dsh-remote-access-web#remote-access-web](https://github.com/wikkd/dsh-remote-access-web/tree/main/packages/bundle/remote-access-web) — DSH Web GUI 反向隧道：通过 frp 把 `dsh --profile web` 发布到公网地址，目录选择器改用应用内浏览器，手机或远程机器可直接打开并管理工作区。
 - [wingsky-1/dsh-plugin-hub#packages/dsh-lan-proxy](https://github.com/wingsky-1/dsh-plugin-hub/tree/main/packages/dsh-lan-proxy) — 局域网访问 dsh web UI：在 0.0.0.0 监听并把 HTTP/HTTPS 与 WebSocket/wss 转发到回环 web 服务器，带 DNS 重绑定防护与回环-only 上游白名单。
 - [WODE25500/dsh-ssh-pro](https://github.com/WODE25500/dsh-ssh-pro) — SSH 增强运维：连接测试、远程目录、ssh-config 导入、指纹检查与多主机批量执行。
+- [xchannel1987/dsh-mobile-xc](https://github.com/xchannel1987/dsh-mobile-xc) — DSH 移动端 UI 适配插件 - Overlay 抽屉导航、玻璃卡片设计、Safe Area 全覆盖、PWA 支持。
 - [xchannel1987/dsh-reverse-proxy-xc](https://github.com/xchannel1987/dsh-reverse-proxy-xc) — DSH 局域网反向代理插件 - 让手机/平板访问 DSH 获得完整功能，修复反代访问时设置面板无法打开的问题。
 - [yabolee-kkk/dsh-streaming-mcp-bridge](https://github.com/yabolee-kkk/dsh-streaming-mcp-bridge) — DeepSeek Harness 流式 MCP 桥接：将实时会话事件作为 MCP 进度输出，并提供 cc-connect/飞书 ACP 适配器。
 - [yuunnn/dsh-on-imessage](https://github.com/yuunnn/dsh-on-imessage) — 在 iPhone 信息里直接和本机 DeepSeek Harness（dsh）对话：切换工作区/会话、开新会话、原生信息气泡回复，无需额外 App、服务器或云服务。
