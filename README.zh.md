@@ -1813,7 +1813,18 @@ dsh plugin --profile web add dshmarket
 - [777-Zen/dsh-capability-index](https://github.com/777-Zen/dsh-capability-index) — DSH agent 的插件库起飞检查：向运行时上下文注入按步骤触发的提示，让合适的已装插件从「碰巧想起」变成「可预期使用」。
 - [863683348/dsh-plugin-verify](https://github.com/863683348/dsh-plugin-verify) — DSH 核验工具箱：在工作区文件中核查声明并返回带行号引用的证据，校验配置文件（JSON/YAML），以及只读的 URL / npm / GitHub 提交就绪度探测。
 - [863683348/dsh-trend-radar](https://github.com/863683348/dsh-trend-radar) — 生态行情面板：把 dsh-plugin topic 与 awesome 收录列表快照成本地历史，产出周报（新增插件、star 增速、类别热度、收录覆盖率），并支持关键词雷达监控新品与 star 突增。
-- [988hj7tczd-oss/dsh-lsp-packs](https://github.com/988hj7tczd-oss/dsh-lsp-packs) — 开箱即用的分语言 LSP 配置包（12 语言：C/C++、C#、Go、Java、Kotlin、Lua、PHP、Pyright、Ruby、Rust、Swift、TS），每语言一个 Cordis 插件，全部复用官方 @deepseek-ai/dsh-lsp-stdio + @deepseek-ai/dsh-tool-lsp 底座、底座零改动；已用真实 clangd 验证 goToDefinition/hover。
+- [988hj7tczd-oss/dsh-lsp-packs#dsh-lsp-cpp](https://github.com/988hj7tczd-oss/dsh-lsp-packs/tree/main/dsh-lsp-cpp) — 基于 clangd 为 DeepSeek Harness 提供 C/C++ 代码导航和语言服务配置。
+- [988hj7tczd-oss/dsh-lsp-packs#dsh-lsp-csharp](https://github.com/988hj7tczd-oss/dsh-lsp-packs/tree/main/dsh-lsp-csharp) — 基于 OmniSharp 为 DeepSeek Harness 提供 C# 代码导航和语言服务配置。
+- [988hj7tczd-oss/dsh-lsp-packs#dsh-lsp-go](https://github.com/988hj7tczd-oss/dsh-lsp-packs/tree/main/dsh-lsp-go) — 基于 gopls 为 DeepSeek Harness 提供 Go 代码导航和语言服务配置。
+- [988hj7tczd-oss/dsh-lsp-packs#dsh-lsp-java](https://github.com/988hj7tczd-oss/dsh-lsp-packs/tree/main/dsh-lsp-java) — 基于 Eclipse JDT 语言服务器为 DeepSeek Harness 提供 Java 代码导航和语言服务配置。
+- [988hj7tczd-oss/dsh-lsp-packs#dsh-lsp-kotlin](https://github.com/988hj7tczd-oss/dsh-lsp-packs/tree/main/dsh-lsp-kotlin) — 基于 kotlin-language-server 为 DeepSeek Harness 提供 Kotlin 代码导航和语言服务配置。
+- [988hj7tczd-oss/dsh-lsp-packs#dsh-lsp-lua](https://github.com/988hj7tczd-oss/dsh-lsp-packs/tree/main/dsh-lsp-lua) — 基于 lua-language-server 为 DeepSeek Harness 提供 Lua 代码导航和语言服务配置。
+- [988hj7tczd-oss/dsh-lsp-packs#dsh-lsp-php](https://github.com/988hj7tczd-oss/dsh-lsp-packs/tree/main/dsh-lsp-php) — 基于 Intelephense 为 DeepSeek Harness 提供 PHP 代码导航和语言服务配置。
+- [988hj7tczd-oss/dsh-lsp-packs#dsh-lsp-pyright](https://github.com/988hj7tczd-oss/dsh-lsp-packs/tree/main/dsh-lsp-pyright) — 基于 Pyright 为 DeepSeek Harness 提供 Python 代码导航和语言服务配置。
+- [988hj7tczd-oss/dsh-lsp-packs#dsh-lsp-ruby](https://github.com/988hj7tczd-oss/dsh-lsp-packs/tree/main/dsh-lsp-ruby) — 基于 ruby-lsp 为 DeepSeek Harness 提供 Ruby 代码导航和语言服务配置。
+- [988hj7tczd-oss/dsh-lsp-packs#dsh-lsp-rust](https://github.com/988hj7tczd-oss/dsh-lsp-packs/tree/main/dsh-lsp-rust) — 基于 rust-analyzer 为 DeepSeek Harness 提供 Rust 代码导航和语言服务配置。
+- [988hj7tczd-oss/dsh-lsp-packs#dsh-lsp-swift](https://github.com/988hj7tczd-oss/dsh-lsp-packs/tree/main/dsh-lsp-swift) — 基于 sourcekit-lsp 为 DeepSeek Harness 提供 Swift 代码导航和语言服务配置。
+- [988hj7tczd-oss/dsh-lsp-packs#dsh-lsp-ts](https://github.com/988hj7tczd-oss/dsh-lsp-packs/tree/main/dsh-lsp-ts) — 基于 typescript-language-server 为 DeepSeek Harness 提供 TypeScript 和 JavaScript 代码导航及语言服务配置。
 - [a1113622001/dsh-auto-update](https://github.com/a1113622001/dsh-auto-update) — Harness 启动器自更新插件；检查 npm 上的 @deepseek-ai/dsh 新版本，暂存 tarball，并在退出或通过面板「更新并重启」时应用。
 - [a179-sanae/dsh-code-check](https://github.com/a179-sanae/dsh-code-check) — 自动类型检查诊断：模型编辑/创建 TS 文件后后台防抖运行 `tsc --noEmit`，经 `code_check` 工具按文件分组汇报错误（行列号 + 严重级别 + TS 错误码），形成「改 → 查 → 修」闭环。
 - [Airmetro/dsh-update-checker](https://github.com/Airmetro/dsh-update-checker) — 全栈更新管理：对 DeepSeek Harness 主程序与每个已装第三方插件做 npm/GitHub Release 双源 semver 比对，GUI 横幅随系统语言（中/英）逐项提示可更新插件；一键更新主程序或任意插件，自动备份可回滚、插件经临时目录安装不碰其它包、更新后看门狗自动重启服务。「检查更新」设置页提供逐插件版本状态灯、实时更新进度与横幅/通知开关。跨机器零配置。
