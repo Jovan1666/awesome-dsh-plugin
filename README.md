@@ -1633,6 +1633,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 
 - [173787247/dsh-wsl-browser](https://github.com/173787247/dsh-wsl-browser) - Opens http(s) URLs from WSL in the Windows default browser.
 - [173787247/dsh-wsl-clipboard](https://github.com/173787247/dsh-wsl-clipboard) - Reads and writes the Windows clipboard from WSL.
+- [173787247/dsh-wsl-clock](https://github.com/173787247/dsh-wsl-clock) - Detects WSL2 clock skew versus Windows that can break TLS and tokens.
 - [173787247/dsh-wsl-cred](https://github.com/173787247/dsh-wsl-cred) - Safe Git Credential Manager hints for WSL without exposing secrets.
 - [173787247/dsh-wsl-distro](https://github.com/173787247/dsh-wsl-distro) - Reports the current WSL distro and warns about multi-distro setups.
 - [173787247/dsh-wsl-env](https://github.com/173787247/dsh-wsl-env) - Injects WSL distro, Linux path mapping, /mnt/c CRLF and git caveats, and NODE_USE_ENV_PROXY into the system prompt.
