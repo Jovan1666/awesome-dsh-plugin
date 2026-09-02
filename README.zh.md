@@ -2403,6 +2403,7 @@ dsh plugin --profile web add dshmarket
 - [LoserFox/telegram](https://github.com/LoserFox/telegram) — Telegram Bot API 桥接：长轮询、per-chat 会话、HTML 格式化。
 - [lsq-dsh-plugins/dsh-windows-notifications](https://github.com/lsq-dsh-plugins/dsh-windows-notifications) — 为任务事件提供 Windows 桌面通知、可选提示音和 DSH 风格的页面通知。
 - [luzhengyangtx/dsh-telegram-duty](https://github.com/luzhengyangtx/dsh-telegram-duty) — Telegram 值班网关：手机消息任务闭环（专属值班会话）、值守模式全局审批转发（内联同意/拒绝按钮）、telegram_ask 选项提问、值守/本地切换与网页横幅、中英双语消息、空闲零 token。
+- [lw-storm/dsh-plugin-noticeme](https://github.com/lw-storm/dsh-plugin-noticeme) — 后台通知插件：页面处于后台时出现审批提示或提问卡片，即发送桌面通知（通知权限不可用时回退为标签页标题 ⚠ 前缀），点击通知聚焦页面；宿主将事件存入同源队列供前端每 3 秒轮询，页面恢复可见后标题自动还原。
 - [lxp731/agents-plugins#task-complete-notify-for-dsh](https://github.com/lxp731/agents-plugins/tree/main/task-complete-notify-for-dsh) — DSH 桌面通知插件：运行完成、出错或等待审批时发送桌面通知并播放提示音，支持可配置的时长阈值。
 - [ly6170/dsh-messager](https://github.com/ly6170/dsh-messager) — 在 DSH Web 端监控会话状态，为需要交互、任务完成、任务出错发送桌面 / 浏览器 / 第三方通知。
 - [Machine-126/dsh-alert-sound](https://github.com/Machine-126/dsh-alert-sound) — 为 dsh 网页界面提供声音/语音提醒：审批、提问、完成、错误各有独立音色，可选语音朗读。
