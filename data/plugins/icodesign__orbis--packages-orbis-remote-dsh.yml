@@ -1,0 +1,6 @@
+url: https://github.com/icodesign/orbis/tree/main/packages/orbis-remote-dsh
+name: icodesign/orbis#orbis-remote-dsh
+category: remote
+description:
+  en: Encrypted device pairing for remote DeepSeek Harness access, with workspace browsing and real-time session updates.
+  zh: 为远程访问 DeepSeek Harness 提供加密设备配对、工作区浏览和会话实时更新。
