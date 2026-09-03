@@ -1,7 +1,7 @@
 url: https://github.com/00080000/dsh-project-memory
 name: 00080000/dsh-project-memory
 category: memory
-tarball: https://github.com/00080000/dsh-project-memory/releases/latest/download/dsh-project-memory-0.3.0.tgz
+tarball: https://github.com/00080000/dsh-project-memory/releases/download/v0.4.0/dsh-project-memory-0.4.0.tgz
 description:
-  zh: "dsh 项目级持久记忆。**读到即索引**：模型读文件时才建索引，未读零开销。文档自动摘要，代码零依赖出符号表，每条可回源验证。分片存储 + 无锁同步事务，LLM 摘要从不阻塞查询/记忆。纯 JS、单依赖懒加载，无数据库/向量库/后台服务。5000 文件冷启动 64ms，查询中位数 2.6ms，索引体积约 0.3KB/条目。"
-  en: "Project memory for dsh with read-time indexing: only files the model reads get indexed, unread files cost nothing. Docs get LLM summaries; code yields zero-token symbol tables via regex. Every entry has a path:line citation back to source. Sharded storage + lock-free transactions; background indexing never blocks queries or memory ops. Pure JS with a single lazy-loaded dep—no DB, vector store, or daemon. 5000 files load in 64ms; median query latency 2.6ms; index size ~0.3 KB/entry."
+  zh: "为 DeepSeek Harness 提供持久化的项目级记忆。专门针对项目开发，原生融合 dsh 任务系统：会话内任务清单与读写文件自动沉淀为跨会话可续接的任务记录，任务↔文件自动关联——开发工作流可切换、可续接，无需重复梳理。读文件即记忆（无需全量预扫），提取代码符号、生成文档摘要并文档↔符号交叉链接；可选 TS 语义增强（装 TS 自动激活）。经验笔记自动去重。所有数据召回附带出处可溯源。纯 JS、单依赖、开箱即用、静默运行，零操作成本。"
+  en: "Project memory for dsh with native task-system integration: session todos and file reads auto-condense into cross-session task records (task↔file links), so workflows are switchable and resumable without re-contextualizing. Read-time memory (no upfront scan): extracts code symbols, summarizes docs, and cross-links docs↔symbols; optional TS semantic enhancement (auto on when TS installed). Experience notes auto-dedup. Every recall includes a traceable citation. Pure JS, single dep, works out of the box, silent operation, zero overhead."
