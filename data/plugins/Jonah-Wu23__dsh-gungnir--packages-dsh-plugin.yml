@@ -2,5 +2,5 @@ url: https://github.com/Jonah-Wu23/dsh-gungnir/tree/main/packages/dsh-plugin
 name: Jonah-Wu23/dsh-gungnir#dsh-plugin
 category: agi
 description:
-  en: 'Evidence-driven goal verification for DeepSeek Harness. /ultragoal locks versioned goal specs, tool results are captured into an append-only evidence ledger, exit-code and artifact verifiers judge completion claims against evidence, and the reconcile loop intercedes only on evidence conflicts. Installs from npm as dsh-gungnir.'
-  zh: '面向 DeepSeek Harness 的证据驱动目标校验插件。/ultragoal 锁定版本化目标规格，工具结果进入追加式证据账本，退出码与工件验证器对照证据裁决完成声明，对账循环只在证据冲突时介入。npm 包名 dsh-gungnir。'
+  en: 'Locks goals via /ultragoal and verifies completion against command exit codes and generated artifacts, preventing the model from falsely reporting task completion.'
+  zh: '通过 /ultragoal 锁定目标，并依据命令退出码与生成产物验证完成状态，防止模型虚报任务完成。'
