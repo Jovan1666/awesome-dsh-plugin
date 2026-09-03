@@ -1,0 +1,6 @@
+url: https://github.com/mrRisega/dsh-remote
+name: mrRisega/dsh-remote
+category: remote
+description:
+  en: 'Remote control DeepSeek Harness (dsh web) from any phone browser — 100% full-feature, app-like experience: send messages, watch tool execution, approve permissions, edit settings, manage credentials (incl. privileged ops), no NAT/tunnel needed on LAN. One-command install: npx @mrrisega/dsh-remote. Self-host or SaaS.'
+  zh: '远离电脑也能用手机 100% 全功能接管 DeepSeek Harness（dsh web）：发消息、看工具执行、审批权限、改设置、管凭据（含特权操作），局域网免内网穿透，一条命令安装 npx @mrrisega/dsh-remote。支持自建或官方云服务。'
