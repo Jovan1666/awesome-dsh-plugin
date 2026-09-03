@@ -2864,6 +2864,7 @@ dsh plugin --profile web add dshmarket
 - [omdsh-dev/sandbox-mxc](https://github.com/omdsh-dev/sandbox-mxc) — 微软跨平台沙盒支持。
 - [omdsh-dev/sandbox-nono](https://github.com/omdsh-dev/sandbox-nono) — nono 沙盒支持。
 - [onlyqzq/dsh-riskproof](https://github.com/onlyqzq/dsh-riskproof) — 具备来源追踪能力的执行安全机制，可跨 DSH 工具调用持续追踪敏感数据，并在执行前阻断高风险的数据外泄行为。
+- [Ox0400/dsh-vault](https://github.com/Ox0400/dsh-vault) — Harness 的本地加密凭据保险库：Web 设置页与 vault_* 工具，可存取与复制密码、API 密钥、TOTP 与银行卡信息，支持健康审计、到期轮换、导入导出以及只读/询问访问模式。
 - [PAKIKNOWLEDGE/dsh-auto-classifier](https://github.com/PAKIKNOWLEDGE/dsh-auto-classifier) — auto（自主模式）权限分类器：工具作用域的放行/拒绝规则、LLM 语义裁判与 git 快照，面向无人值守会话。
 - [pengxuding/dsh-plugin-judge](https://github.com/pengxuding/dsh-plugin-judge) — 插件价值裁判：装前审核（源码静态扫描 + LLM 裁判）与装后审计已装插件，模型切换时弹窗提醒复核；判断插件对当前模型是增强还是压制。
 - [PensiveFei/dsh-secure-audit](https://github.com/PensiveFei/dsh-secure-audit) — DSH 只读安全合规插件：提示注入检测、中文 PII 脱敏、本机配置安全审计，输出脱敏且可复现的报告。
