@@ -1,6 +1,0 @@
-url: https://github.com/WMXS-A/dsh-utility-plugins/tree/main/packages/dsh-bootcheck
-name: WMXS-A/dsh-utility-plugins#dsh-bootcheck
-category: usage
-description:
-  en: 'Quiet session-start check that verifies every installed skill is catalogued in the skill dictionary, showing a report card only when something is missing.'
-  zh: '会话启动时静默体检：核对已安装的每个技能是否都已录入技能词典，仅在发现遗漏时弹出体检简报。'
