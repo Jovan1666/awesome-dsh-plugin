@@ -796,6 +796,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [jiangwangyang/dsh-theme-blackhole](https://github.com/jiangwangyang/dsh-theme-blackhole) - A black hole theme plugin for the DeepSeek Harness (dsh) Web UI.
 - [Jimmyzwang-cloud/dsh-inkscreen-theme](https://github.com/Jimmyzwang-cloud/dsh-inkscreen-theme) - Ink-and-paper Apple-inspired theme for the DSH web client with a handwritten jimmy sidebar brand.
 - [JohnnyTing/dsh-official-homepage-theme](https://github.com/JohnnyTing/dsh-official-homepage-theme) - A web theme recreating the DeepSeek Harness homepage with a fluid background, an elastic pointer grid, animated fish, and adjustable effects.
+- [Jonah-Wu23/dsh-bg-carousel](https://github.com/Jonah-Wu23/dsh-bg-carousel) - Rotates images and videos from a media folder as the DSH UI background, with panel controls for the rotation interval and UI opacity.
 - [Juryorca/dsh-custom-theme-import](https://github.com/Juryorca/dsh-custom-theme-import) - DSH Web skin manager for mainstream DSH skin packages: import local paths or GitHub collections, scan installed skins from the web profile, preview/use/disable/refresh/delete, with host-side persistence.
 - [keke050/dsh-wallpaper](https://github.com/keke050/dsh-wallpaper) - Wallpaper skin for the DSH Web UI: presets, image URL or upload, and an opacity slider that fades the interface to reveal the wallpaper.
 - [KinGao294/dsh-skin](https://github.com/KinGao294/dsh-skin) - Codex-style skin switcher plus a custom wallpaper layer with opacity and blur controls.
