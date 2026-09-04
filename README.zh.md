@@ -1822,6 +1822,7 @@ dsh plugin --profile web add dshmarket
 - [ankye/dsh_use_browser#use-browser](https://github.com/ankye/dsh_use_browser/tree/main/packages/use-browser) — 通用浏览器自动化：browser_open、browser_click、browser_type、browser_extract、browser_screenshot、browser_eval 六个工具，@e 元素引用，Playwright 无头与 CDP（连接本机 Chrome）双后端。
 - [anweat/dsh-browser](https://github.com/anweat/dsh-browser) — 自包含浏览器运行时：Playwright（chromium）+ OpenCLI 作为插件本地依赖（全局复用回退），提供 `browser` 服务与 9 个交互式浏览器工具。
 - [anweat/dsh-web-search-pro](https://github.com/anweat/dsh-web-search-pro) — 增强型、可持久化的网页搜索：多引擎路由（DeepSeek/Exa/DDG/Bing/Jina + GitHub/B站/YouTube/V2EX/小红书/Twitter/Reddit/RSS）、SQLite+LRU 缓存、userscript 风格抽取、Playwright 渲染。
+- [BitDG/dsh-plugins#reference-library](https://github.com/BitDG/dsh-plugins/tree/main/plugins/reference-library) — 在原生 @ 引用菜单中提供 CodePen、Pinterest、Z-Library 与 GitHub 数据卡片，并支持 Pinterest 分页和 Z-Library 排序。
 - [bpc-oss/chrome-faithful#dsh-plugin-chrome-faithful](https://github.com/bpc-oss/chrome-faithful/tree/main/packages/dsh-plugin-chrome-faithful) — 按精确 Profile 名控制你真实已登录的 Chrome 浏览器：MCP 服务器 + MV3 扩展 + 认证本地桥接，提供标签页、定位器、文件注入、媒体导出与持久滚动采集，不使用调试 Profile 或远程调试端口。
 - [BrambleXu/dsh-annotate](https://github.com/BrambleXu/dsh-annotate) — 面向 Vibe Coding 的浏览器元素标注插件：直接选取页面元素，并将结构化视觉反馈发送给 DeepSeek Harness Agent。
 - [caob23/dsh-browser-control](https://github.com/caob23/dsh-browser-control) — 通过本地 WebSocket 桥接让 DSH 操控你的真实 Chrome：标签页管理、导航、DOM 快照、页面 JS 求值、点击输入、截图、等待与弹窗处理，默认关闭需在设置中开启。
@@ -3154,6 +3155,7 @@ dsh plugin --profile web add dshmarket
 - [Awu12277/dsh-stock-watch](https://github.com/Awu12277/dsh-stock-watch) — A 股自选股实时行情盯盘插件：在 DeepSeek Harness（DSH）Web 界面的右上角显示一个可折叠弹窗，实时监控自选股行情、切换分组、查看分时与 K 线、设置买卖目标价。
 - [baisama-cloud/dsh-galgame-generator](https://github.com/baisama-cloud/dsh-galgame-generator) — Galgame 生成器：提供剧本文档与立绘/背景/音乐/动画素材（工作区 img_human/、img_bg/、audio/、img_cg/）即可生成可玩视觉小说网页，支持可配置存档槽位（`[存档 N]`，默认 9）、立绘自动跟随说话人并切换多表情立绘（`[表情]`）、开局/结束/CG 动画（`[op]`/`[ed]`/`[cg]`）、BGM 播放/停止/音量控制与 if 条件线分支。
 - [bigharm/dsh-agentnoodle](https://github.com/bigharm/dsh-agentnoodle) — DeepSeek Harness 插件：可扩展的 AI 群像聊天游戏框架。输入一个行动，多个 NPC 各自回应，每条反应独立成带头像插图的聊天室消息；世界、地点、NPC 与功能扩展（如接入第三方绘图 API 实现 NPC 动态表情动作）都可以在对话框里让 agent 直接添加修改，无需写代码。
+- [BitDG/dsh-plugins#music-player](https://github.com/BitDG/dsh-plugins/tree/main/plugins/music-player) — 提供多公共音源的侧栏音乐浏览、持续后台播放、队列续播，以及经审核安装的 MusicFree 兼容音源扩展。
 - [Bob-Bo1/dsh-stock-watch](https://github.com/Bob-Bo1/dsh-stock-watch) — DSH 本地优先的 A 股持仓与自选监控：侧栏行情、持仓盈亏，以及网页添加、修改、删除和 JSON 保存。
 - [Cerbur/clutch-dsh#clutch-dsh-fireworks](https://github.com/Cerbur/clutch-dsh/tree/main/packages/clutch-dsh-fireworks) — 通过 `happy_fireworks` Agent 工具为 DSH Web UI 增加庆祝礼花覆盖层。
 - [chen731215-dev/dsh-tavern](https://github.com/chen731215-dev/dsh-tavern) — 酒馆管理原生面板：多角色卡、多世界书、多预设与会话级隔离，记忆总结与角色关系网，剧情选项一键发送，另有 NSFW 成人模式。
