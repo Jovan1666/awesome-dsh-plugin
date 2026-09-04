@@ -1031,6 +1031,7 @@ dsh plugin --profile web add dshmarket
 - [chouyong/dsh-branch-review](https://github.com/chouyong/dsh-branch-review) — 为相关 DSH 会话分支记录人工决策：保留、淘汰或待跟进，并保存理由、标签与外部链接。
 - [chouyong/dsh-fork-diff](https://github.com/chouyong/dsh-fork-diff) — 只读并排比较相关 DeepSeek Harness 会话历史，展示消息、工具调用、回答、耗时和 usage 差异。
 - [chouyong/dsh-fork-graph](https://github.com/chouyong/dsh-fork-graph) — 会话标题栏内联的 Git 风格 fork 血缘图：用彩色轨道与分叉曲线显示会话从何处分支，并可点击跳转。
+- [chrisx9z/dsh-chat-share](https://github.com/chrisx9z/dsh-chat-share) — 将选中的聊天片段分享为 Markdown、HTML 或纯文本；支持 Header 按钮、侧边栏 ... 菜单与 /share 命令。
 - [ChuanTianML/dsh-local-share](https://github.com/ChuanTianML/dsh-local-share) — 把完整 Web Session 导出为本地 Markdown 或自包含 HTML，提供稳定的 Markdown 渲染预览、默认脱敏和可选的有界工具调用详情。
 - [ChuShiZ/dsh-archive-manager](https://github.com/ChuShiZ/dsh-archive-manager) — 归档会话管理插件：按工作区分组浏览，FTS5 全文检索会话内容并展示多条命中摘要，支持恢复并打开与彻底删除。
 - [cindyguyuehu123/dsh-webchatlike](https://github.com/cindyguyuehu123/dsh-webchatlike) — 更贴近 deepseek 网页版/App 的聊天体验：原位编辑提问、重新生成回复、每条消息带 <i/N> 版本翻页器（树状版本模型，跨对话保持稳定）。
