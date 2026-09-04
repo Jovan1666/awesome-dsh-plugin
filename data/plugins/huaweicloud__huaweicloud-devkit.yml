@@ -2,5 +2,5 @@ url: https://github.com/huaweicloud/huaweicloud-devkit
 name: huaweicloud/huaweicloud-devkit
 category: dev
 description:
-  en: Huawei Cloud DevKit -- MCP server, 30+ skills, safety hooks, and sandbox deployment for coding agents.
-  zh: 为 AI 编码助手提供操作华为云所需的知识、工具与安全护栏，让 Agent 安全、准确地使用华为云。
+  en: HuaweiCloud DevKit gives AI agents complete command of Huawei Cloud — build, deploy, operate, always governed, always secure.
+  zh: 让 AI 智能体掌握华为云全流程操作——构建、部署、运维全程受控，助您轻松安全上云。
