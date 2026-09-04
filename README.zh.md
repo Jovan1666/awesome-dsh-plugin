@@ -2132,6 +2132,7 @@ dsh plugin --profile web add dshmarket
 - [kobenfang/BigLead](https://github.com/kobenfang/BigLead) — 精准客户线索挖掘技能：按行业/产品/地区搜索目标公司，多渠道验证并提取联系方式。
 - [kobenfang/BigPlan](https://github.com/kobenfang/BigPlan) — AI产品调研技能：分析市场、技术与供应链，输出高中低三套产品规格方案。
 - [kobenfang/BigSeedSkill](https://github.com/kobenfang/BigSeedSkill) — 闪念记录与人生拼图技能：捕捉生活点滴，构建画像并生成小说、剧本或自传。
+- [kobenfang/BigTimer](https://github.com/kobenfang/BigTimer) — 定时任务与消息推送管家：统一管理 cron 调度，自动推送飞书/多端，兼容 OpenClaw 与 DSH 双环境。
 - [kobenfang/Eyes](https://github.com/kobenfang/Eyes) — 全球热点监控技能：追踪全球事件，按行业、汇率与大宗商品链路分析影响。
 - [kobenfang/FruitPi](https://github.com/kobenfang/FruitPi) — 全球水果价格追踪技能：采集与查询国内外水果批发价，支持人民币/公斤换算。
 - [kobenfang/ListForm](https://github.com/kobenfang/ListForm) — 智能表单技能：支出账单、台账与日志的结构化记录，自动归类并生成周期报表。
