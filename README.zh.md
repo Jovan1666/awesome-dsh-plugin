@@ -88,6 +88,7 @@ dsh plugin --profile web add dshmarket
 - [01Virex/dsh-status-rotator](https://github.com/01Virex/dsh-status-rotator) — 把回合状态那句 "Deep diving..." 替换成更有梗的自定义文案，按阶段轮换，支持打字机与流动渐变。
 - [0imzero/dsh-workspace-menu](https://github.com/0imzero/dsh-workspace-menu) — DSH 主页工作区/会话增强菜单：置顶、重命名、资源管理器打开、归档、分叉、复制、新窗口打开。
 - [0xsline/dsh-spotlight](https://github.com/0xsline/dsh-spotlight) — 键盘优先的命令面板（command palette）。
+- [1010n111/dsh-about](https://github.com/1010n111/dsh-about) — 为 DeepSeek Harness Web 设置面板添加“关于”页，展示运行中的 DSH 版本与最近更新日志。
 - [1070296335-create/dph-taskboard](https://github.com/1070296335-create/dph-taskboard) — 侧边栏会话化任务看板：拖拽会话到待办/进行中/评审中/已完成四列，新建会话可选模型与推理强度，回收站可恢复，支持备注与导出导入。
 - [13071301808/dsh-composer-expand](https://github.com/13071301808/dsh-composer-expand) — Web UI 输入框展开/收起：composer 工具行新增 ⬆/⬇ 按钮，一键把输入框扩大到 70vh 高度，方便写长 prompt。
 - [1321928757/dsh-prompt-polish](https://github.com/1321928757/dsh-prompt-polish) — 输入栏提示词优化：6 种策略 × 3 种语言与自定义指令重写草稿，可选携带目标、任务清单、压缩摘要、工具结果与聊天上下文，附结果确认弹窗、最近 5 次历史与三级设置持久化。
