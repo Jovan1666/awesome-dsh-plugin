@@ -2563,6 +2563,7 @@ dsh plugin --profile web add dshmarket
 - [wsxwj123/dsh-plugins#dsh-pet-bridge](https://github.com/wsxwj123/dsh-plugins/tree/main/packages/dsh-pet-bridge) — dsh ↔ cc-pet 桌面宠物状态桥：把会话状态（思考中 / 读取文件 / 运行命令 / 完成）实时推送到桌面宠物气泡。
 - [wsz987/dsh-channels#channels](https://github.com/wsz987/dsh-channels/tree/main/packages/channels) — 将微信、QQ、钉钉、飞书和 Telegram 接入 DeepSeek Harness，提供统一配置、私聊与群聊访问范围管理，以及渠道内 Agent 对话和会话指令。
 - [wz-heng/dsh-feishu-bridge](https://github.com/wz-heng/dsh-feishu-bridge) — Fail-closed 的飞书（Lark）channel 桥：和机器人聊天即驱动 dsh agent turn，可选人在环工具审批（每次 bash 调用前飞书弹 Allow/Deny 卡，超时默认拒绝）。仅经官方 Python SDK 集成（精确锁版）；白名单默认全拒、webhook 验签/时间窗/防重放、按 chat 粘性会话；每日最新 SDK 兼容金丝雀；中英双语文档。
+- [xchannel1987/dsh-notify-xc](https://github.com/xchannel1987/dsh-notify-xc) — DeepSeek Harness 系统通知：agent 完成任务或需要你输入/批准/审阅计划时，通过浏览器 Notification API 弹出系统通知；点击气泡聚焦页面并打开对应会话。
 - [xiaoshihou514/dsh-weixin](https://github.com/xiaoshihou514/dsh-weixin) — 通过微信远程控制 DeepSeek Harness，支持任意文件传输。
 - [xiaxingtianxia2-glitch/dsh-chime](https://github.com/xiaxingtianxia2-glitch/dsh-chime) — 为 DeepSeek Harness 复刻 opencode 的任务完成提示音，完成、提问、计划待审、出错四种场景播放原始音效，零外部依赖。
 - [xmanrui/dsh-feishu](https://github.com/xmanrui/dsh-feishu) — 通过扫码把飞书机器人接入DeepSeek Harness。
