@@ -356,9 +356,11 @@ for (const e of ordered) {
   // Consumers must tell "not published" apart from "published, unused".
   e.downloads = downloadsMap[e.url]?.downloads ?? null
   // registry dist-tags.latest from probe-npm.mjs. null when not on npm, OR
-  // when the package is on npm but the map row has not been backfilled /
-  // refreshed yet (consumers: use `npm != null && version == null` for that
-  // gap — do not treat version null alone as "github-only").
+  // when probed but no latest tag was available. A published row whose map
+  // entry still lacks the `version` key has not been backfilled yet — after
+  // backfill the key is always present (string or null). Consumers: prefer
+  // `npm` for "on the registry"; treat missing/null version as "unknown",
+  // not as "github-only".
   // Surfaced for dsh-market's discover list (dsh-market#348).
   e.version = e.npm ? (npmMap[e.url]?.version ?? null) : null
   e.slug = e.sub ? `${e.repo}--${e.sub.replaceAll('/', '-')}` : e.repo
@@ -940,9 +942,8 @@ const registry = {
       // by parsing the command string is not a contract worth offering, so the
       // field is published directly. Omitted when absent, like `screenshots`.
       tarball: e.tarball ?? undefined,
-      // Current npm `latest` when known. null means either github-only
-      // (`npm` is also null) or published but not yet version-backfilled
-      // (`npm` set, `version` null) — not interchangeable with `downloads`.
+      // Current npm `latest` when known. null = github-only (`npm` null) or
+      // probed with no latest tag. Not the same signal as `downloads`.
       version: e.version,
       stars: e.stars,
       downloads: e.downloads,

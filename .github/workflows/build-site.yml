@@ -138,21 +138,23 @@ jobs:
           # every entry with npm and downloads blank. Probing is slow; that is
           # cheaper than a wrong plugins.json.
           #
-          # Also re-probe on push when the restored npm-map still has published
-          # rows without a string `version` (schema backfill after that field
-          # shipped). Skipping would publish plugins.json with npm set and
-          # version null for every package until the next nightly.
+          # Schema backfill: if the restored npm-map still has published rows
+          # that predate the `version` key, run probe-npm only (not the whole
+          # suite). Check for a missing key — not `typeof !== "string"` — so
+          # an explicit `version: null` does not re-trigger on every push.
           NEED_PROBES=0
+          NEED_NPM_VERSION_BACKFILL=0
           if [ "${{ github.event_name }}" != "push" ] || [ ! -s data/npm-map.json ]; then
             NEED_PROBES=1
           elif node -e '
             const map = JSON.parse(require("fs").readFileSync("data/npm-map.json", "utf8"));
-            const published = Object.values(map).filter((e) => e && e.npm);
-            const missing = published.some((e) => typeof e.version !== "string");
+            const missing = Object.values(map).some(
+              (e) => e && e.npm && !Object.prototype.hasOwnProperty.call(e, "version"),
+            );
             process.exit(missing ? 0 : 1);
           '; then
-            echo "cached npm-map has published entries without version — probing to backfill"
-            NEED_PROBES=1
+            echo "cached npm-map has published entries without a version key — backfilling via probe-npm"
+            NEED_NPM_VERSION_BACKFILL=1
           fi
           if [ "$NEED_PROBES" = 1 ]; then
             node scripts/probe-npm.mjs
@@ -174,6 +176,8 @@ jobs:
             # downloads), and absence of notes is a normal state downstream,
             # so this probe never blocks the build.
             node scripts/probe-updates.mjs
+          elif [ "$NEED_NPM_VERSION_BACKFILL" = 1 ]; then
+            node scripts/probe-npm.mjs
           else
             echo "push build with cached probe data — skipping probes"
           fi

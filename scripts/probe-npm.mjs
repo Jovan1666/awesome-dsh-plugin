@@ -13,18 +13,18 @@
  *
  * Results are cached in data/npm-map.json:
  *   { "<github url>": { npm, version, checkedAt } }
- * `version` is the registry `dist-tags.latest` when `npm` is set.
- * dsh-market's "discover" list reads it from plugins.json (dsh-market#348)
- * so clients do not page the registry. The full probe already fetched the
- * packument; recording `latest` there adds no extra request.
+ * `version` is the registry `dist-tags.latest` when known, else null.
+ * The key is always written once a published (or not) verdict is recorded so
+ * consumers can tell "not backfilled yet" (key absent) from "probed, no
+ * latest tag" (`version: null`). dsh-market reads it from plugins.json
+ * (dsh-market#348). Recording `latest` on the full probe adds no extra
+ * request; the packument is already fetched.
  *
- * Published package *names* stay cached. `version` is refreshed on the same
- * daily cadence when this script actually runs (registry-only). In CI, push
- * builds usually skip probes when the cache hits; the nightly `PROBE_ALL`
- * full pass is what keeps versions fresh there. Unpublished verdicts are
- * fully re-probed daily. Network failures leave the existing entry untouched.
- * A packument that is missing `dist-tags.latest` does not wipe a previously
- * recorded version.
+ * Published package *names* stay cached. Version freshness in CI comes from
+ * the nightly `PROBE_ALL` full pass. Rows that predate the `version` field
+ * get a one-shot registry-only backfill (key absent → fetch once, write the
+ * key). Network failures leave the existing entry untouched. A packument
+ * missing `dist-tags.latest` does not wipe a previously recorded string.
  *
  * Usage: node scripts/probe-npm.mjs
  */
@@ -55,21 +55,21 @@ const priorVersion = (url) => {
   return typeof v === 'string' ? v : null
 }
 
+const hasVersionKey = (entry) => Object.prototype.hasOwnProperty.call(entry ?? {}, 'version')
+
 // Full probe: unknown, forced, or an expired "not on npm" verdict.
 const needsFullProbe = (entry) =>
   PROBE_ALL
   || entry === undefined
   || (entry.npm === null && ageDays(entry) > RECHECK_DAYS)
 
-// Published name is sticky; version still moves and must be refreshed, and
-// older map rows predate the field entirely (backfill on first run).
-const needsVersionRefresh = (entry) =>
-  Boolean(entry?.npm)
-  && (PROBE_ALL || typeof entry.version !== 'string' || ageDays(entry) > RECHECK_DAYS)
+// One-shot backfill for map rows that predate the version field. Not an
+// ongoing refresh — nightly PROBE_ALL already renews versions via full probe.
+const needsVersionBackfill = (entry) => Boolean(entry?.npm) && !hasVersionKey(entry)
 
 const pendingFull = urls.filter((url) => needsFullProbe(map[url]))
-const pendingVersion = urls.filter((url) => !needsFullProbe(map[url]) && needsVersionRefresh(map[url]))
-console.log(`${urls.length} listed, ${pendingFull.length} full probe(s), ${pendingVersion.length} version refresh(es)`)
+const pendingVersion = urls.filter((url) => !needsFullProbe(map[url]) && needsVersionBackfill(map[url]))
+console.log(`${urls.length} listed, ${pendingFull.length} full probe(s), ${pendingVersion.length} version backfill(s)`)
 
 async function fetchJson(url) {
   const res = await fetch(url, {
@@ -97,8 +97,7 @@ async function probe(url) {
     const repoField = typeof repository === 'string' ? repository : repository?.url ?? ''
     const linked = repoField.toLowerCase().includes(repo.toLowerCase())
     if (!linked) return { npm: null, version: null, checkedAt: today }
-    // Keep a previously recorded version when the packument has no latest tag
-    // rather than publishing a false "unknown" over known data.
+    // Always write the version key. Keep a prior string when latest is absent.
     return {
       npm: name,
       version: latest ?? priorVersion(url),
@@ -109,21 +108,16 @@ async function probe(url) {
   }
 }
 
-/** Refresh dist-tags.latest for a package already confirmed published. */
-async function refreshVersion(url) {
+/** One-shot dist-tags.latest backfill for a package already confirmed published. */
+async function backfillVersion(url) {
   const name = map[url]?.npm
   if (typeof name !== 'string') return null
   try {
     const meta = await fetchJson(`https://registry.npmjs.org/${encodeURIComponent(name)}`)
     const latest = typeof meta['dist-tags']?.latest === 'string' ? meta['dist-tags'].latest : null
-    if (latest === null) {
-      const kept = priorVersion(url)
-      // No latest tag: leave the whole entry untouched if we never had a
-      // version; otherwise bump checkedAt but keep the old version string.
-      if (kept === null) return null
-      return { npm: name, version: kept, checkedAt: today }
-    }
-    return { npm: name, version: latest, checkedAt: today }
+    // Write the key even when latest is missing (null), so push-time backfill
+    // does not re-trigger forever on typeof-null checks.
+    return { npm: name, version: latest ?? priorVersion(url), checkedAt: today }
   } catch {
     return null
   }
@@ -144,7 +138,7 @@ async function runBatch(label, pending, worker) {
 }
 
 await runBatch('full', pendingFull, probe)
-await runBatch('version', pendingVersion, refreshVersion)
+await runBatch('version-backfill', pendingVersion, backfillVersion)
 
 const listed = new Set(urls)
 for (const k of Object.keys(map)) if (!listed.has(k)) delete map[k]
