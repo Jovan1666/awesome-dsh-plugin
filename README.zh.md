@@ -433,7 +433,6 @@ dsh plugin --profile web add dshmarket
 - [Rudyy898/dsh-drag-path](https://github.com/Rudyy898/dsh-drag-path) — 像 Codex/Claude 一样：拖入任意格式文件或文件夹，真实绝对路径立即插入输入框，不用一个个打字。工作区优先智能定位、大小校验、同名弹候选选择器，支持批量拖入与粘贴，兼容 Windows/macOS。
 - [Ruiming-cn/dsh-ask-in-sidebar](https://github.com/Ruiming-cn/dsh-ask-in-sidebar) — 选中助手回答中的文本，在临时右侧面板向侧边栏助手提问：基于主对话 LLM 历史快照回答，支持流式 Markdown、可折叠思考与多轮追问，不打扰主对话。
 - [Ruiming-cn/dsh-better-at](https://github.com/Ruiming-cn/dsh-better-at) — DSH Web 输入框 `@` 文件/会话引用加速：预加载索引、浏览器本地按键过滤、保留原生 mention 序列化。
-- [ruisenbai/dsh-annotation](https://github.com/ruisenbai/dsh-annotation) — 在已完成的助手回复中选中原文，在引文旁添加编号注解；草稿与输入框文字、图片合并为一条用户消息发送，模型按注解逐条回复。
 - [s3yf1337/dsh-desktop#bundle](https://github.com/s3yf1337/dsh-desktop/tree/main/bundle) — dsh 桌面配置：原生 Tauri 窗口承载 harness Web 界面，支持托盘、原生通知、文件管理器面板与一键更新。
 - [SA1992X/dsh-ctrl-enter-submit](https://github.com/SA1992X/dsh-ctrl-enter-submit) — 让对话框中普通 Enter 换行、Ctrl/Cmd+Enter 提交，可在设置中开关。
 - [sakuraqqq/dsh-auto-paste](https://github.com/sakuraqqq/dsh-auto-paste) — 在输入框粘贴大段文本时自动保存为附件文件。
@@ -1153,6 +1152,7 @@ dsh plugin --profile web add dshmarket
 - [Ricketts-Guo/dsh-off-peak-message#dsh-offpeak-send](https://github.com/Ricketts-Guo/dsh-off-peak-message/tree/main/dsh-offpeak-send) — 谷时发送调度器：开启谷时模式后输入框消息排队至 DeepSeek 谷时窗口（半价）自动注入会话并得到回复。原生外观输入条、快捷键（Enter 入队 / ⌘+Enter 立即发送 / Esc 退出）、按会话记忆的开关，重启不丢。
 - [robbyisrobby/dsh-codex-pins](https://github.com/robbyisrobby/dsh-codex-pins) — 把 DeepSeek Harness 侧边栏分成可独立滚动的置顶栏和最近栏，置顶过的会话不再出现在最近列表里。
 - [rongxingda/dsh-prompt-enhance](https://github.com/rongxingda/dsh-prompt-enhance) — 输入框一键提示词增强——把草稿改写为结构化提示词（角色与目标、可执行步骤、输出格式、验收标准、边界条件），支持前后对比、回填与一键撤销；不改变原意、不凭空编造需求。
+- [ruisenbai/dsh-annotation](https://github.com/ruisenbai/dsh-annotation) — 需要 DSH 0.1.2-rc.1。在已完成的助手消息中选中原文并添加多条注解，再与官方输入框文字和图片合并为一条会话用户消息；模型按顺序逐条回答，并用可悬浮的回复芯片关联原文。
 - [RyensX/dsh-message-fold](https://github.com/RyensX/dsh-message-fold) — 为 DeepSeek Harness 提供 Codex 风格的会话消息折叠。
 - [SaiSenBox/dsh-prompt-manager](https://github.com/SaiSenBox/dsh-prompt-manager) — 浏览器本地提示词库：在输入框选择器中同时注入多条会话级系统提示词，支持分支继承、中英界面、收藏与 JSON 备份。
 - [savageops/dsh-rich-indexing](https://github.com/savageops/dsh-rich-indexing) — 分级压缩中枢：把单一的 80% 压缩阈值换成可配置的阶梯（默认 30/50/70/90），逐级加强压缩力度；每次检查点都折叠入确定性关键词索引，让事实跨周期累积；摘要走模型链——主模型加最多 3 个回退，各自独立推理档位。附带 Compaction 模块子标签页与设置卡片；关闭插件始终恢复原版压缩。
