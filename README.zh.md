@@ -2033,7 +2033,7 @@ dsh plugin --profile web add dshmarket
 - [Schumchanvi/dsh-voice-input-cn](https://github.com/Schumchanvi/dsh-voice-input-cn) — 国内可用的输入框语音输入。需要先启动本地 Python bridge（pip install dashscope websockets，运行 bridge/voice-bridge.py）——只装插件不可用。浏览器麦克风采集 16kHz PCM 流式转发给 bridge，由阿里云 DashScope ASR（paraformer-realtime-v2）识别；识别文字在光标处实时填入草稿，静音自动停止，可选识别后自动发送。
 - [shimingming520/dsh-audiogen](https://github.com/shimingming520/dsh-audiogen) — 面向 DeepSeek Harness Web 的 AI 音频插件 —— 多厂商 TTS、音乐、音效与音色设计，含侧边栏面板、模型对比、资源库与 Agent 工具。
 - [STARDUSTLC666/dsh-voice](https://github.com/STARDUSTLC666/dsh-voice) — 语音五工具：edge-tts 免费微软神经语音合成、OpenAI 兼容 ASR 转写、音色清单、批量音色试听与健康自检。
-- [SuCriss/dsh-voice-control](https://github.com/SuCriss/dsh-voice-control) — 输入框集成声控：发送键旁麦克风语音输入（Web Speech API 推式识别，Chrome/Edge），可选自动发送；语音指令的回复自动朗读（1.5s 稳定去抖 + Markdown 口语化清洗），音色按浏览器/系统动态适配，零依赖。
+- [SuCriss/dsh-voice-control](https://github.com/SuCriss/dsh-voice-control) — DSH 网页端语音控制：按住说话将语音转文字输入发送框（可自动发送），用浏览器语音合成朗读助手回复；右键麦克风打开设置面板，支持 Ctrl+M 全局快捷键。
 - [supersyh-sss/dsh-voice-assistant](https://github.com/supersyh-sss/dsh-voice-assistant) — dsh web 语音助手：说出唤醒词（如「小鲸」）即可免手听写，说话内容自动转成文字填入输入框；支持口述编辑指令（发送、清空、换行、停止朗读），并可用中文朗读 AI 回复。语音识别基于 sherpa-onnx WASM 在浏览器本地运行，离线可用、无需 API Key。
 - [tangzheng202202/dsh-voice-live](https://github.com/tangzheng202202/dsh-voice-live) — 基于火山流式 ASR/TTS 的实时双工语音：回复朗读、打断、唤醒词、实时字幕、30 个中文音色与先响应后思考；在 DSH monorepo 内构建。
 - [TaoruiLiu19/dsh-gsv](https://github.com/TaoruiLiu19/dsh-gsv) — 将本地高性能 TTS 引擎 GSV-TTS-Lite 实时接入 DeepSeek Harness：语音预设、自动朗读、引擎配置助手、朗读按钮与设置面板。
