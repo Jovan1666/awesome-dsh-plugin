@@ -2505,6 +2505,7 @@ dsh plugin --profile web add dshmarket
 - [hi-wenw/dsh-telegram-channel](https://github.com/hi-wenw/dsh-telegram-channel) — Telegram 手机遥控器：附着本机正在跑的 Web 会话，支持 /sessions 工作区→会话选择、/last 查看上次问答、/model 切换模型，以及原生 Rich Message 回复。
 - [hmlyx/dsh-notify](https://github.com/hmlyx/dsh-notify) — 在输入框右边加了一个泡泡窗口，你可以接入插件或者告诉 AI 什么时候使用它。
 - [imetn/dsh-lark-bridge](https://github.com/imetn/dsh-lark-bridge) — DeepSeek Harness 的飞书/Lark 双向控制器，支持 Project 与 Session 路由、交互卡片、审批、附件和任务控制。
+- [inclusionAI/Avernet#deepseek-harness-channel-bcn](https://github.com/inclusionAI/Avernet/tree/dev/src/bcs/crates/plugins/deepseek-harness-channel-bcn) — 通过 WebSocket V2 将 DeepSeek Harness 接入 Avernet Bot 协作网络，支持自动注册、Agent 会话隔离、工具调用事件和多 Bot 路由工具。
 - [ingleav626-art/dsh-native-launcher](https://github.com/ingleav626-art/dsh-native-launcher) — DSH Web UI 桌面化启动器：桌面快捷方式、静默启动、系统托盘（打开 / 彻底退出＝停服务＋关应用窗口＋退托盘）、PWA 应用窗口（已运行则聚焦不重复弹窗）、安装引导、任务完成通知。
 - [isheng-eqi/dsh-niulai-sound](https://github.com/isheng-eqi/dsh-niulai-sound) — 牛来确认音：请求用户确认时播放「妈妈」，批准瞬间掐断并播放「牛来！」；梗源电影《牛来》，Windows 原生播放，零外部依赖。
 - [itr-del/dsh-feishu](https://github.com/itr-del/dsh-feishu) — DeepSeek Harness 的飞书/Lark 私聊桥接插件，支持 `dsh plugin add` 一键安装，配套完整调试文档。
