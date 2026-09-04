@@ -5,15 +5,23 @@
  * GitHub tarballs.
  *
  * For every plugin URL in the default-locale README that is missing from
- * data/npm-map.json (or was last checked unpublished over 30 days ago):
+ * data/npm-map.json (or was last checked unpublished over a day ago):
  *   1. read the repo's package.json name from raw.githubusercontent.com
  *   2. accept it only when registry.npmjs.org has that package AND its
  *      repository URL points back at the same GitHub repo (guards against
  *      name squatting and unrelated packages)
  *
- * Results are cached in data/npm-map.json: { "<github url>": { npm, checkedAt } }.
- * Published verdicts are permanent; unpublished ones are re-probed daily.
- * Network failures leave the existing entry untouched.
+ * Results are cached in data/npm-map.json:
+ *   { "<github url>": { npm, version, checkedAt } }
+ * `version` is the registry `dist-tags.latest` when `npm` is set, else null.
+ * dsh-market's "discover" list needs that field in plugins.json without
+ * each client paging the registry (dsh-market#348) — recording it here is
+ * free: the full probe already fetched the packument.
+ *
+ * Published package *names* stay cached; `version` is refreshed on the same
+ * daily cadence as downloads (registry-only, no GitHub raw fetch).
+ * Unpublished verdicts are fully re-probed daily. Network failures leave the
+ * existing entry untouched.
  *
  * Usage: node scripts/probe-npm.mjs
  */
@@ -36,14 +44,24 @@ const readme = fs.readFileSync(LOCALES[0].readme, 'utf8')
 const urls = [...readme.matchAll(/^- \[.+?\]\((https:\/\/github\.com\/[^)]+)\) [—-] /gm)].map((m) => m[1])
 
 const today = new Date().toISOString().slice(0, 10)
-const stale = (entry) =>
+const ageDays = (entry) =>
+  entry?.checkedAt ? (Date.now() - new Date(entry.checkedAt).getTime()) / 86400000 : Infinity
+
+// Full probe: unknown, forced, or an expired "not on npm" verdict.
+const needsFullProbe = (entry) =>
   PROBE_ALL
   || entry === undefined
-  || (entry.npm === null
-    && (Date.now() - new Date(entry.checkedAt).getTime()) / 86400000 > RECHECK_DAYS)
+  || (entry.npm === null && ageDays(entry) > RECHECK_DAYS)
 
-const pending = urls.filter((url) => stale(map[url]))
-console.log(`${urls.length} listed, ${pending.length} to probe`)
+// Published name is sticky; version still moves and must be refreshed, and
+// older map rows predate the field entirely (backfill on first run).
+const needsVersionRefresh = (entry) =>
+  Boolean(entry?.npm)
+  && (PROBE_ALL || typeof entry.version !== 'string' || ageDays(entry) > RECHECK_DAYS)
+
+const pendingFull = urls.filter((url) => needsFullProbe(map[url]))
+const pendingVersion = urls.filter((url) => !needsFullProbe(map[url]) && needsVersionRefresh(map[url]))
+console.log(`${urls.length} listed, ${pendingFull.length} full probe(s), ${pendingVersion.length} version refresh(es)`)
 
 async function fetchJson(url) {
   const res = await fetch(url, {
@@ -61,7 +79,7 @@ async function probe(url) {
   try {
     const pkg = await fetchJson(`https://raw.githubusercontent.com/${repo}/HEAD/${sub ? sub + '/' : ''}package.json`)
     const name = typeof pkg.name === 'string' ? pkg.name : null
-    if (name === null) return { npm: null, checkedAt: today }
+    if (name === null) return { npm: null, version: null, checkedAt: today }
     const meta = await fetchJson(`https://registry.npmjs.org/${encodeURIComponent(name)}`)
     // Registry documents can retain repository metadata from the first
     // publication at the top level. Resolve the current `latest` manifest
@@ -70,23 +88,45 @@ async function probe(url) {
     const repository = (latest === null ? null : meta.versions?.[latest]?.repository) ?? meta.repository
     const repoField = typeof repository === 'string' ? repository : repository?.url ?? ''
     const linked = repoField.toLowerCase().includes(repo.toLowerCase())
-    return { npm: linked ? name : null, checkedAt: today }
+    return {
+      npm: linked ? name : null,
+      version: linked ? latest : null,
+      checkedAt: today,
+    }
   } catch {
     return null // network failure or 404 chain — keep whatever we had
   }
 }
 
-let done = 0
-for (let i = 0; i < pending.length; i += CONCURRENCY) {
-  const batch = pending.slice(i, i + CONCURRENCY)
-  const results = await Promise.all(batch.map(async (url) => [url, await probe(url)]))
-  for (const [url, result] of results) {
-    if (result !== null) map[url] = result
-    else if (map[url] === undefined) map[url] = { npm: null, checkedAt: today }
+/** Refresh dist-tags.latest for a package already confirmed published. */
+async function refreshVersion(url) {
+  const name = map[url]?.npm
+  if (typeof name !== 'string') return null
+  try {
+    const meta = await fetchJson(`https://registry.npmjs.org/${encodeURIComponent(name)}`)
+    const latest = typeof meta['dist-tags']?.latest === 'string' ? meta['dist-tags'].latest : null
+    return { npm: name, version: latest, checkedAt: today }
+  } catch {
+    return null
   }
-  done += batch.length
-  console.log(`probed ${done}/${pending.length}`)
 }
+
+async function runBatch(label, pending, worker) {
+  let done = 0
+  for (let i = 0; i < pending.length; i += CONCURRENCY) {
+    const batch = pending.slice(i, i + CONCURRENCY)
+    const results = await Promise.all(batch.map(async (url) => [url, await worker(url)]))
+    for (const [url, result] of results) {
+      if (result !== null) map[url] = result
+      else if (map[url] === undefined) map[url] = { npm: null, version: null, checkedAt: today }
+    }
+    done += batch.length
+    console.log(`${label} ${done}/${pending.length}`)
+  }
+}
+
+await runBatch('full', pendingFull, probe)
+await runBatch('version', pendingVersion, refreshVersion)
 
 const listed = new Set(urls)
 for (const k of Object.keys(map)) if (!listed.has(k)) delete map[k]
@@ -94,4 +134,5 @@ for (const k of Object.keys(map)) if (!listed.has(k)) delete map[k]
 const sorted = Object.fromEntries(Object.entries(map).sort(([a], [b]) => a.localeCompare(b)))
 fs.writeFileSync(MAP_FILE, JSON.stringify(sorted, null, 1) + '\n')
 const published = Object.values(sorted).filter((e) => e.npm !== null).length
-console.log(`npm-map written: ${published}/${Object.keys(sorted).length} published on npm`)
+const withVersion = Object.values(sorted).filter((e) => typeof e.version === 'string').length
+console.log(`npm-map written: ${published}/${Object.keys(sorted).length} published on npm, ${withVersion} with version`)
