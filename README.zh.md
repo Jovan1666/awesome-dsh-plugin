@@ -505,6 +505,7 @@ dsh plugin --profile web add dshmarket
 - [WJZ-P/dsh-attachments](https://github.com/WJZ-P/dsh-attachments) — 为 Web UI 添加文件与文件夹拖放附件，提供输入栏卡片、持久化历史记录与工作区路径。
 - [wlj521/dsh-ui-tweaks](https://github.com/wlj521/dsh-ui-tweaks) — 从设置面板实时调教 DSH 网页对话界面：消息字体大小、Claude Desktop 风格 Markdown 表格、对话框宽度、可选时间线侧栏，以及带分支管理、逐文件 Diff 和提交推送功能的 GitBar。
 - [wmengxiang/dsh-prompt-optimizer](https://github.com/wmengxiang/dsh-prompt-optimizer) — 在输入框新增图标按钮，一键调用当前模型把提示词优化得更清晰具体。
+- [WMXS-A/dsh-utility-plugins#dsh-skill-cheatsheet](https://github.com/WMXS-A/dsh-utility-plugins/tree/main/packages/dsh-skill-cheatsheet) — 在输入框工具栏提供一个按钮，一键打开技能面板，列出当前会话的全部技能（中文标题、用途与例句），并可一键收录新安装但尚未录入词典的技能（保存在本机）。
 - [wodongx123/dsh-desktop-tray](https://github.com/wodongx123/dsh-desktop-tray) — 为 DSH Desktop 增加系统托盘图标，可在设置中选择最小化或关闭时隐藏到托盘，应用更新后自动恢复。
 - [WolfGenerals/ncm-player](https://github.com/WolfGenerals/ncm-player) — 网易云音乐浮窗播放器：可拖拽/折叠浮窗与迷你条，歌单发现（搜索/热门歌单），逐行同步歌词与翻译，播放队列持久化，扫码或 Cookie 登录，颜色跟随 DSH 皮肤主题。
 - [wqx-txdsyl/dsh-ds-attach](https://github.com/wqx-txdsyl/dsh-ds-attach) — **DeepSeek Chat（chat.deepseek.com）同款附件**：回形针上传按钮、240×64 DS 风格文件卡片（官方彩色文档图标，从 DS 前端 bundle 提取）、拖拽上传、文本提取（PDF/DOCX/XLSX/TXT）注入消息、对话流中渲染真实附件卡片（自定义 user 渲染器）且模型读取完整内容。
