@@ -2279,6 +2279,7 @@ dsh plugin --profile web add dshmarket
 - [kui123456789/dsh-codex-workflow](https://github.com/kui123456789/dsh-codex-workflow) — 协调 Codex 制定计划和独立审查，由 DSH 原会话完成代码修改与测试。
 - [L3n3L/dsh-resume](https://github.com/L3n3L/dsh-resume) — AI 写简历容易，但写完常会遇到模板不合适、排版溢出、页面留白过多，以及改一处导致全局变形等问题。dsh-resume 专注解决手动修改简历繁琐、低效的问题，让 DSH 覆盖从内容撰写、模板选择到排版调优的完整简历工作流，并支持针对不同求职场景产出合适的简历版本。
 - [LeemanCheung/dsh-task-dag](https://github.com/LeemanCheung/dsh-task-dag) — 由投影驱动的会话子代理与持久工作流实时 DAG：状态与节点导航、深层链路确定性布局、适应/平移画布，以及当前会话内节点拖动重排。
+- [lemoncat7/dsh-partner](https://github.com/lemoncat7/dsh-partner) — 提供隔离记忆、微信渠道、Skill、定时任务、伙伴挂念与依赖任务看板的长期 AI 伙伴。
 - [LeslieWylie/agent-loop-workflow](https://github.com/LeslieWylie/agent-loop-workflow) — 面向 DeepSeek Harness、与具体项目无关的多智能体协作协议：阻止失控循环的循环守卫、六字段交接格式、按风险分级的评审路由，以及固定的验证→提交→推送→评审→关闭流程。用一个 skill 取代复制粘贴进每个 agent 指令里的相同规则。
 - [LeslieWylie/dsh-ops-kit](https://github.com/LeslieWylie/dsh-ops-kit) — 证据优先的操作套件：六个只读工具（能力清单、分阶段编排计划、随包技能阅读、有上限的本地记忆检索、仓库发布审计、发布清单）加五个随包技能；只规划与审计，不做远程写入。
 - [LeslieWylie/review-workflow](https://github.com/LeslieWylie/review-workflow) — 面向 DeepSeek Harness 的结构化多评审人评审工作流：N 个评审人在相互隔离、彼此不可见的 subagent 中独立打分；一名 chair 先按锚点匹配、再按 Δ 级别裁决来调和分歧；一名独立的 critic 负责审计整个评审过程。适用于设计、代码、论文或项目评审。
