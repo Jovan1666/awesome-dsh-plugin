@@ -1407,6 +1407,7 @@ dsh plugin --profile web add dshmarket
 - [CHplus0/dsh-shell-command](https://github.com/CHplus0/dsh-shell-command) — Claude Code 风格的 shell 集成：/! 单命令分析 与 /terminal 交互式终端（带按需历史引用）。
 - [ciky20171114/dsh-plugin-midscene](https://github.com/ciky20171114/dsh-plugin-midscene) — 基于 Midscene 的 AI UI 自动化——android_ui 与 web_ui 工具，通过 ctx.midscene seam 在真实 Android 设备或已运行的 Chrome 上完成点击、输入、查询与断言。
 - [ClaireXi99/dsh-data-insight](https://github.com/ClaireXi99/dsh-data-insight) — 数据分析工具包：CSV/TSV/JSON 数据画像、IQR 与 z-score 异常检测、带质量问题提示的结构化摘要、以及无需写代码的筛选/分组/聚合查询。
+- [cndn/dsh-d1](https://github.com/cndn/dsh-d1) — Cloudflare D1 数据库工具：d1_list/query/exec/schema/stats/health，通过 D1 HTTP API 访问，默认只读（SQLite 语义的词法级只读保护）、LIMIT 行数上限、CSV/JSON 查询输出与写审批门。
 - [codingayice/dsh-interview](https://github.com/codingayice/dsh-interview) — 面向 DeepSeek Harness Web 的 AI 面试陪练：支持背八股、模拟面试、场景题与力扣热题 100 四种模式，自动评分、点评并讲解知识点。
 - [coolbreezecoin/dsh-wechat-mp](https://github.com/coolbreezecoin/dsh-wechat-mp) — 把 markdown 变成排好版的微信公众号草稿：样式逐条内联到元素上（编辑器会丢弃 `<style>` 块和 class 名），每张本地图片走微信自己的上传接口以免被过滤，然后创建草稿；不做群发。
 - [CREAIT-nl/dsh-plugins#tool-disclosure](https://github.com/CREAIT-nl/dsh-plugins/tree/main/tool-disclosure) — 渐进式工具披露：被延后的工具组在每次请求中只占目录里的一行，模型用 tool_search 加载后才拿到完整 schema；设置页为每个组提供一个开关，各组开销按当前工具注册表实测。
