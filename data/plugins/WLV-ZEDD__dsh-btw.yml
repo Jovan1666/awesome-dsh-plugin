@@ -1,0 +1,5 @@
+url: https://github.com/WLV-ZEDD/dsh-btw
+name: WLV-ZEDD/dsh-btw
+category: ui
+description:
+  en: Interactive Side-Assistant Dock to ask quick side questions via /btw with real-time thinking status and history pagination without interrupting the active agent loop.
