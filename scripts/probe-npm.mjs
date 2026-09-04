@@ -13,15 +13,18 @@
  *
  * Results are cached in data/npm-map.json:
  *   { "<github url>": { npm, version, checkedAt } }
- * `version` is the registry `dist-tags.latest` when `npm` is set, else null.
- * dsh-market's "discover" list needs that field in plugins.json without
- * each client paging the registry (dsh-market#348) — recording it here is
- * free: the full probe already fetched the packument.
+ * `version` is the registry `dist-tags.latest` when `npm` is set.
+ * dsh-market's "discover" list reads it from plugins.json (dsh-market#348)
+ * so clients do not page the registry. The full probe already fetched the
+ * packument; recording `latest` there adds no extra request.
  *
- * Published package *names* stay cached; `version` is refreshed on the same
- * daily cadence as downloads (registry-only, no GitHub raw fetch).
- * Unpublished verdicts are fully re-probed daily. Network failures leave the
- * existing entry untouched.
+ * Published package *names* stay cached. `version` is refreshed on the same
+ * daily cadence when this script actually runs (registry-only). In CI, push
+ * builds usually skip probes when the cache hits; the nightly `PROBE_ALL`
+ * full pass is what keeps versions fresh there. Unpublished verdicts are
+ * fully re-probed daily. Network failures leave the existing entry untouched.
+ * A packument that is missing `dist-tags.latest` does not wipe a previously
+ * recorded version.
  *
  * Usage: node scripts/probe-npm.mjs
  */
@@ -46,6 +49,11 @@ const urls = [...readme.matchAll(/^- \[.+?\]\((https:\/\/github\.com\/[^)]+)\) [
 const today = new Date().toISOString().slice(0, 10)
 const ageDays = (entry) =>
   entry?.checkedAt ? (Date.now() - new Date(entry.checkedAt).getTime()) / 86400000 : Infinity
+
+const priorVersion = (url) => {
+  const v = map[url]?.version
+  return typeof v === 'string' ? v : null
+}
 
 // Full probe: unknown, forced, or an expired "not on npm" verdict.
 const needsFullProbe = (entry) =>
@@ -88,9 +96,12 @@ async function probe(url) {
     const repository = (latest === null ? null : meta.versions?.[latest]?.repository) ?? meta.repository
     const repoField = typeof repository === 'string' ? repository : repository?.url ?? ''
     const linked = repoField.toLowerCase().includes(repo.toLowerCase())
+    if (!linked) return { npm: null, version: null, checkedAt: today }
+    // Keep a previously recorded version when the packument has no latest tag
+    // rather than publishing a false "unknown" over known data.
     return {
-      npm: linked ? name : null,
-      version: linked ? latest : null,
+      npm: name,
+      version: latest ?? priorVersion(url),
       checkedAt: today,
     }
   } catch {
@@ -105,6 +116,13 @@ async function refreshVersion(url) {
   try {
     const meta = await fetchJson(`https://registry.npmjs.org/${encodeURIComponent(name)}`)
     const latest = typeof meta['dist-tags']?.latest === 'string' ? meta['dist-tags'].latest : null
+    if (latest === null) {
+      const kept = priorVersion(url)
+      // No latest tag: leave the whole entry untouched if we never had a
+      // version; otherwise bump checkedAt but keep the old version string.
+      if (kept === null) return null
+      return { npm: name, version: kept, checkedAt: today }
+    }
     return { npm: name, version: latest, checkedAt: today }
   } catch {
     return null

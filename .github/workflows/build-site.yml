@@ -137,7 +137,24 @@ jobs:
           # cache, so skipping the probes on a cold push build would publish
           # every entry with npm and downloads blank. Probing is slow; that is
           # cheaper than a wrong plugins.json.
+          #
+          # Also re-probe on push when the restored npm-map still has published
+          # rows without a string `version` (schema backfill after that field
+          # shipped). Skipping would publish plugins.json with npm set and
+          # version null for every package until the next nightly.
+          NEED_PROBES=0
           if [ "${{ github.event_name }}" != "push" ] || [ ! -s data/npm-map.json ]; then
+            NEED_PROBES=1
+          elif node -e '
+            const map = JSON.parse(require("fs").readFileSync("data/npm-map.json", "utf8"));
+            const published = Object.values(map).filter((e) => e && e.npm);
+            const missing = published.some((e) => typeof e.version !== "string");
+            process.exit(missing ? 0 : 1);
+          '; then
+            echo "cached npm-map has published entries without version — probing to backfill"
+            NEED_PROBES=1
+          fi
+          if [ "$NEED_PROBES" = 1 ]; then
             node scripts/probe-npm.mjs
             # After probe-npm.mjs, never before: this reads data/npm-map.json
             # to know which entries HAVE a package to probe. Reads and writes

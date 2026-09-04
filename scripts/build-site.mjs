@@ -355,9 +355,11 @@ for (const e of ordered) {
   // entries with no npm package at all — a coverage gap, not a zero.
   // Consumers must tell "not published" apart from "published, unused".
   e.downloads = downloadsMap[e.url]?.downloads ?? null
-  // registry dist-tags.latest from probe-npm.mjs; null when not on npm.
-  // Surfaced for dsh-market's discover list (dsh-market#348) so clients do
-  // not page the registry themselves.
+  // registry dist-tags.latest from probe-npm.mjs. null when not on npm, OR
+  // when the package is on npm but the map row has not been backfilled /
+  // refreshed yet (consumers: use `npm != null && version == null` for that
+  // gap — do not treat version null alone as "github-only").
+  // Surfaced for dsh-market's discover list (dsh-market#348).
   e.version = e.npm ? (npmMap[e.url]?.version ?? null) : null
   e.slug = e.sub ? `${e.repo}--${e.sub.replaceAll('/', '-')}` : e.repo
 }
@@ -938,9 +940,9 @@ const registry = {
       // by parsing the command string is not a contract worth offering, so the
       // field is published directly. Omitted when absent, like `screenshots`.
       tarball: e.tarball ?? undefined,
-      // Current npm `latest` when published; null for github:-only entries.
-      // Same null semantics as `downloads`: absence of an npm package, not
-      // "version unknown".
+      // Current npm `latest` when known. null means either github-only
+      // (`npm` is also null) or published but not yet version-backfilled
+      // (`npm` set, `version` null) — not interchangeable with `downloads`.
       version: e.version,
       stars: e.stars,
       downloads: e.downloads,
