@@ -1654,6 +1654,7 @@ dsh plugin --profile web add dshmarket
 - [mjylfz/dsh-subagent-codex](https://github.com/mjylfz/dsh-subagent-codex) — 新增 subagent_codex 工具，把任务委派给本机 OpenAI Codex CLI 在独立外部进程中执行，与主对话完全隔离。
 - [MlittleFriend/dsh-character-profiler](https://github.com/MlittleFriend/dsh-character-profiler) — 角色一致性工具包：性格侧写档案、出场权重统计与行为偏离检测。
 - [MochiNek0/dsh-web-search-free](https://github.com/MochiNek0/dsh-web-search-free) — 把默认的 Web 搜索与抓取通道替换为 Tavily、Exa、Brave 等八个免费搜索引擎，按可配置的顺序依次 fallback。在设置卡片中填写各引擎 Key，并可开关 web_fetch 工具。
+- [mokuyoaxis/dsh-iris](https://github.com/mokuyoaxis/dsh-iris) — 面向 DeepSeek Harness 的媒体与视觉工作台：文生图、图/文生视频、语音合成与转写、图像问答与元素定位、长图 OCR、像素比对、HTML 截图验证、视频摘要；支持 DashScope 与 OpenAI 兼容供应商，含模型池与工作台客户端。
 - [moon16u/dsh-pouch](https://github.com/moon16u/dsh-pouch) — DSH 实用小插件锦囊：每轮真实时钟注入、安全自愈重启、顶栏会话 ID 复制、Tavily 真实搜索提供方、可配置的 LLM 请求头路由，以及运行时管理官方 @deepseek-ai/dsh-mcp-client 的 MCP 服务器控制台——增删改/启停/重连、工具级开关、SSE 实时状态、mcpServers JSON 导入、profile YAML 条目自动移植。
 - [moononnn/DeepSeek-Harness-biaoqingbao](https://github.com/moononnn/DeepSeek-Harness-biaoqingbao) — 表情包表达插件：让助手用表情包表达情绪，按情绪自动配图，含图库管理、AI 识图打标、方言口音、学我说话，还能点「和助手聊聊」直接调教标签。
 - [Mr-Neutr0n/dsh-medseek](https://github.com/Mr-Neutr0n/dsh-medseek) — 面向临床人员的文档与参考工具包：SOAP/APSO 病程录、入院 H&P、SBAR/I-PASS 交接班、 出院小结、Safe Harbor 脱敏、患者须知可读性评分、完整性检查，以及来自 FDA 说明书、 MedlinePlus、PubMed 和 ClinicalTrials.gov 的带出处检索。仅起草不决定， 内置 PHI 外发守卫；非医疗器械。
