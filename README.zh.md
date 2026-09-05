@@ -2757,6 +2757,7 @@ dsh plugin --profile web add dshmarket
 - [guo6x/dsh-housekeeper](https://github.com/guo6x/dsh-housekeeper) — agent 的环境管家：工具链台账（node/pnpm/git/gh/ffmpeg/浏览器）、缓存与临时目录扫描 + 白名单安全一键清理、机器规则（AGENTS.md）编辑，全在 Web GUI 设置面板。
 - [guo6x/dsh-shipcheck](https://github.com/guo6x/dsh-shipcheck) — 证据优先的前端交付验收：用真实浏览器检查内容、无障碍、运行时错误、网络失败与结构基线，并保存截图报告。
 - [gwsbhqt/dsh-insight](https://github.com/gwsbhqt/dsh-insight) — 只读的 profile 洞察面板：同一份数据的五个视图——配置层、插件树、服务、工具名、模型，每一条都给出被哪一层插入或禁用、此刻在不在跑。
+- [Harzva/dsh-control-plane](https://github.com/Harzva/dsh-control-plane) — 面向本地优先管理多个 DSH Runtime、Profile、Preset、Session、计划和知识引用的控制平面。
 - [Harzva/dsh-uvm](https://github.com/Harzva/dsh-uvm) — DSH 原生 uv 环境管理器：在设置面板创建、同步、运行 Python 虚拟环境，pip 回退、conda 只读可见，项目依赖同步带 dry-run 差异预览。
 - [hellosky983/dsh-fabric](https://github.com/hellosky983/dsh-fabric) — 用一套声明式 DSL 统一 DSH 的所有可扩展接缝：提供 `fabric` 运行时服务、`fabric_extend`/`fabric_inspect` 工具，以及能力图谱设置页。
 - [hellosky983/dsh-foundry](https://github.com/hellosky983/dsh-foundry) — 插件编译器：以运行时服务提供蓝图注册表（脚手架 → 校验 → 部署），配三个模型工具和一个蓝图画廊设置页。
