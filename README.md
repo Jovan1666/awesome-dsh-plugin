@@ -1796,6 +1796,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [zmh2000829/dsh-web-search-multi](https://github.com/zmh2000829/dsh-web-search-multi) - Selectable SearXNG, Brave, Tavily, Gemini Search Grounding, or Wikipedia backend for the native web_search tool, with Web settings and no implicit fallback.
 - [zoahdev/dsh-artifacts](https://github.com/zoahdev/dsh-artifacts) - Render Markdown + JSON into self-contained HTML documents, cards, dashboards, and galleries (CLI + artifact_render tool).
 - [zoahdev/dsh-browser-use](https://github.com/zoahdev/dsh-browser-use) - Browser Use cloud bridge for dsh: run real web tasks — open pages, click, type, fill forms, and extract data — through the Browser Use API.
+- [zoahdev/dsh-firecrawl](https://github.com/zoahdev/dsh-firecrawl) - Scrape URLs to LLM-ready Markdown and search the web via the Firecrawl Cloud API.
 - [zp-home/dsh-recommend](https://github.com/zp-home/dsh-recommend) - Transparent rankings and recommendations for the DSH plugin ecosystem: daily auto-fetched topic data, an open scoring model, and rank/search/recommend tools with a settings-page leaderboard.
 - [ZRui-C/dsh-computer-use](https://github.com/ZRui-C/dsh-computer-use) - Text-first computer use for DSH: background Chromium control via Playwright/CDP plus accessibility-first macOS control; actions stay pinned to the right process and window without taking the user's pointer, ships a Developer ID signed, notarized Universal 2 DMG.
 
