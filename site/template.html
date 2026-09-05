@@ -3,6 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Preloaded so the swap to Archivo lands before first paint instead of after
+     it. font-display:swap shows fallback text immediately, and on Windows the
+     fallback metrics differ enough that the late swap re-wraps the hero and
+     reflows the card grid — the top remaining CLS source in the field data.
+     Only the latin file: latin-ext is unicode-range-gated and almost never
+     fetched, so preloading it would be a wasted request. crossorigin is
+     required on font preloads even same-origin, or the browser fetches twice. -->
+<link rel="preload" href="/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
 <title>__TITLE__</title>
 <meta name="description" content="__DESC__">
 <link rel="canonical" href="__URL__">
