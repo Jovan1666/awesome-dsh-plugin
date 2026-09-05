@@ -1128,6 +1128,7 @@ dsh plugin --profile web add dshmarket
 - [jueburenshu123/dsh-win-minimal](https://github.com/jueburenshu123/dsh-win-minimal) — Windows 极简模式 preset：单句 persona、三工具、无运行时上下文。
 - [kaieye/dsh-AIR](https://github.com/kaieye/dsh-AIR) — DSH Web 输入框增强：跨会话召回已发送提示词、用 Ctrl+R 搜索并还原富草稿，以及提供停靠式 /btw 或 /side 旁路会话。
 - [kanchengw/dsh-assembly.resume](https://github.com/kanchengw/dsh-assembly.resume) — 将本地 Codex CLI/Desktop、Claude Code CLI 和 Claude Desktop 会话导入 DSH：按项目分组，保留语义历史和工具活动，可绑定原工作区或新工作区，并由 DSH Agent 继续对话。
+- [Kayungko/dsh-plugin-task-coordinator](https://github.com/Kayungko/dsh-plugin-task-coordinator) — 跨任务协调：在监督代理中列出、查看、派生、发消息并引导顶层会话。
 - [keepermttl/dsh-archive-viewer](https://github.com/keepermttl/dsh-archive-viewer) — DSH Web 归档会话管理器：支持标题/内容搜索、标签筛选、阅读日志、恢复会话与 ZIP 导出。
 - [kevenliu3/dhs-plugins#dsh-workspace-session-monitor](https://github.com/kevenliu3/dhs-plugins/tree/main/dsh-workspace-session-monitor) — 侧边栏徽标与面板，跨工作区聚合各会话的待处理、运行中、已完成状态，点击即可打开对应会话。
 - [kiligzzz/dsh-session-archive](https://github.com/kiligzzz/dsh-session-archive) — DeepSeek Harness 已归档会话管理面板：按工作区目录分组、按标题实时搜索、只读预览用户问题、一键恢复，或二次确认后删除。
