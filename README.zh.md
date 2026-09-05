@@ -1556,6 +1556,7 @@ dsh plugin --profile web add dshmarket
 - [kaka-crypto/dsh-disk-guard](https://github.com/kaka-crypto/dsh-disk-guard) — 把 DSH 的下载、产物、缓存与临时文件重定向到用户指定目录（自动挑剩余空间最大的非 C 盘），向每个会话注入路径纪律提示词，并自带 disk_guard 工具做状态查看与清理——防止 C 盘被撑爆。
 - [KannaKuron/dsh-gitbash-shell](https://github.com/KannaKuron/dsh-gitbash-shell) — Windows 插件：将宿主 shell 执行器换成 Git for Windows bash（全部 Agent 模式生效），并物化标准/极简/PTC/创造四个 Git Bash 预设变体（逐文件 sha256 标记、用户修改保留）；发布 gitBash 能力服务，让配套预设自动选用 Git Bash；若装有 dsh-better-sidebar，还会通过对方官方设置补丁口把其终端（UI 标签与模型 terminal_* 工具）一并切到 Git Bash。
 - [KannaKuron/dsh-ptc-cordis-preset](https://github.com/KannaKuron/dsh-ptc-cordis-preset) — 为 DeepSeek Harness 提供的 Agent 预设：在 PTC 编码模式之上叠加自引用 Cordis 工具集（动态插件、运行时检视）与预设编写技能；物化文件带逐文件 sha256 标记，用户改过的预设升级与卸载时都不会被覆盖。
+- [kenny2077/dsh-web-search-zai](https://github.com/kenny2077/dsh-web-search-zai) — DeepSeek Harness 的 Z.ai / 智谱网页搜索插件，支持 Coding Plan MCP 套餐额度和 REST API 余额两种计费模式，提供原生中英文设置卡片，可复用现有 ZAI_API_KEY。
 - [kentleenot/dsh-trading-toolkit](https://github.com/kentleenot/dsh-trading-toolkit) — DSH agent 的 A股/美股交易工具箱：实时行情、OHLCV K线、ADX 三状态市场分类信号与简易回测预览，数据源东方财富。只读设计，永不下单。
 - [kexuejin/dsh-zhihu-dashboard](https://github.com/kexuejin/dsh-zhihu-dashboard) — 知乎面板：热榜（带趋势标记）、关注动态（收藏/创作/关注的人）、帖子追踪（问题/关键词/关注的人，支持自动创意简报），并提供 5 个对话工具（zhihu_search / hot / answer / global_search / followees）。
 - [kiligzzz/dsh-agent-dispatch](https://github.com/kiligzzz/dsh-agent-dispatch) — 自定义 Agent + 自动路由 + 小队编排：六个模型工具（agent_dispatch / agent_followup / agent_list / agent_squad / agent_import_skill / agent_upsert），无内置 Agent，原生右 tab 主面板（总览 / Agent / 小队 / 历史）与悬浮活动球。
@@ -1858,7 +1859,6 @@ dsh plugin --profile web add dshmarket
 - [JohnXu22786/browser-automation](https://github.com/JohnXu22786/browser-automation) — dsh 的真实浏览器自动化:基于 Playwright 的 MCP 服务,提供导航、点击、填写、输入、截图与带编号引用的无障碍快照操作,22 个 web_* 工具经 stdio 接入 Agent。
 - [kenny2077/dsh-web-kimi](https://github.com/kenny2077/dsh-web-kimi) — 为 DeepSeek Harness 提供 Kimi Coding 的网页搜索与网页抓取双提供方——一把 coding 计划密钥同时接入 ctx.web 的两条链路（/v1/search 与 /v1/fetch），设置卡片经凭据服务保存密钥，并回退读取 Kimi CLI 配置，安装即用。
 - [kenny2077/dsh-web-search-doubao](https://github.com/kenny2077/dsh-web-search-doubao) — 为 DeepSeek Harness 提供豆包搜索（火山引擎）网络搜索提供方——把 web_search 的后端切换为独立的豆包搜索 API，密钥与计费独立（每月 500 次免费），并内置专用设置卡片，经凭据服务保存密钥。
-- [kenny2077/dsh-web-search-zai](https://github.com/kenny2077/dsh-web-search-zai) — 单密钥模式的 DeepSeek Harness 网页搜索：把内置 web_search 的后端切换为 Z.ai（智谱/GLM）独立 Web 搜索 API，复用你已有的 ZAI_API_KEY，聊天与搜索共用一把密钥。
 - [KKKneko/dsh-search-enhance](https://github.com/KKKneko/dsh-search-enhance) — 提供 Grok-compatible 网页搜索、保留来源分页、Context7 与 Exa 文档检索、有界网页提取、站点映射、离线研究计划和只读诊断。
 - [kyo615/dsh-browser-control](https://github.com/kyo615/dsh-browser-control) — 基于 Playwright MCP 的 AI 浏览器控制：驱动真实可见的 Chrome（导航/点击/输入/快照，约 80 个 browser_* 工具），并在 GUI 内嵌实时截图面板，每次操作后自动刷新。
 - [lemoncat7/dsh-web-search](https://github.com/lemoncat7/dsh-web-search) — 为 DeepSeek Harness 提供可配置联网搜索，支持 SearXNG、Wikipedia、Tavily、Brave 与 Gemini，并支持客户端引擎选择和受控重试。
