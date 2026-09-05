@@ -1627,6 +1627,7 @@ dsh plugin --profile web add dshmarket
 - [megatronyy/dsh-tradingagents](https://github.com/megatronyy/dsh-tradingagents) — /trading-agent 命令背后的 A 股多智能体分析，移植自 TradingAgents-AShare：14 个角色（分析师、多空辩论、风控、交易员）经 dsh 已配置的模型路由协作产出完整投研报告。
 - [merenguesL/dsh-tool-normalizer](https://github.com/merenguesL/dsh-tool-normalizer) — 模型工具调用自愈中间件与诊断看板。
 - [minyang-chen/dsh-stock-lookup](https://github.com/minyang-chen/dsh-stock-lookup) — 通过 SEC EDGAR 将公司名称或股票代码解析为已验证的股票代号，再从 yahoo-finance2 获取实时行情，包括价格、市盈率、每股收益、市值、52周区间和股息率。
+- [mjylfz/dsh-subagent-codex](https://github.com/mjylfz/dsh-subagent-codex) — 新增 subagent_codex 工具，把任务委派给本机 OpenAI Codex CLI 在独立外部进程中执行，与主对话完全隔离。
 - [MlittleFriend/dsh-character-profiler](https://github.com/MlittleFriend/dsh-character-profiler) — 角色一致性工具包：性格侧写档案、出场权重统计与行为偏离检测。
 - [MochiNek0/dsh-web-search-free](https://github.com/MochiNek0/dsh-web-search-free) — 把默认的 Web 搜索与抓取通道替换为 Tavily、Exa、Brave 等八个免费搜索引擎，按可配置的顺序依次 fallback。在设置卡片中填写各引擎 Key，并可开关 web_fetch 工具。
 - [moon16u/dsh-pouch](https://github.com/moon16u/dsh-pouch) — DSH 实用小插件锦囊：每轮真实时钟注入、安全自愈重启、顶栏会话 ID 复制、Tavily 真实搜索提供方、可配置的 LLM 请求头路由，以及运行时管理官方 @deepseek-ai/dsh-mcp-client 的 MCP 服务器控制台——增删改/启停/重连、工具级开关、SSE 实时状态、mcpServers JSON 导入、profile YAML 条目自动移植。
