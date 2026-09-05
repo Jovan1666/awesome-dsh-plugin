@@ -3095,6 +3095,7 @@ dsh plugin --profile web add dshmarket
 - [JochenYang/dsh-remote#dsh-remote](https://github.com/JochenYang/dsh-remote/tree/main/dsh-remote) — 随时随地用手机操作 DSH：自托管中继 + 桌面 host 插件组成令牌认证隧道（保序 HTTP 反向代理 + WebSocket 桥接），扫码配对、管理台可管理设备与令牌，并自动注入移动适配层（聊天全宽、设置弹窗全屏、侧栏抽屉化）。
 - [jsdvjx/dshn#agent](https://github.com/jsdvjx/dshn/tree/main/packages/agent) — 把本地 dsh 网页通过带登录门禁的中继转发到公网 *.ds.hn 子域名(也可自托管到自己的域名),支持可选的端到端加密(PBKDF2 到 AES-256-GCM)。
 - [JUANWANG-BUAA/dsh-full-remote](https://github.com/JUANWANG-BUAA/dsh-full-remote) — 远程访问 DeepSeek Harness 且服务端 API 完整：转发时改写 Host/Origin，恢复其他方案必定 403 的 settings.* / credentials.* / host.listDirectory。令牌门、按设备会话、可选首访审批。
+- [Junkrat9527/dsh-desktop-automation](https://github.com/Junkrat9527/dsh-desktop-automation) — macOS 桌面控制插件：agent 像人一样操作非浏览器应用（剪映/PS/WPS/原生客户端）——14 个工具覆盖鼠标/键盘/滚动/应用/窗口/截图，并整合视觉闭环（desktop_see 识图 + desktop_locate UI 定位坐标，复用 dsh 既有视觉凭据）。服务 GUI 会话按需拉起，非登录自启。
 - [JUNQINGV587/dsh-ssh-hub](https://github.com/JUNQINGV587/dsh-ssh-hub) — DSH Web GUI 多服务器 SSH 终端面板：浮动终端窗口支持标签页、并排组合、广播、宿主侧持久会话，以及密码/私钥/SSH Agent 认证。
 - [KyoMio/dsh-zen-remote](https://github.com/KyoMio/dsh-zen-remote) — 手机优先的移动端界面重排 + 配对码网关：经自建反代或 Cloudflare Tunnel 把 DSH 变成可安装、带推送的 PWA。
 - [Leon0555/dsh-lan-access](https://github.com/Leon0555/dsh-lan-access) — 局域网访问：Web GUI 绑定 0.0.0.0 + crypto.randomUUID polyfill（修复非安全上下文下 RPC 崩溃）。
