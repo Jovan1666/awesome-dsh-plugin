@@ -80,6 +80,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 <!-- BEGIN PLUGINS -->
 ### AGI Architecture Exploration
 
+- [CAI-MH/dsh-quality-review](https://github.com/CAI-MH/dsh-quality-review) - Audit each finished assistant turn with an independent reviewer model and steer the agent to fix failed output, with at most 2 review rounds per turn.
 - [FuRongJun-1999/dsh-memory](https://github.com/FuRongJun-1999/dsh-memory) - White-box AGI architecture exploration: metacognition (self-cognition loop), continual learning (knowledge flywheel), world model (condition space, spatiotemporal memory graph), self-improvement (bootstrap discipline), zero-LLM white-box pipeline, and auditable trust guardrails.
 - [Jonah-Wu23/dsh-gungnir#dsh-plugin](https://github.com/Jonah-Wu23/dsh-gungnir/tree/main/packages/dsh-plugin) - Evidence-driven goal verification plugin for DeepSeek Harness. Locks goals via /ultragoal and verifies completion against command exit codes and generated artifacts, preventing the model from falsely reporting task completion.
 
@@ -1046,6 +1047,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 ### Identity & Communication
 
 - [AgentConnect/dsh-awiki](https://github.com/AgentConnect/dsh-awiki) - Provides DeepSeek Harness agents with native identities based on the open Agent Network Protocol (ANP), plus identity-based direct, group, mail, and Agent-to-Agent communication.
+- [CAI-MH/dsh-reply-language](https://github.com/CAI-MH/dsh-reply-language) - Force the model to write all replies in a chosen language (Simplified Chinese by default) via a system-prompt section, switchable anytime with a tool.
 - [chenbin-dev/dsh-auth-everying](https://github.com/chenbin-dev/dsh-auth-everying) - Import local Claude, Codex, Grok, Gemini, Copilot, OpenCode, and CC Switch config into DeepSeek Harness with OAuth login for supported providers.
 - [Freakz2z/dsh-catgirl-plugin](https://github.com/Freakz2z/dsh-catgirl-plugin) - Token-efficient persona runtime for DeepSeek Harness with local catgirl rendering and progressive tool-schema disclosure.
 - [lw-storm/dsh-plugin-masterprompt](https://github.com/lw-storm/dsh-plugin-masterprompt) - Per-conversation persona / master prompt plugin: create, edit, switch and delete persona templates from the composer toolbar, with highest-priority system-prompt injection, fixed interaction guardrails, subagent inheritance, new-conversation default, and local JSON persistence.
@@ -2594,6 +2596,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [bobleer/dsh-acp-for-bitfun](https://github.com/bobleer/dsh-acp-for-bitfun) - ACP bridge between BitFun and DSH.
 - [BolunHan/cc-monitor#dsh-cc-monitor](https://github.com/BolunHan/cc-monitor/tree/main/dsh-cc-monitor) - Reports DeepSeek Harness session activity to a self-hosted cc-monitor server, which surfaces Claude Code and DSH sessions as color-coded state cards in one web dashboard and pings your browser and Android app when a session needs attention.
 - [br1nosense/dsh-wxauto-plugin](https://github.com/br1nosense/dsh-wxauto-plugin) - WeChat automation for DSH: push task progress to WeChat, listen for messages with keyword auto-reply, and a WeChat ↔ DSH two-way bridge controllable from the settings page, built on wxauto4.
+- [CAI-MH/dsh-feishu-task-recorder](https://github.com/CAI-MH/dsh-feishu-task-recorder) - Poll Feishu (Lark) chats through lark-cli, extract candidate tasks with a review workflow, and two-way sync them with the task-board plugin, with a floating browser panel.
 - [caoxiaohu7745-bot/kongmu-im-bridge](https://github.com/caoxiaohu7745-bot/kongmu-im-bridge) - Feishu bridge for DeepSeek Harness (derived from dsh-im-bridge): WebSocket long connection, approval cards, group @-mention-only replies, streaming card updates, /stop command.
 - [cdxiaodong/dsh-island](https://github.com/cdxiaodong/dsh-island) - Bridge DSH agent sessions, tool calls, and approvals to the CodeIsland macOS notch panel over a Unix socket, with in-panel allow/deny.
 - [cerebrixos-org/tuning-engines-cli#tuningengines-dsh-plugin](https://github.com/cerebrixos-org/tuning-engines-cli/tree/main/packages/tuningengines-dsh-plugin) - Exports metadata-only DSH turn, model, tool, approval, retry, and error events to Tuning Engines for governed traces, policy evaluation, cost analysis, and Work Session review, with a disk-backed retry queue.
