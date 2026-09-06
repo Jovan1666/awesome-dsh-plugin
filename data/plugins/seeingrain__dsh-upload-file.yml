@@ -1,0 +1,6 @@
+url: https://github.com/seeingrain/dsh-upload-file
+name: seeingrain/dsh-upload-file
+category: ui
+description:
+  en: Upload any file to DSH, isolated per workspace and per session — a composer file library with server-side thumbnails, @UPLOAD: mentions, and a right-click menu to open, copy, re-download or delete.
+  zh: 允许将任意文件上传给 DSH，且按工作区+会话隔离——输入框文件库，服务端缩略图，@UPLOAD: 提及，右键打开/复制/重新下载/删除。
