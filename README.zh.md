@@ -646,6 +646,7 @@ dsh plugin --profile web add dshmarket
 - [2006spy/dsh-token-billing](https://github.com/2006spy/dsh-token-billing) — DSH Web 实时 token 计费插件：官网人民币价直接计费、高峰/错峰自动切换、价格实时跟随官网、可视化自定义模型价格、多币种兜底。
 - [283Gawin/dsh-heatmap](https://github.com/283Gawin/dsh-heatmap) — DSH Web 侧边栏活动热力图：GitHub 风格网格展示每日提交、Token 用量与估算花费，今日统计行显示全会话 Token 总量、缓存命中率与按模型自动计价的花费。
 - [3361805598-gif/dsh-usage-analytics](https://github.com/3361805598-gif/dsh-usage-analytics) — 在设置页提供本机个人用量分析：1/7/30 天 Token 热力图与 30 天日历视图、Token 构成、模型分布和技能调用状态。
+- [345420242/dsh-commandcode-usage-inline](https://github.com/345420242/dsh-commandcode-usage-inline) — 在 DSH 输入栏（模型选择器旁）内联显示 Command Code 套餐用量：5 小时与周窗口已用百分比及剩余 credits，点击徽章弹出向上的详情浮层并含重置倒计时；复用 @mars-sea/dsh-commandcode-provider 的 commandcode/report 远端数据。
 - [534119219/chicheng-stats](https://github.com/534119219/chicheng-stats) — 高度可配置的 DSH 用量统计插件：侧边栏文字/卡片组件加统计弹窗，提供按提供方与按模型的请求/Token 统计、缓存命中率、趋势图与首字节/总耗时明细。
 - [940842546/dsh-usage-billing](https://github.com/940842546/dsh-usage-billing) — 用量与消费统计：8/17 调价前后峰谷计费，主界面汇总面板、按会话明细与日/周/月/年/累计用量热力图。
 - [a1113622001/dsh-session-stats-panel](https://github.com/a1113622001/dsh-session-stats-panel) — 右侧会话统计面板，展示平均缓存命中率、会话成本、运行时长、请求数、累计 token 与账户余额。
