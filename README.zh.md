@@ -819,6 +819,7 @@ dsh plugin --profile web add dshmarket
 - [AKS1st/ikun-theme-skin](https://github.com/AKS1st/ikun-theme-skin) — ikun 主题皮肤：星蓝昼/夜与背带裤黑金三套配色接入系统主题列表，全屏照片壁纸轮播、音乐盒与发送音效。
 - [Angel2518975237/deepseek-harness-hello-kitty-suite](https://github.com/Angel2518975237/deepseek-harness-hello-kitty-suite) — DSH Web 的 Hello Kitty 风格任务完成与待回答提醒插件，附带可选的粉色明暗双主题 Skin Center v2 皮肤及本地安装脚本。
 - [ash-qw/dsh-theme-prts](https://github.com/ash-qw/dsh-theme-prts) — 面向 DSH Web 的非官方明日方舟 P.R.T.S. 风格界面主题，提供外观预设、辅助功能与会话导航。
+- [B-TQ/dsh-wallpaper](https://github.com/B-TQ/dsh-wallpaper) — 把本地视频/图片变成全屏动态壁纸，支持实时效果调节、壁纸切换与 Wallpaper Engine 工坊导入，设置自动保存永久生效。
 - [baisama-cloud/dsh-custom-brand](https://github.com/baisama-cloud/dsh-custom-brand) — Web UI 品牌区自定义：鲸鱼 logo 与 DeepSeek 文字可换成本地图片，HARNESS 徽章文字可双击编辑（双击修改，右键恢复）。
 - [BeiZi6/dsh-theme-plugin](https://github.com/BeiZi6/dsh-theme-plugin) — DSH Web GUI 主题工作室：5 套内置预设 + 完全可自定义的浅/深配色（强调色、背景、前景、UI 与代码字体、半透明侧栏、对比度），即时热切换并持久化到 localStorage。
 - [caoyiwei850/dsh-client-ui-skins](https://github.com/caoyiwei850/dsh-client-ui-skins) — DSH Web 换肤插件：4 套内置皮肤 + 自定义图片皮肤，图片作为全界面背景，配色自动跟随图片主色调。
