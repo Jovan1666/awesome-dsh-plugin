@@ -2661,7 +2661,7 @@ dsh plugin --profile web add dshmarket
 - [zengweicheng666/dsh-svn-tools](https://github.com/zengweicheng666/dsh-svn-tools) — SVN（Subversion）工具集：33 个 agent 工具（status/diff/log/blame/commit/merge/props/lock/changelist 等），以及带 BASE/工作副本左右对比、冲突解决与 AI 提交日志的侧边栏面板。
 - [zhu1090093659/dsh-web#packages/dsh-git-graph](https://github.com/zhu1090093659/dsh-web/tree/main/packages/dsh-git-graph) — 输入框上方提供 Git 分支选择器，并把分支泳道与提交历史画成图谱，沿着时间线找到任意变更。
 - [Zhucy123/dsh-update](https://github.com/Zhucy123/dsh-update) — 一键更新本地 DeepSeek Harness：侧边栏按钮对比版本、拉取重建并自动重启，还可选择回退到任一历史版本，全程实时进度。
-- [Zhucy123/source-code-mgmt](https://github.com/Zhucy123/source-code-mgmt) — DSH 网页界面的代码管理面板：git/gh 环境检查、SSH ed25519 密钥配置、GitHub/Gitee 双平台推送与新建仓库、连通性测试，自动忽略超过 100MB 的文件并说明原因。
+- [Zhucy123/source-code-mgmt](https://github.com/Zhucy123/source-code-mgmt) — DSH 网页界面的代码管理面板，五步搞定 Git 日常：① 环境检查自动检测 git/gh/ssh，缺工具一键安装（gh 支持镜像下载源加速，Windows 也可用）并带检查更新；② SSH ed25519 密钥生成/连接测试 + 一键写 443 配置绕过 22 端口封锁，Gitee 私人令牌在此配置；③ 查看仓库状态、并排 diff、暂存提交、切换分支、查看/回滚历史，一键新建仓库并推送，自动忽略超 100MB 文件；④ 列出账号名下所有远程仓库一键克隆；⑤ 五步发布 npm 包。支持 GitHub / Gitee 双平台，界面中英文跟随 DSH 设置实时切换。
 - [ZIye1208/dsh-github-mcp](https://github.com/ZIye1208/dsh-github-mcp) — 把 GitHub 官方远程 MCP server 封装为 DSH 插件：PAT 存入 DSH 凭据中心（.credentials.yaml），提供 github_set_token / github_token_status 模型工具，GitHub 工具以 mcp__github__* 形式可用。
 - [ZIye1208/dsh-github-mcp-hint](https://github.com/ZIye1208/dsh-github-mcp-hint) — GitHub MCP 辅助面板：在「设置 → 插件 → GitHub MCP」展示可复制的示例提示（30 条示例池随机 4 条）、可视化公开仓库的星/fork/语言，并提供 gh_repo_stats / gh_current_user 模型工具。
 - [zoahdev/dsh-github-intelligence](https://github.com/zoahdev/dsh-github-intelligence) — 目前最完整的 dsh GitHub 整合：仓库概览、Release、Issue、PR、贡献者、搜索与一键深度报告，内置 TTL 缓存，无需 API Key。
