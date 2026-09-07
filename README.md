@@ -844,6 +844,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [Isilsolme/dsh-anthropic-fonts](https://github.com/Isilsolme/dsh-anthropic-fonts) - Anthropic Sans, Serif, and Mono fonts for the DSH Web UI, with Source Han fallback for CJK.
 - [jiangwangyang/dsh-theme-blackhole](https://github.com/jiangwangyang/dsh-theme-blackhole) - A black hole theme plugin for the DeepSeek Harness (dsh) Web UI.
 - [Jimmyzwang-cloud/dsh-inkscreen-theme](https://github.com/Jimmyzwang-cloud/dsh-inkscreen-theme) - Ink-and-paper Apple-inspired theme for the DSH web client with a handwritten jimmy sidebar brand.
+- [jinxlux/xiao-theme-dsh-ui-plugin](https://github.com/jinxlux/xiao-theme-dsh-ui-plugin) - A fully customizable theming framework for DSH UI, with Xiao from Genshin Impact as the default theme.
 - [JohnnyTing/dsh-official-homepage-theme](https://github.com/JohnnyTing/dsh-official-homepage-theme) - A web theme recreating the DeepSeek Harness homepage with a fluid background, an elastic pointer grid, animated fish, and adjustable effects.
 - [Jonah-Wu23/dsh-bg-carousel](https://github.com/Jonah-Wu23/dsh-bg-carousel) - Rotates images and videos from a media folder as the DSH UI background, with panel controls for the rotation interval and UI opacity.
 - [Juryorca/dsh-custom-theme-import](https://github.com/Juryorca/dsh-custom-theme-import) - DSH Web skin manager for mainstream DSH skin packages: import local paths or GitHub collections, scan installed skins from the web profile, preview/use/disable/refresh/delete, with host-side persistence.
