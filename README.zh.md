@@ -2299,6 +2299,7 @@ dsh plugin --profile web add dshmarket
 - [WODE25500/dsh-token-rtk](https://github.com/WODE25500/dsh-token-rtk) — DeepSeek Harness 的输入冗余剪枝——送进模型前剪掉重复/冗余 token(layer ②)。
 - [WODE25500/dsh-token-skills](https://github.com/WODE25500/dsh-token-skills) — 四层省 Token，不牺牲模型智能：handoff、rtk、headroom、caveman 四个省 token 的 skill，每个也是独立可装插件。
 - [wyzh0117/dsh-skill-select](https://github.com/wyzh0117/dsh-skill-select) — 侧边栏技能选择器：列出已安装技能并标注 Global 与所属 repo，支持本会话勾选与常驻默认启动、可选 Guard、Codex/Grok/Hermes 用户技能，以及 /skill 注入。
+- [xi-kari/dsh-amphoreus](https://github.com/xi-kari/dsh-amphoreus) — 把 δ-me13（翁法罗斯）的 13 张黄金裔角色技能卡变成席位工作区：逐席配色与壁纸、首轮自动注入技能卡、对话表情、每席记忆便签与预设、Alt+数字切席，以及用于派发与移交的总览画布；技能套件本身从可配置的本地目录读取，不随插件打包。
 - [xiaxi626/dsh-skills-nexus](https://github.com/xiaxi626/dsh-skills-nexus) — 通用 skill 适配器，将含 SKILL.md 的 GitHub 仓库克隆并 symlink 到官方 skills 根目录，注册为 DSH skill。
 - [xsoc1/math-research-dsh](https://github.com/xsoc1/math-research-dsh) — 严谨开放数学研究套件：4 个 agent skill（rigorous-open-math-research、manage-math-research-program、math-research-workflow、lean-verify），覆盖对抗性审计的定理求解、研究项目管理、流水线编排与 Lean 4 形式化审计；CI 测试与机械式上游同步。
 - [xulelenlp/dsh-web-artifact-designer](https://github.com/xulelenlp/dsh-web-artifact-designer) — 面向 DSH 的设计稿生成 skill（改编自 Anthropic canvas-design / web-artifacts-builder）：把设计需求做成可直接打开的自包含 HTML/SVG 设计稿（海报、信息图、落地页、图表、组件稿），内置交付前质量清单与「去 AI 味」反模式清单。
