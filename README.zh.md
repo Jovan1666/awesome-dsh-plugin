@@ -1453,6 +1453,7 @@ dsh plugin --profile web add dshmarket
 
 - [0xRabit/dsh-crypto-portfolio](https://github.com/0xRabit/dsh-crypto-portfolio) — 加密货币组合追踪器：BTC / EVM（DeBank 免费+付费双源）/ Solana / Hyperliquid L1 / CEX 余额，多 API 源自动切换、多 Profile 配置、每日定时刷新与趋势图（自带 Web 仪表盘）。
 - [1321928757/dsh-mysql](https://github.com/1321928757/dsh-mysql) — DeepSeek Harness 的 MySQL 连接插件：在设置页配置多套连接（每连接可配表白名单与写权限），输入栏一键切换当前会话的连接，并为所有 Agent 预设提供 mysql_query / mysql_tables / mysql_execute 工具。
+- [1byteone/dsh-plugin-nlbi](https://github.com/1byteone/dsh-plugin-nlbi) — 自然语言查询 + 商业智能报表：Text2SQL、图表、报表收藏、Schema/数据面板与侧栏工作台，基于 DSH 的 MySQL 连接层。
 - [1na-ko/dsh-hdc-bridge](https://github.com/1na-ko/dsh-hdc-bridge) — 鸿蒙设备桥：hdc 截图/装包/日志/崩溃/UI 自动化闭环（配 read_image 看图），官方优先版本化 API 知识层（SDK .d.ts + 离线随包文档），以及 DevEco CLI 构建/签名/lint 通道。
 - [863683348/dsh-plugin-academic-writing](https://github.com/863683348/dsh-plugin-academic-writing) — 为 DSH agent 提供学术写作工具包：论文大纲、标题与摘要骨架、GB/T 7714 / APA / MLA 引文格式化、措辞质检与投稿前清单。
 - [863683348/dsh-plugin-education](https://github.com/863683348/dsh-plugin-education) — 为 DSH agent 提供教育工具包：按学段的教案骨架、测验题与答案校验、分析式评分量规、Anki/markdown 闪卡与可读性分级。
