@@ -2612,6 +2612,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 ### Git & Code Review
 
 - [7dgroup-ai/dsh-skill-7d-git-commit](https://github.com/7dgroup-ai/dsh-skill-7d-git-commit) - Checks git commit messages against the 7DGroup convention (Chinese type tags, length and punctuation rules) before committing, as a client-side guard before GitLab pre-receive hooks.
+- [988hj7tczd-oss/harness-github](https://github.com/988hj7tczd-oss/harness-github) - DSH GitHub connector: review PRs, triage issues, debug CI, prepare changes (18 tools, gh-first + REST fallback, approval-gated writes).
 - [a792883583/dsh-git-panel](https://github.com/a792883583/dsh-git-panel) - Git sidebar panel with commit graphs, ahead/behind tracking, branch operations, and one-click chat context injection.
 - [Akimiya-z/codex-guard#dsh](https://github.com/Akimiya-z/codex-guard/tree/main/dsh) - Pre-submit pull-request hygiene checks inside DeepSeek Harness: scans the current diff for TODO leftovers, hardcoded secrets, and non-conventional commit subjects.
 - [alpacachen/dsh-worktree](https://github.com/alpacachen/dsh-worktree) - A minimal worktree management solution with only one button and one dialog.

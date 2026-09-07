@@ -2612,6 +2612,7 @@ dsh plugin --profile web add dshmarket
 ### 🔀 Git 与代码评审
 
 - [7dgroup-ai/dsh-skill-7d-git-commit](https://github.com/7dgroup-ai/dsh-skill-7d-git-commit) — 提交前按 7DGroup 规范校验 git commit message（中文类型标签、长度与标点规则），作为 GitLab pre-receive 钩子的客户端前置校验。
+- [988hj7tczd-oss/harness-github](https://github.com/988hj7tczd-oss/harness-github) — DSH GitHub 连接器:检查 PR、分诊 issue、调试 CI、准备代码变更(18 个工具,gh 优先 + REST 回退,写操作人工审批)。
 - [a792883583/dsh-git-panel](https://github.com/a792883583/dsh-git-panel) — Git 侧边栏面板：提交图谱、超前/落后跟踪、分支操作及改动 Diff 一键带入对话。
 - [Akimiya-z/codex-guard#dsh](https://github.com/Akimiya-z/codex-guard/tree/main/dsh) — 在 DeepSeek Harness 内做提交前的 Pull Request 卫生检查：扫描当前改动中的 TODO 残留、硬编码密钥与非规范提交信息。
 - [alpacachen/dsh-worktree](https://github.com/alpacachen/dsh-worktree) — 极简 worktree 管理方案，只有一个按钮和一个弹窗。
