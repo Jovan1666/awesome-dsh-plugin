@@ -2,5 +2,5 @@ url: https://github.com/345420242/dsh-commandcode-usage-inline
 name: 345420242/dsh-commandcode-usage-inline
 category: usage
 description:
-  en: Inline Command Code plan usage badge in the DSH composer toolbar beside the model selector: 5h and weekly window usage plus remaining credits, clicking the badge opens an upward detail popover with reset countdowns; reuses the commandcode/report remote from @mars-sea/dsh-commandcode-provider.
-  zh: 在 DSH 输入栏（模型选择器旁）内联显示 Command Code 套餐用量：5 小时与周窗口已用百分比及剩余 credits，点击徽章弹出向上的详情浮层并含重置倒计时；复用 @mars-sea/dsh-commandcode-provider 的 commandcode/report 远端数据。
+  en: "Inline Command Code plan usage badge in the DSH composer toolbar beside the model selector: 5h and weekly window usage plus remaining credits, clicking the badge opens an upward detail popover with reset countdowns; reuses the commandcode/report remote from @mars-sea/dsh-commandcode-provider."
+  zh: "鍦?DSH 杈撳叆鏍忥紙妯″瀷閫夋嫨鍣ㄦ梺锛夊唴鑱旀樉绀?Command Code 濂楅鐢ㄩ噺锛? 灏忔椂涓庡懆绐楀彛宸茬敤鐧惧垎姣斿強鍓╀綑 credits锛岀偣鍑诲窘绔犲脊鍑哄悜涓婄殑璇︽儏娴眰骞跺惈閲嶇疆鍊掕鏃讹紱澶嶇敤 @mars-sea/dsh-commandcode-provider 鐨?commandcode/report 杩滅鏁版嵁銆?
