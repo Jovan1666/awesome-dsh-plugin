@@ -3010,6 +3010,7 @@ dsh plugin --profile web add dshmarket
 - [tianyaZTY/dsh-hot-plugin-host](https://github.com/tianyaZTY/dsh-hot-plugin-host) — Web UI 运行时插件加载：监视热目录，运行中安装/更新客户端插件 bundle，所有页面即时生效，免重启。附子智能体看板示例。
 - [tuogusa/dsh-skill-manager](https://github.com/tuogusa/dsh-skill-manager) — 在 Web 设置面板中浏览、搜索、删除/撤回并更新用户技能，支持从 GitHub/Gitee Release 检查技能更新。
 - [vibeinging/dsh-trace](https://github.com/vibeinging/dsh-trace) — 遥测后端：把 turns、model steps、tool calls 导出到 yiTrace。
+- [wangtie-010101/wangtie-os](https://github.com/wangtie-010101/wangtie-os) — 构建在 DeepSeek Harness Web 之上的全屏业务应用框架：深色侧边栏工作台，集成数据库连通测试与 SQL 查询、票据/会计二级知识库（本地检索与 Word 文档投喂）、元数据环境比对与变更 SQL 生成、数据字典、Agent 日志检索报告演示、系统测试用例执行、印象笔记风格记事本、常用开发工具与小游戏。
 - [william-jin-cmu/dsh-evolve](https://github.com/william-jin-cmu/dsh-evolve) — 自进化：agent 在会话内给自己热挂载/卸载持久化插件。
 - [wingsky-1/dsh-plugin-hub#packages/dsh-gzip](https://github.com/wingsky-1/dsh-plugin-hub/tree/main/packages/dsh-gzip) — /api 响应 gzip 压缩，解决远程/低带宽访问时历史加载超时；SSE 与已编码响应自动豁免。
 - [wiyi/dsh-web-service-manager](https://github.com/wiyi/dsh-web-service-manager) — 在设置面板中管理 DSH Web 服务:状态、版本、重启、停止与一键更新。
