@@ -1,5 +1,5 @@
-url: https://github.com/jiang12345-code/dsh-multi-role-debate
-name: jiang12345-code/dsh-multi-role-debate
+url: https://github.com/jiang12345-code/dsh-multi-role-debate/tree/main/dsh-multi-role-debate
+name: jiang12345-code/dsh-multi-role-debate#dsh-multi-role-debate
 category: workflow
 description:
   en: 'Multi-role parallel argumentation for DeepSeek Harness: runs the real Codex and Claude CLIs in parallel, has the DSH model (Judge) write a third-party verdict back into the conversation, plus Obsidian-style single-agent direct chat and per-role model config.'
