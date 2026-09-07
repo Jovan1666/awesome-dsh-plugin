@@ -184,6 +184,7 @@ dsh plugin --profile web add dshmarket
 - [Crosery/dsh-drop](https://github.com/Crosery/dsh-drop) — 把文件拖入或粘贴进 Web 输入框，图片与文件共用预览栏；PNG/JPEG/WebP/GIF 保留出厂图片通道，其他文件优先引用匹配的本地路径，否则流式暂存到 Host，发送时才追加 @ 引用。提供浏览器媒体/PDF 和限长文本预览；Office 与压缩包显示身份卡，未发送文件清单仅保存在页面内。
 - [Crosery/dsh-viewer](https://github.com/Crosery/dsh-viewer) — 面向模型的 display_file 工具，在网页 UI 内联渲染 36 种扩展名：图片（点击开灯箱）、可拖进度条的视频、音频、PDF、经 LibreOffice 在 Host 转为 PDF 的 Office 与 OpenDocument 文件，以及沙箱 iframe 中的本地 HTML；字节由带 Range 支持的签名 HTTP 路由流式传输，PNG/JPEG/WebP/GIF 在支持图像输入的路由上同时进入模型上下文。
 - [cuhaitiang0405-collab/dsh-indexbookmark](https://github.com/cuhaitiang0405-collab/dsh-indexbookmark) — DSH 对话问题索引：列出会话中你提过的所有问题，支持搜索、分页与一键定位。
+- [cyjyyd/dsh-ssh-tui](https://github.com/cyjyyd/dsh-ssh-tui) — 给跳板机和高延迟 SSH 用的 DeepSeek Harness 终端：纯 ANSI、增量重绘，不需要浏览器。
 - [cyrus123456/dsh-johari-cognition-quadrant-dialog-composer](https://github.com/cyrus123456/dsh-johari-cognition-quadrant-dialog-composer) — 乔哈里认知四象限对话梳理工具——在输入框上方添加按钮，弹出 2×2 象限面板（我知道/不知道 × AI知道/不知道），将对话上下文梳理为结构化 Prompt 并写回输入框。
 - [daetz-coder/dsh-multi-chat](https://github.com/daetz-coder/dsh-multi-chat) — 在 DSH Web 界面里并排运行、监控多个对话实例：多窗口墙 + 自动发现 + 单窗控制，内置带口令认证的局域网网关，手机/平板也能看。
 - [DamonKoy/dsh-web-ui#dsh-aionui-panel](https://github.com/DamonKoy/dsh-web-ui/tree/main/packages/dsh-aionui-panel) — dsh web GUI 右侧面板系统：像素级还原 AionUi 的资源树 + 预览（文件树、差异视图、预览）。
