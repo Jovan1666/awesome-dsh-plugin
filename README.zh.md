@@ -2845,7 +2845,7 @@ dsh plugin --profile web add dshmarket
 - [a1113622001/dsh-auto-update](https://github.com/a1113622001/dsh-auto-update) — Harness 启动器自更新插件；检查 npm 上的 @deepseek-ai/dsh 新版本，暂存 tarball，并在退出或通过面板「更新并重启」时应用。
 - [a179-sanae/dsh-code-check](https://github.com/a179-sanae/dsh-code-check) — 自动类型检查诊断：模型编辑/创建 TS 文件后后台防抖运行 `tsc --noEmit`，经 `code_check` 工具按文件分组汇报错误（行列号 + 严重级别 + TS 错误码），形成「改 → 查 → 修」闭环。
 - [AgentDebugX/AgentDebugX#dsh-agentdebugx](https://github.com/AgentDebugX/AgentDebugX/tree/main/integrations/dsh-agentdebugx) — 使用 AgentDebugX 诊断当前及已保存的 DeepSeek Harness 轨迹，并在其仪表盘中打开结构化报告。
-- [Airmetro/dsh-update-checker](https://github.com/Airmetro/dsh-update-checker) — 全栈更新管理：对 DeepSeek Harness 主程序与每个已装第三方插件做 npm/GitHub Release 双源 semver 比对，GUI 横幅随系统语言（中/英）逐项提示可更新插件；一键更新主程序或任意插件，自动备份可回滚、插件经临时目录安装不碰其它包、更新后看门狗自动重启服务。「检查更新」设置页提供逐插件版本状态灯、实时更新进度与横幅/通知开关。跨机器零配置。
+- [Airmetro/dsh-update-checker](https://github.com/Airmetro/dsh-update-checker) — DeepSeek Harness 主程序与插件更新管理：对主程序与每个已装插件做 npm/GitHub Release 双源 semver 比对，GUI 横幅按系统语言（中/英）列出可更新项；一键更新——主程序自动备份、完整性校验、失败回滚，插件经临时目录安装不碰其它包；更新后看门狗自动重启服务。「检查更新」设置页提供逐插件版本状态灯、实时更新进度与横幅/通知开关。
 - [AKS1st/dsh-skill-manager](https://github.com/AKS1st/dsh-skill-manager) — DSH 设置面板内的「技能管理」页面：按系统 / 用户 / 工作区 / 预设浏览技能，展开技能查看文件树、查看和编辑文件，支持从 zip 导入技能，以及导出、删除（系统技能只读）。
 - [All3nCN/dsh-qa-suite-N23](https://github.com/All3nCN/dsh-qa-suite-N23) — 质控套件：agent 编辑 TypeScript 后自动回喂 tsc --noEmit 诊断，另含 /code-review 命令（五镜头并行审查 + 置信度评分）；吸收合并 dsh-code-check 与 dsh-command-code-review。
 - [andyfan1094/dsh-devforge](https://github.com/andyfan1094/dsh-devforge) — 面向 DeepSeek Harness 的规范驱动服务工厂与本机智能体工作台。
