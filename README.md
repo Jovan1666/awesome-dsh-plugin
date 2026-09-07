@@ -954,6 +954,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 
 ### Models & Providers
 
+- [11zld22/dsh-model-info-fill](https://github.com/11zld22/dsh-model-info-fill) - Fills missing context window, max tokens, thinking levels, and image input on custom DSH models from models.dev, and lists unmatched models for manual edits.
 - [AdonisSheldon/dsh-openai-oauth](https://github.com/AdonisSheldon/dsh-openai-oauth) - Connect a ChatGPT account to Codex models in DeepSeek Harness through browser PKCE or device-code OAuth, with automatic token refresh and Web or headless login.
 - [alaxrpg/dsh-adaptive-model-router](https://github.com/alaxrpg/dsh-adaptive-model-router) - Adaptive model discovery, evaluation, tiering, and subagent routing for DeepSeek Harness.
 - [amlyczz/dsh-agy-link](https://github.com/amlyczz/dsh-agy-link) - Google Antigravity (agy CLI) models for DSH — streaming chat with Gemini/Claude/GPT-OSS subscriptions, native tool cards, thinking turns, and in-GUI Google OAuth login.
