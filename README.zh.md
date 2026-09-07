@@ -101,6 +101,7 @@ dsh plugin --profile web add dshmarket
 - [a1073097082/dsh-model-search](https://github.com/a1073097082/dsh-model-search) — 为模型选择器增加按提供方、模型名称和模型 ID 搜索的筛选框，空格表示任意字符。
 - [a179-sanae/dsh-auto-collapse](https://github.com/a179-sanae/dsh-auto-collapse) — Codex 风格工作流自动折叠：回合完成收成一行「已处理 X秒」只留最终正文，工具/思考块折叠成实时摘要 chip（运行中跟随流式滚动），逐级点击展开；卸载完整还原。
 - [a735624258/dsh-skill-picker](https://github.com/a735624258/dsh-skill-picker) — WorkBuddy 同款技能选择器：输入框旁 ⚡ 按钮弹出全部技能列表，支持搜索与最近/常用排序，点选即插入官方 `/技能名` 手势，随消息发出自动加载执行。
+- [a792883583/dsh-chat-toc](https://github.com/a792883583/dsh-chat-toc) — 对话大纲目录导航：支持书签标记、轮次置顶钉住、全局快捷键与智能标题提取。
 - [a903067276-rgb/dsh-file-mentions](https://github.com/a903067276-rgb/dsh-file-mentions) — DSH 回复中的文件路径可点击：Codex 风格行内打开、文件管理器定位、回合尾部文件 chip 列表。
 - [a903067276-rgb/dsh-file-upload](https://github.com/a903067276-rgb/dsh-file-upload) — 统一上传按钮 + 拖拽文件直进对话：文件保存到项目 uploads/，路径文本自动进输入框，可配合任意视觉工具看图。
 - [a903067276-rgb/dsh-hud](https://github.com/a903067276-rgb/dsh-hud) — HUD 状态面板：Git 状态、MCP 服务器、技能列表、模型与 token 用量，悬浮侧栏一览无余。
@@ -2586,6 +2587,7 @@ dsh plugin --profile web add dshmarket
 ### 🔀 Git 与代码评审
 
 - [7dgroup-ai/dsh-skill-7d-git-commit](https://github.com/7dgroup-ai/dsh-skill-7d-git-commit) — 提交前按 7DGroup 规范校验 git commit message（中文类型标签、长度与标点规则），作为 GitLab pre-receive 钩子的客户端前置校验。
+- [a792883583/dsh-git-panel](https://github.com/a792883583/dsh-git-panel) — Git 侧边栏面板：提交图谱、超前/落后跟踪、分支操作及改动 Diff 一键带入对话。
 - [Akimiya-z/codex-guard#dsh](https://github.com/Akimiya-z/codex-guard/tree/main/dsh) — 在 DeepSeek Harness 内做提交前的 Pull Request 卫生检查：扫描当前改动中的 TODO 残留、硬编码密钥与非规范提交信息。
 - [alpacachen/dsh-worktree](https://github.com/alpacachen/dsh-worktree) — 极简 worktree 管理方案，只有一个按钮和一个弹窗。
 - [andyfan1094/dsh-github](https://github.com/andyfan1094/dsh-github) — Web GUI 的 GitHub 账号与本地 Git 工作流插件，支持 clone、快进 pull、status、commit、push，推送默认关闭并有宿主侧开关保护。
@@ -2676,6 +2678,7 @@ dsh plugin --profile web add dshmarket
 - [534119219/dsh-messaging#messaging-core](https://github.com/534119219/dsh-messaging/tree/main/packages/messaging-core) — DeepSeek Harness 的统一消息网关：一个插件接入 27 个 IM 平台（Telegram、QQ、微信、Discord、WhatsApp、飞书等），支持扫码授权、每平台独立工作区、斜杠命令与 Web 配置弹窗。
 - [988hj7tczd-oss/dsh-im-qq](https://github.com/988hj7tczd-oss/dsh-im-qq) — 接入 QQ 官方机器人（q.qq.com）：私聊 / 群聊 / 频道 @ 与完整 agent 对话——WS 长连接（心跳 / 重连 / RESUME）、每会话隔离、标准 agent preset、审批内联按钮 + /revoke、斜杠命令、白名单 fail-closed、凭据走凭据域。
 - [a23842/dsh-notifier](https://github.com/a23842/dsh-notifier) — DeepSeek Harness 多渠道通知插件：注册 send_notification 工具与设置页，向 NotifyX、企业微信应用通知、企业微信机器人、邮件（Resend/SMTP）、钉钉机器人、飞书机器人发送通知；支持浏览器通知、运行结束/阻塞/目标完成事件自动推送。
+- [a792883583/dsh-smart-reminder](https://github.com/a792883583/dsh-smart-reminder) — 智能日程与待办助手：农历节气、macOS/Windows 原生桌面弹窗、企微多平台推送与拖拽改期。
 - [AbcdefgXW/dsh-msg-hub](https://github.com/AbcdefgXW/dsh-msg-hub) — IM 渠道桥：微信（ilinkai）/ QQ / 飞书接入，支持主动推送——定时任务可唤醒渠道 bot 并把 AI 回复推送到手机。
 - [alvinunreal/openpets#dsh](https://github.com/alvinunreal/openpets/tree/main/packages/dsh) — 将 DeepSeek Harness 的生命周期状态、错误与审批请求，桥接到本地运行的 OpenPets 桌面伙伴。
 - [amlyczz/dsh-lark-link](https://github.com/amlyczz/dsh-lark-link) — DeepSeek Harness 的高可靠飞书/Lark 桥接：扫码一键认证、卡片化命令与意图确认、at-least-once 零丢失出站队列、多媒体出入站、/doctor 会话日志 ZIP，并复用 DSH Web GUI 把会话归入正确工作区。
