@@ -67,7 +67,10 @@ jobs:
                       number title isDraft url
                       author { login }
                       labels(first:20) { nodes { name } }
-                      comments(last:20) { nodes { createdAt authorAssociation author { login } } }
+                      comments(last:30) { nodes { createdAt author { login } } }
+                      timelineItems(last:50, itemTypes:[LABELED_EVENT]) {
+                        nodes { ... on LabeledEvent { createdAt label { name } } }
+                      }
                       commits(last:1) { nodes { commit {
                         committedDate
                         statusCheckRollup { state }
@@ -88,13 +91,19 @@ jobs:
             } while (cursor)
             core.info(`${prs.length} open pull request(s)`)
 
-            // A maintainer comment is what puts a submission on hold, so it is
-            // the clock the "has anything happened since?" test runs against.
-            // authorAssociation rather than a hardcoded username list: the list
-            // would go stale silently, and being wrong here means a held PR
-            // never appears in the report — the exact failure this job exists
-            // to end.
-            const MAINTAINER = new Set(['OWNER', 'MEMBER', 'COLLABORATOR'])
+            // The clock is the moment `held: author` was applied, read from
+            // the timeline — not the last maintainer comment.
+            //
+            // The first version of this job identified maintainers by
+            // `authorAssociation`, and every row came back with no hold date.
+            // `author_association` is resolved against the *viewer*: an org
+            // membership that is private reads as MEMBER to the maintainer's
+            // own token and as something else to the Actions token, so the
+            // hold was never found and every author comment — including ones
+            // predating the hold — counted as movement. The label event has no
+            // such dependency, and it is the more honest clock anyway: the
+            // label is what took the pull request out of the merge queue.
+            const HELD = 'held: author'
 
             const rows = []
             for (const pr of prs) {
@@ -113,19 +122,24 @@ jobs:
               if (runs.get('check') !== 'SUCCESS') continue
               if (runs.get('Submission gate') !== 'SUCCESS') continue
 
-              const cs = pr.comments.nodes
-              const lastHold = [...cs].reverse().find((c) => MAINTAINER.has(c.authorAssociation))
-              const heldAt = lastHold ? Date.parse(lastHold.createdAt) : null
+              // Last application of the label, so that a hold re-applied
+              // after a first round of fixes restarts the clock rather than
+              // leaving the pull request permanently "moved".
+              const labelled = pr.timelineItems.nodes
+                .filter((e) => e?.label?.name === HELD)
+                .map((e) => Date.parse(e.createdAt))
+              if (!labelled.length) continue // labelled before the timeline window
+              const heldAt = Math.max(...labelled)
 
               // "Something happened after the hold" = the author pushed, or
               // the author said something. Either is a claim that the hold no
               // longer applies, and either deserves a human re-read.
               const pushedAt = Date.parse(commit.committedDate)
-              const spokeAt = cs
-                .filter((c) => !MAINTAINER.has(c.authorAssociation))
+              const spokeAt = pr.comments.nodes
+                .filter((c) => c.author?.login === pr.author?.login)
                 .map((c) => Date.parse(c.createdAt))
-                .filter((t) => heldAt === null || t > heldAt)
-              const movedAt = Math.max(heldAt !== null && pushedAt > heldAt ? pushedAt : 0, ...spokeAt, 0)
+                .filter((t) => t > heldAt)
+              const movedAt = Math.max(pushedAt > heldAt ? pushedAt : 0, ...spokeAt, 0)
               if (!movedAt) continue
 
               const pings = spokeAt.length
@@ -134,7 +148,7 @@ jobs:
                 title: pr.title,
                 url: pr.url,
                 author: pr.author?.login ?? '?',
-                held: lastHold ? lastHold.createdAt.slice(0, 10) : '—',
+                held: new Date(heldAt).toISOString().slice(0, 10),
                 moved: new Date(movedAt).toISOString().slice(0, 10),
                 days: Math.floor((Date.now() - movedAt) / 86400000),
                 pings,
