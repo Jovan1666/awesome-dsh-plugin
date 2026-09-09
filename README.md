@@ -80,6 +80,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 <!-- BEGIN PLUGINS -->
 ### AGI Architecture Exploration
 
+- [dsh-answer-reviewer](https://github.com/bycall/dsh-answer-reviewer) - Agentic answer reviewer for DeepSeek Harness: each final assistant turn is re-reviewed by a separate LLM graded 1-100; below-threshold scores steer the agent back with concrete feedback. Live config over a 127.0.0.1 HTTP server, plus a right-sidebar config tab via dsh-better-sidebar.
 - [CAI-MH/dsh-quality-review](https://github.com/CAI-MH/dsh-quality-review) - Audit each finished assistant turn with an independent reviewer model and steer the agent to fix failed output, with at most 2 review rounds per turn.
 - [FuRongJun-1999/dsh-memory](https://github.com/FuRongJun-1999/dsh-memory) - White-box AGI architecture exploration: metacognition (self-cognition loop), continual learning (knowledge flywheel), world model (condition space, spatiotemporal memory graph), self-improvement (bootstrap discipline), zero-LLM white-box pipeline, and auditable trust guardrails.
 - [Jonah-Wu23/dsh-gungnir#dsh-plugin](https://github.com/Jonah-Wu23/dsh-gungnir/tree/main/packages/dsh-plugin) - Evidence-driven goal verification plugin for DeepSeek Harness. Locks goals via /ultragoal and verifies completion against command exit codes and generated artifacts, preventing the model from falsely reporting task completion.
