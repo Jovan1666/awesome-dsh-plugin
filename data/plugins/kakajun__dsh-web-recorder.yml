@@ -1,6 +1,3 @@
-# awesome-dsh-plugin 收录投稿文件(草稿)。
-# 提 PR 时把它复制到 awesome-dsh-plugin 仓库的 data/plugins/kakajun__dsh-web-recorder.yml,
-# 不要手工编辑该仓库的 README(由脚本生成)。文件名须与本文件一致。
 url: https://github.com/kakajun/dsh-web-recorder
 name: kakajun/dsh-web-recorder
 category: browser
