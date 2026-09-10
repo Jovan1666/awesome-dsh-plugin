@@ -1,0 +1,8 @@
+url: https://github.com/boogoo619/dsh-noteboard
+name: boogoo619/dsh-noteboard
+category: memory
+description:
+  en: >-
+    Workspace-wide sticky notes on an infinite canvas: notes are plain Markdown files, created manually, captured from conversations, or distilled by the AI, and can be handed back as context; ships with tools and skills for AI-driven tagging.
+  zh: >-
+    工作区级的无限画布便签：便签以 Markdown 文件保存，可手动创建、从对话中摘录或由 AI 提炼生成，并能作为上下文提供给 AI 使用；附带 AI 创建和管理标签的工具与技能。
