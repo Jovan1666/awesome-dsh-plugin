@@ -1,6 +1,0 @@
-url: https://github.com/idoall/dsh-update-status
-name: idoall/dsh-update-status
-category: ui
-description:
-  en: 'Read-only sidebar version chip that discovers npm latest, next, and alpha releases, shows compatibility labels, and generates copy-only upgrade commands.'
-  zh: 只读侧栏版本芯片：发现 npm latest、next、alpha 发布，显示兼容性标签，并生成仅可复制的升级命令。
