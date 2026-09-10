@@ -1,10 +1,3 @@
-# Ready-to-submit entry for https://github.com/awesome-dsh-plugin/awesome-dsh-plugin
-# Open a PR that adds this file to the list repo as:
-#   data/plugins/vitas__dsh-model-pricing.yml
-# (READMEs in that repo are generated from data/plugins/*.yml — do not edit them.)
-# Submission gate: the list's CI requires the target repo to be >= 1 day old;
-# vitas/dsh-model-pricing was created 2026-09-09T16:36Z, so submit from
-# 2026-09-10T17:00Z onward.
 url: https://github.com/vitas/dsh-model-pricing
 name: vitas/dsh-model-pricing
 category: model
