@@ -3,5 +3,5 @@ name: himeope/dsh-queue-first-enter
 category: ui
 description:
   en: Pressing Enter with an empty composer steers the first queued message into the running turn while the agent is busy.
-  zh: agent 繁忙时输入框保持空白，按 Enter 即可把队列第一条消息插话发送到正在运行的回合。
+  zh: agent 忙的时候，输入框空着按回车，排队的第一条消息就会插话送进当前回合，不用等它跑完。
 tarball: https://github.com/himeope/dsh-queue-first-enter/releases/latest/download/dsh-queue-first-enter.tgz
