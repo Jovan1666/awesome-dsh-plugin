@@ -2746,7 +2746,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [XMoon/dsh-subagent-router](https://github.com/XMoon/dsh-subagent-router) - Adds subagent_route and subagent_fork_route delegation tools where the model itself picks the provider/model route for each child; the deployment only sets the spawn/fork backend, background policy and allowedProviders allowlist, while continuable children and background jobs reuse the official send_message / job_output tools.
 - [yakoylp/dsh-md-convert](https://github.com/yakoylp/dsh-md-convert) - Convert Office documents and PDFs (including scanned ones) to structurally formatted Markdown via a CPU-first routing OCR pipeline (RapidOCR/SLANet/FormulaNet).
 - [yangdongzhen590/dsh-knj-scheduler](https://github.com/yangdongzhen590/dsh-knj-scheduler) - Cron task scheduler for DSH: on schedule, automatically creates a new session and injects your prompt as its first message, with task history and manual run/stop controls. Its sidebar entry is provided by dsh-knj-menu; install together: dsh plugin add dsh-scheduler dsh-knj-menu.
-- [yangdongzhen590/dsh-knj-workflow](https://github.com/yangdongzhen590/dsh-knj-workflow) - Config-driven development-task orchestration for DSH: create tasks bound to multi-stage workflows, run and resume them with per-stage persistence, and watch stage status in a sidebar progress bar.
+- [yangdongzhen590/dsh-knj-workflow](https://github.com/yangdongzhen590/dsh-knj-workflow) - Config-driven development-task orchestration for DSH: graph workflows (task/gateway/human nodes) with per-stage persistence, plus an in-editor AI assistant that configures workflows through conversation with live validation.
 - [yangyongzhen/dsh-article-publish](https://github.com/yangyongzhen/dsh-article-publish) - Publish articles to CSDN / Juejin / CNBlog directly from the session, no external server.
 - [yangyongzhen/dsh-scheduler](https://github.com/yangyongzhen/dsh-scheduler) - Cron/one-shot scheduled tasks: run shell commands or fire webhooks on a schedule, with optional ServerChan/DingTalk/Feishu/webhook delivery of results.
 - [yaopushen/dsh-plugin-background-tasks](https://github.com/yaopushen/dsh-plugin-background-tasks) - Antigravity-style run_command for DSH: short commands return inline within a configurable wait window (default 10s) while longer ones auto-promote into ctx.jobs for later collection and completion notices — executed via ctx.shell under the session sandbox and approval pipeline.
@@ -3715,7 +3715,7 @@ One file per plugin means two submissions never touch the same file, so PRs stop
 
 Your repo must:
 
-- declare a **`dsh.bundle`** manifest in `package.json` — `dsh.client` alone is not installable, and this is checked automatically on every PR
+- [yangdongzhen590/dsh-knj-workflow](https://github.com/yangdongzhen590/dsh-knj-workflow) - Config-driven development-task orchestration for DSH: graph workflows (task/gateway/human nodes) with per-stage persistence, plus an in-editor AI assistant that configures workflows through conversation with live validation.
 - be at least **1 day old** with **10 or more commits** — brand-new repos can resubmit once they clear this
 - carry the [`dsh-plugin`](https://github.com/topics/dsh-plugin) topic
 
