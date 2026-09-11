@@ -3194,6 +3194,7 @@ dsh plugin --profile web add dshmarket
 - [xiaoyuyu6420/dsh-backup](https://github.com/xiaoyuyu6420/dsh-backup) — 一键备份与恢复 DSH 用户数据：/backup 命令族与可视化设置面板——备份目标、保留份数与排除规则即改即生效、免重启。sha256 校验与加固恢复（拒绝路径穿越/软链），失败自动回滚并回执结果；定时自动备份（重启续跑）；每日/每周分级保留；/backup doctor 从已知良好备份体检并修复会话日志；智能备份在宿主版本变化时自动快照，轮换销毁前先隔离损坏会话日志；进程外救援通道（备份目录内置零依赖救援网页，宿主起不来也能用）；归档下载路由与 GitHub 同步实现跨机迁移。默认对凭据脱敏——.credentials.yaml 与 .env 留在本地保险库而不进归档，跨机恢复时会列出需要重新填写的项。macOS/Linux/Windows。
 - [xiaxingtianxia2-glitch/dsh-auto-exit](https://github.com/xiaxingtianxia2-glitch/dsh-auto-exit) — 关闭 DSH Web UI 后自动退出 CLI 进程（等效 Ctrl+C），支持可配置宽限期与试运行模式。
 - [xingyingyuzhui/dsh-updater-ui](https://github.com/xingyingyuzhui/dsh-updater-ui) — 设置页中的 DSH 自助更新器：一键检查/拉取（git pull --ff-only）、自动后台检查、版本对比与更新说明预览，带红点提醒。
+- [xingzhen199186/dsh-insight-tree](https://github.com/xingzhen199186/dsh-insight-tree) — DeepSeek Harness 的运行可观测与插件运维面板：展示 Profile 插件树、Loader 真实 fiber 状态、能力/依赖/兼容性、本轮会话插件活动与上游来源/版本核验，支持一键关闭/启用/更新/卸载，并提供 DSH 未运行时也能打开的独立启动失败诊断页。
 - [xswt442-cmd/dsh-instance-manager](https://github.com/xswt442-cmd/dsh-instance-manager) — 侧边栏实例管理面板：统一列出本机 3080–3129 端口的全部 dsh web 实例（端口、PID、运行时长、会话数），一键启动或优雅停止任意实例，含当前实例的任务管理器式停止。
 - [xswt442-cmd/dsh-treekeeper](https://github.com/xswt442-cmd/dsh-treekeeper) — 将 DSH 宿主的 Windows 进程树与可用任务账本对照，标出未归属和孤儿进程，并提供受保护的进程树终止。
 - [xxiaoxiong/dsh-prometheus](https://github.com/xxiaoxiong/dsh-prometheus) — 导出有界的 DSH Session、Agent、LLM、Tool、Approval、Subagent 与 Job Prometheus 指标，附带 Grafana 仪表盘，Endpoint 默认仅监听回环地址。
