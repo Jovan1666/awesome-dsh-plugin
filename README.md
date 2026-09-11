@@ -3309,7 +3309,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [omdsh-dev/sandbox-micro](https://github.com/omdsh-dev/sandbox-micro) - Support for the microsandbox backend.
 - [omdsh-dev/sandbox-mxc](https://github.com/omdsh-dev/sandbox-mxc) - Microsoft cross-platform sandbox support.
 - [omdsh-dev/sandbox-nono](https://github.com/omdsh-dev/sandbox-nono) - Support for the nono sandbox backend.
-- [onlyqzq/dsh-riskproof](https://github.com/onlyqzq/dsh-riskproof) - Provenance-aware execution security that tracks sensitive data across DSH tool calls and blocks risky exfiltration before execution.
+- [onlyqzq/dsh-riskproof](https://github.com/onlyqzq/dsh-riskproof) - Live security beacon for DSH that follows tool activity. Click to view call statistics, risk provenance chains and blocked actions, with read-only task restrictions and tool metadata change detection.
 - [Ox0400/dsh-vault](https://github.com/Ox0400/dsh-vault) - Encrypted local credentials vault for the Harness: a web settings page and vault_* tools to store, search and copy passwords, API keys, TOTP secrets and card data, with health audits, expiry rotation, imports/exports and read-only/ask access modes.
 - [PAKIKNOWLEDGE/dsh-auto-classifier](https://github.com/PAKIKNOWLEDGE/dsh-auto-classifier) - Autonomous permission classifier for the auto preset: tool-scoped allow/deny rules, an LLM semantic judge, and git checkpointing for unattended sessions.
 - [pengxuding/dsh-plugin-judge](https://github.com/pengxuding/dsh-plugin-judge) - Plugin value auditor: pre-install review (source scan + LLM judge) and post-install audit of installed bundles, with model-switch re-audit reminders.
