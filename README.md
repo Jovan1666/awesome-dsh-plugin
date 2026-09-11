@@ -1855,6 +1855,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [maxmilian/dsh-odoo](https://github.com/maxmilian/dsh-odoo) - Read-only Odoo tools over JSON-RPC: server info, model field introspection, and a restricted search_read limited to an allow list of models whose domain field names may not contain dots, so related-record traversal is not possible. A draft-create tool is registered only when allowWrite is enabled, and is limited to sale.order and project.task with the draft state enforced by the plugin.
 - [megatronyy/dsh-tradingagents](https://github.com/megatronyy/dsh-tradingagents) - A-share multi-agent analysis behind /trading-agent, ported from TradingAgents-AShare, running 14 roles (analysts, bull/bear debate, risk review, trader) through the harness LLM route.
 - [merenguesL/dsh-tool-normalizer](https://github.com/merenguesL/dsh-tool-normalizer) - A self-healing layer for tool calls: missing params, wrong fields and out-of-range paths are fixed before they reach the model. Measured visible error rate fell from 7.95% to 2.20%.
+- [mimosa776/dsh-plugin-recommender](https://github.com/mimosa776/dsh-plugin-recommender) - Role-based plugin recommender for DSH: asks the user's role (developer, designer, writer, researcher, ops, student...), recommends suitable plugins, and audits each with a local static security scan (dangerous code patterns + 0-100 risk score) and a reputation check (npm downloads / GitHub stars).
 - [minyang-chen/dsh-stock-lookup](https://github.com/minyang-chen/dsh-stock-lookup) - Resolves a company name or ticker to a verified stock symbol via SEC EDGAR, then fetches a live quote with price, P/E, EPS, market cap, 52-week range, and dividend yield from yahoo-finance2.
 - [mjylfz/dsh-subagent-codex](https://github.com/mjylfz/dsh-subagent-codex) - Adds a subagent_codex tool that delegates tasks to the local OpenAI Codex CLI, running the work in an isolated external process.
 - [MlittleFriend/dsh-character-profiler](https://github.com/MlittleFriend/dsh-character-profiler) - Character consistency toolkit: personality profile cards, appearance-weight stats, and behavioral-drift detection for long-form fiction.
@@ -3715,8 +3716,8 @@ One file per plugin means two submissions never touch the same file, so PRs stop
 
 Your repo must:
 
-- [yangdongzhen590/dsh-knj-workflow](https://github.com/yangdongzhen590/dsh-knj-workflow) - Config-driven development-task orchestration for DSH: graph workflows (task/gateway/human nodes) with per-stage persistence, plus an in-editor AI assistant that configures workflows through conversation with live validation.
-- be at least **1 day old** with **10 or more commits** — brand-new repos can resubmit once they clear this
+- declare **`dsh.bundle`** in `package.json` — `dsh.client` alone is not installable; every PR checks this automatically
+- be at least **1 day old** — a brand-new repo can resubmit once it clears this, and nothing is held against a resubmission
 - carry the [`dsh-plugin`](https://github.com/topics/dsh-plugin) topic
 
 Themes & skins: entries under **Themes & Appearance** power the Themes tab in `dsh-market` — one-click install/switch for users.
