@@ -1,0 +1,6 @@
+url: https://github.com/duoduoqian708/dsh-voice-talk
+name: duoduoqian708/dsh-voice-talk
+category: voice
+description:
+  en: "Full-screen voice conversation for the DSH Web GUI: talk hands-free and hear each reply read aloud as it streams - prose only, code and reasoning skipped."
+  zh: "DSH Web 的全屏语音对话：点麦克风边说边听，AI 回复边生成边念正文，只念正文、略过代码与推理；支持千问 / 讯飞 / 系统语音。"
