@@ -818,6 +818,7 @@ dsh plugin --profile web add dshmarket
 - [teethyachi/dsh-usage-mini](https://github.com/teethyachi/dsh-usage-mini) — DSH Web 悬浮用量小窗，显示 Claude、Codex 订阅用量窗口与重置倒计时，以及 DeepSeek API 今日花费与余额；只展示，是 dsh-cost-meter 的伴侣。
 - [Thedeergod666/dsh-musage](https://github.com/Thedeergod666/dsh-musage) — 在 composer 输入框旁显示 5 家 AI 套餐用量与余额（MiniMax、DeepSeek、Kimi、OpenRouter、智谱），跟随当前模型自动切换，复用 DSH 模型设置里已配的 API Key。
 - [tma1-ai/dsh-otel](https://github.com/tma1-ai/dsh-otel) — 把 agent loop 以 OpenTelemetry traces、metrics、logs 导出到 GreptimeDB，附七个 Grafana dashboard，覆盖 token 用量、成本、会话结果和每轮耗时。
+- [Tuhuaqing/just-dsh-plugins#dsh-auto-update](https://github.com/Tuhuaqing/just-dsh-plugins/tree/main/plugins/dsh-auto-update) — 一键升级Deepseek Harness, 支持侧边栏显示版本号.
 - [V-dev-388/dsh-usage-meter](https://github.com/V-dev-388/dsh-usage-meter) — 设置页用量仪表盘：按服务商/模型汇总全部会话 token 用量，含今日/近 7 天/近 30 天趋势柱状图与缓存命中率。
 - [v587d/dsh-opencode-go-usage](https://github.com/v587d/dsh-opencode-go-usage) — 在输入框上方 dock 显示 OpenCode Go 订阅用量（5h 滚动/每周/每月窗口与重置倒计时），内置凭据编辑器。
 - [vibeinging/dsh-agent-budget](https://github.com/vibeinging/dsh-agent-budget) — agent 树 token 预算管理。
