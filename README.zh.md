@@ -1309,7 +1309,7 @@ dsh plugin --profile web add dshmarket
 - [Ricketts-Guo/dsh-off-peak-message#dsh-offpeak-send](https://github.com/Ricketts-Guo/dsh-off-peak-message/tree/main/dsh-offpeak-send) — 谷时发送调度器：开启谷时模式后输入框消息排队至 DeepSeek 谷时窗口（半价）自动注入会话并得到回复。原生外观输入条、快捷键（Enter 入队 / ⌘+Enter 立即发送 / Esc 退出）、按会话记忆的开关，重启不丢。
 - [robbyisrobby/dsh-codex-pins](https://github.com/robbyisrobby/dsh-codex-pins) — 把 DeepSeek Harness 侧边栏分成可独立滚动的置顶栏和最近栏，置顶过的会话不再出现在最近列表里。
 - [rongxingda/dsh-prompt-enhance](https://github.com/rongxingda/dsh-prompt-enhance) — 输入框一键提示词增强——把草稿改写为结构化提示词（角色与目标、可执行步骤、输出格式、验收标准、边界条件），支持前后对比、回填与一键撤销；不改变原意、不凭空编造需求。
-- [ruisenbai/dsh-annotation](https://github.com/ruisenbai/dsh-annotation) — 需要 DSH 0.1.3-alpha.1。在已完成的助手消息中选中原文并添加多条注解，再与官方输入框文字、图片和文件合并为一条会话用户消息；模型按顺序逐条回答，并用可悬浮的回复芯片关联原文。
+- [ruisenbai/dsh-annotation](https://github.com/ruisenbai/dsh-annotation) — 需要 DSH 0.1.5-alpha.1。在已完成的助手消息中选中原文并添加多条注解，再与官方输入框文字、图片和文件合并为一条会话用户消息；模型按顺序逐条回答，并用可悬浮的回复芯片关联原文。
 - [RyensX/dsh-message-fold](https://github.com/RyensX/dsh-message-fold) — 为 DeepSeek Harness 提供 Codex 风格的会话消息折叠。
 - [SaiSenBox/dsh-prompt-manager](https://github.com/SaiSenBox/dsh-prompt-manager) — 浏览器本地提示词库：在输入框选择器中同时注入多条会话级系统提示词，支持分支继承、中英界面、收藏与 JSON 备份。
 - [savageops/dsh-rich-indexing](https://github.com/savageops/dsh-rich-indexing) — 分级压缩中枢：把单一的 80% 压缩阈值换成可配置的阶梯（默认 30/50/70/90），逐级加强压缩力度；每次检查点都折叠入确定性关键词索引，让事实跨周期累积；摘要走模型链——主模型加最多 3 个回退，各自独立推理档位。附带 Compaction 模块子标签页与设置卡片；关闭插件始终恢复原版压缩。
