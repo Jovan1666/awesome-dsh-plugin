@@ -1953,6 +1953,7 @@ dsh plugin --profile web add dshmarket
 - [yanJ26/dsh-disk-browser](https://github.com/yanJ26/dsh-disk-browser) — DeepSeek Harness 侧边栏磁盘文件浏览插件：浏览服务器任意目录（含隐藏文件夹），支持文本预览、流式下载与上传（多选/拖拽、同名确认覆盖），桌面与移动端响应式适配。
 - [yaways/dsh-subagent-claude-code-wrapper](https://github.com/yaways/dsh-subagent-claude-code-wrapper) — 子代理委派提供方：通过可配置的 executablePath 字段，运行任意 Claude 兼容 CLI 二进制。
 - [Yeelight/dsh-yeelight-smart-home](https://github.com/Yeelight/dsh-yeelight-smart-home) — 控制、组织、诊断、设计、个性化 Yeelight 智能家居，解答产品知识问题，由本地 yeelight-home 运行时驱动。
+- [yh01010/dsh-mcp-matlab](https://github.com/yh01010/dsh-mcp-matlab) — 将本地 MATLAB MCP server 桥接进 DSH，提供 mcp__matlab__* 工具：执行 MATLAB 代码、运行 .m 脚本与测试、查看已安装工具箱。
 - [YiRan0/dsh-bangumi](https://github.com/YiRan0/dsh-bangumi) — DSH 追番订阅管理器：Bangumi 查番、nyaa/dmhy 搜种、qBittorrent 自动下载（RSS 判新轮询）、本地媒体库查重，附日历/进度侧边栏 GUI 与 11 个 LLM 工具（bangumi_lookup / bangumi_search / bangumi_subscribe / bangumi_unsubscribe / bangumi_list / bangumi_progress / bangumi_calendar / qb_status / qb_configure / qb_add_torrent / library_scan）。
 - [Yu-tao-Li/dsh-computer-use-win](https://github.com/Yu-tao-Li/dsh-computer-use-win) — 为 DeepSeek Harness 提供 Windows 电脑操控：MCP stdio 服务器 + PowerShell UIA 后端，22 个桌面工具（UIA 树、截图、键鼠输入、OCR、窗口管理、急停保护）。
 - [Yu-tao-Li/dsh-reference-checker](https://github.com/Yu-tao-Li/dsh-reference-checker) — 为 DeepSeek Harness 提供参考文献真实性检查：reference_checker 工具将论文（PDF/BibTeX/tex/文本/粘贴列表）的每条文献对照 Crossref / OpenAlex / arXiv 核对，逐条判定 found / partial / not_found / error，并按输入样式生成可直接替换回论文的更正版引用（APA、GB/T 7714、IEEE、Vancouver、MLA、Chicago、Harvard、ACS、BibTeX）。
