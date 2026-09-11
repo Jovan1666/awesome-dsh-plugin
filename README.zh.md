@@ -190,6 +190,7 @@ dsh plugin --profile web add dshmarket
 - [ChuanTianML/dsh-open-with](https://github.com/ChuanTianML/dsh-open-with) — 从 Session 页头或 Workspace 菜单用检测到或配置的编辑器打开当前已登记 Workspace，支持热重新检测和浏览器首选项记忆。
 - [ChuanTianML/prompt-for-me](https://github.com/ChuanTianML/prompt-for-me) — DSH 输入框的上下文感知下一句建议：重复 Trigger 可持续换一条，发送前始终由用户确认。
 - [cjm-m/dsh-paste-code-block](https://github.com/cjm-m/dsh-paste-code-block) — Cherry Studio 式粘贴：把多行/缩进/围栏文本或代码粘进 DSH Web 输入框时收成带边框、可折叠、带语言标签的卡片，发送时还原为围栏代码块。
+- [clown139880/dsh-live2d-avatar](https://github.com/clown139880/dsh-live2d-avatar) — DSH 的 Live2D 形象舞台与桌宠：内置 Haru 示例、自定义 Cubism 2/3+ 模型加载与缩放/位置控制、页面内可拖动桌宠、可选透明置顶桌面独立桌宠窗口、按对话授权的表情 control prompt，以及默认关闭、需自部署 ASR/TTS 的语音功能。
 - [CNSeniorious000/dsh-generative-ui](https://github.com/CNSeniorious000/dsh-generative-ui) — 让 AI 在对话中或侧边栏里插入流式生成的 UI，以 TSX 书写——模型的母语之一，不必再教它一套 JSON schema。流式渲染不闪烁，状态跨帧保留、无硬刷新，对 UI 的点击直接驱动下一轮对话。inline 形态流式最重要，side canvas 形态更 agentic。卡片内部同样具备 agentic 能力——执行 bash、curl、调用模型、读写文件。
 - [Como44/dsh-zh-more](https://github.com/Como44/dsh-zh-more) — 斜杠命令名与插件清单卡片中文化：三种显示模式（只显示中文 / 中英都显示 / 不翻译），中文为主、英文不丢，切换即时生效。
 - [converk/dsh-tweaks#prompt-history](https://github.com/converk/dsh-tweaks/tree/main/plugins/prompt-history) — 在空输入框里用 ↑/↓ 翻出本会话之前发过的提示词，翻动时显示位置角标。
