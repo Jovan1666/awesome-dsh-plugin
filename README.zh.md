@@ -1015,6 +1015,7 @@ dsh plugin --profile web add dshmarket
 - [ffyuuu/dsh-llm-longcat](https://github.com/ffyuuu/dsh-llm-longcat) — LongCat-2.0 模型适配器：100 万上下文、二元思考模式、工具调用，基于 OpenAI 兼容接口的流式输出。
 - [fieldnote-ops/keyringseam](https://github.com/fieldnote-ops/keyringseam) — macOS Keychain 凭据提供器：替换本地文件提供器，并使用已签名、公证的通用二进制辅助程序。
 - [FishBottle7/opencode2dsh](https://github.com/FishBottle7/opencode2dsh/tree/master/packages/plugin) — 将 OpenCode Zen 免费模型接入 DeepSeek Harness，无需 API Key。
+- [FitBBC/dsh-plugin-tokenmarket](https://github.com/FitBBC/dsh-plugin-tokenmarket) — 将 Token Market 添加为 OpenAI 兼容模型供应商，并提供 DeepSeek V4 Pro、Kimi K3 和 GLM-5.3。
 - [franksong2702/dsh-codex-connect](https://github.com/franksong2702/dsh-codex-connect) — 通过 ChatGPT OAuth 将 OpenAI Codex 模型接入 DeepSeek Harness，并提供可选的搜索与图片工具。
 - [fu827707013/dsh-codebuddy-cli](https://github.com/fu827707013/dsh-codebuddy-cli) — 复用 CodeBuddy CLI 的登录态，把 CodeBuddy 包含的模型接入 DeepSeek Harness，设置卡片可查看账号、令牌有效期与剩余积分。
 - [GeekRicardo/claude-in-dsh](https://github.com/GeekRicardo/claude-in-dsh) — 把一个 dsh web 会话交给本机 Claude Code CLI 驱动：输入框内的引擎选择器（DSH | Claude Code）按会话切换，模型座换成 Claude 的模型与 reasoning effort，访问模式换成 Claude 权限档；权限请求、AskUserQuestion、ExitPlanMode 分别接到 dsh 原生的审批卡、提问卡与计划审核卡。Claude 的流写成 dsh 原生会话事件，由内建转录、工具卡片与嵌套子 agent 渲染；斜杠命令并入命令面板；CLI 由独立 broker 持有，插件更新与 dsh 重启都不中断进行中的轮次。
