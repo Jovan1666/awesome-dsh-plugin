@@ -3596,7 +3596,7 @@ One file per plugin means two submissions never touch the same file, so PRs stop
 
 Your repo must:
 
-- declare a **`dsh.bundle`** manifest in `package.json` — `dsh.client` alone is not installable, and this is checked automatically on every PR
+- [yangdongzhen590/dsh-knj-workflow](https://github.com/yangdongzhen590/dsh-knj-workflow) - Config-driven development-task orchestration for DSH: graph workflows (task/gateway/human nodes) with per-stage persistence, plus an in-editor AI assistant that configures workflows through conversation with live validation.
 - be at least **1 day old** with **10 or more commits** — brand-new repos can resubmit once they clear this
 - carry the [`dsh-plugin`](https://github.com/topics/dsh-plugin) topic
 
