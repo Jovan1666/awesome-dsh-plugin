@@ -2941,6 +2941,7 @@ dsh plugin --profile web add dshmarket
 - [better-er/dsh-write-create-only](https://github.com/better-er/dsh-write-create-only) — 纯 host 端守卫，让 write 工具只允许创建新文件：目标已存在时在执行前直接拒绝并提示改用 edit，全局所有会话生效。
 - [better-er/dsh-write-rule-guard](https://github.com/better-er/dsh-write-rule-guard) — 在工具执行前拦截 edit/write 写入内容里匹配配置正则的字符，默认匹配全角圆括号，同一回合命中后连带拦截后续 pwsh，报错文案与正则均可配置。
 - [BiBoyang/dsh-eval-harness](https://github.com/BiBoyang/dsh-eval-harness) — DSH 插件评测框架：YAML 用例驱动真实 headless agent，断言工具调用/参数/返回与 token 用量，baseline 门禁做 CI 回归。
+- [biedongbin/dsh-claude-compat](https://github.com/biedongbin/dsh-claude-compat) — 把 Claude Code 的 .claude/ 目录零迁移桥接进 DSH：项目与用户级 skills、 斜杠命令、rules（单条 system-reminder 信封注入）、agent 文件、hooks （PreToolUse/PostToolUse/UserPromptSubmit/SessionStart/SessionEnd）、 .mcp.json 服务器，并支持 Claude Code 插件 marketplace。自带 /cc-plugin 插件与市场全管理（claude CLI 优先、自实现兜底）、/cc-resume 列出并把 Claude Code 会话导入为 DSH 原生事件日志、/cc-export 把 DSH skill 导出为 Claude Code skill。Claude Code 与 DSH 的双向桥。
 - [BigBlueBaby/codex2dsh](https://github.com/BigBlueBaby/codex2dsh) — 把 Codex（OpenAI Codex CLI / Desktop）的 MCP 服务器、技能、全局指令、记忆与会话历史迁移进 DeepSeek Harness（DSH），支持可视化面板与命令行，带 dry-run 预览。
 - [BotonJ/dsh-windtunnel](https://github.com/BotonJ/dsh-windtunnel) — 插件作者的契约回归风洞：剧本适配器在隔离子进程中驱动真实管线，会话事件断言覆盖加载/契约/行为/故障四层；零 API key，可进 CI。
 - [br1nosense/dsh-project-manager](https://github.com/br1nosense/dsh-project-manager) — 在 DSH Web 界面以悬浮窗口管理开发项目：添加/删除、一键启动/停止/重启、文件变更热重载自动重启、实时日志查看与持久化。
