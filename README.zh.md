@@ -1128,6 +1128,7 @@ dsh plugin --profile web add dshmarket
 - [tnnevol/fn-os-apps#dsh-codebuddy-plugin](https://github.com/tnnevol/fn-os-apps/tree/main/plugins/dsh-codebuddy-plugin) — 为 DeepSeek Harness 接入腾讯 CodeBuddy 模型提供方，支持浏览器 OAuth 登录和 Web UI 用量显示；npm 安装：`dsh plugin --profile web add @tnnevol/dsh-codebuddy`。
 - [upJiang/dsh-ccswitch](https://github.com/upJiang/dsh-ccswitch) — 将 CC Switch 中的 provider 和模型接入 DeepSeek Harness，并支持 provider 筛选和模型名称搜索。
 - [V1ki/dsh-plugin-subscriptions](https://github.com/V1ki/dsh-plugin-subscriptions) — 把 ChatGPT（Codex）、Claude、Grok 订阅当作 DeepSeek Harness 的 LLM 提供方：设置页登录、模型目录、用量展示，以及 image_generate、video_generate 与 x_search 工具。
+- [vitas/dsh-model-pricing](https://github.com/vitas/dsh-model-pricing) — DSH 设置页中的模型价格表：基于 models.dev 的每 100 万 token 价格并叠加本地目录，含能力标签、跨供应商比价和社区促销信息源。
 - [volcengine/ark-cli#ark-plan-api](https://github.com/volcengine/ark-cli/tree/main/dsh-plugins/ark-plan-api) — 在 DSH 原生模型选择器中注册方舟 Agent Plan、Coding Plan 与后付费模型路由。
 - [welsione/dsh-model-router](https://github.com/welsione/dsh-model-router) — 统一模型路由：一个逻辑 ModelID 汇聚多家供应商，首 token 前失败自动切换并冷却、健康度择优、按 purpose 三档分级（tier1/2/3）、每候选思考级别，设置面板自动保存即时生效。
 - [wenheguo2/dsh-delegation-suite](https://github.com/wenheguo2/dsh-delegation-suite) — 智能委派套件：按角色路由最强模型、失败自动互备、每个子代理可设思考强度、名字带模型标签、支持 fork 委派与可视化路由编辑。
