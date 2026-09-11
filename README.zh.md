@@ -1461,7 +1461,7 @@ dsh plugin --profile web add dshmarket
 - [LFM097384/Context-Prism](https://github.com/LFM097384/Context-Prism) — 面向 DeepSeek Harness 的项目级本地上下文引擎：对历史、代码、文件、用户偏好和 Agent 轨迹做检索/压缩/优先级排序，为任意 LLM 生成动态上下文窗口。
 - [lgquan/dsh-workspace-memory](https://github.com/lgquan/dsh-workspace-memory) — 为 DSH 提供工作区隔离的持久化记忆，让每个工作区拥有可检索、可审计、可纠错和可删除的独立记忆，并支持受控的全局记忆。
 - [liangxiaobing520/dsh-local-vector-memory](https://github.com/liangxiaobing520/dsh-local-vector-memory) — DSH 全本地向量记忆:本地 embedding、SQLite 存储、自动召回注入、去重与冲突检测、软删除回收站、在线备份,可选 LLM 提取。
-- [LittleBlackTong/dsh-plugin-memory](https://github.com/LittleBlackTong/dsh-plugin-memory) — 带 LLM Wiki 结构与 SOUL 人格文件的长期 markdown 记忆库：会话启动强制注入 boot 块，含 remember/recall/consolidate/forget 工作流、内嵌 memory 技能、pack/unpack 迁移工具，以及空闲时以第一人称主动追忆（recall nudge）的拟人化能力。
+- [LittleBlackTong/dsh-plugin-memory](https://github.com/LittleBlackTong/dsh-plugin-memory) — 带 LLM Wiki 结构与 SOUL 人格文件的长期 markdown 记忆库：会话启动注入 boot 块（默认提问后才注入、且只注入当前激活会话），含 remember/recall/consolidate/forget 工作流、内嵌 memory 技能、pack/unpack 迁移工具，以及空闲时以第一人称主动追忆（recall nudge）的拟人化能力。
 - [ljsysfurryACE/dsh-compaction](https://github.com/ljsysfurryACE/dsh-compaction) — 压缩后端：用确定性语义提取器替换 LLM 摘要（保留代码/路径/命令，剔除闲聊），附带 28.4x KV 压缩记账。
 - [ljsysfurryACE/dsh-memory-director](https://github.com/ljsysfurryACE/dsh-memory-director) — LLM 驱动的记忆记/忘插件：每轮对话后由模型决定记住什么/忘记什么（MemoryDirector），请求前注入相关记忆，自动去重，跨会话持久化。
 - [LoserFox/distill](https://github.com/LoserFox/distill) — 自动对话蒸馏：后台 subagent 反省 + 技能 create/update。
