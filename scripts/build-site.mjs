@@ -238,7 +238,25 @@ if (ordered.some((e) => !dates[e.url])) {
       try {
         // Oldest "added" commit for that path. Not `-1`, which git applies
         // before --reverse and would hand back the newest instead.
-        const out = execSync(`git log --diff-filter=A --format=%cI -- ${JSON.stringify(file)}`,
+        //
+        // --first-parent is load-bearing. `--diff-filter=A` cannot match a
+        // merge commit: a merge has no single diff, so git drops it from the
+        // filtered log entirely. When a maintainer resolves a submission's
+        // README conflict during a `--no-ff` merge — or renames its entry file
+        // to match its url, as #2662 needed — the file is born in the merge
+        // itself and exists under that name in neither parent. Both passes
+        // then find nothing, and the build refuses to run: on 2026-09-08 that
+        // took main's site build down for three days and turned 130 unrelated
+        // pull requests red on a step they do not control.
+        //
+        // --first-parent walks the mainline, where every merge appears exactly
+        // once, and reports the merge date — which is the date the entry
+        // entered the list, the thing being asked for. (`-m` also works but
+        // emits one diff per parent, so a merged entry is counted twice.)
+        //
+        // This fallback only ever fills an entry that has NO date yet, so
+        // widening it cannot change a date that is already published.
+        const out = execSync(`git log --first-parent --diff-filter=A --format=%cI -- ${JSON.stringify(file)}`,
           { encoding: 'utf8' }).trim().split('\n').filter(Boolean)
         const iso = out[out.length - 1]
         if (iso) dates[e.url] = new Date(iso).toISOString()
