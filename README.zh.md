@@ -2458,7 +2458,6 @@ dsh plugin --profile web add dshmarket
 - [OMSociety/kimi-ppt-skill](https://github.com/OMSociety/kimi-ppt-skill) — 内含 kimi-ppt 技能的 DSH 插件：本地生成 .pptx 完成 PPT 的创建、编辑与导出，Pillow 生成预览图；衍生自 MIT 项目 open-kimi-ppt-skill。
 - [PerryLink/dsh-plugin-guide](https://github.com/PerryLink/dsh-plugin-guide) — DSH 插件开发知识库，作为按需加载的 agent 技能随 bundle 安装：官方约束、任务工作流、API 参考与社区踩坑，写插件时让 DSH 自己查。
 - [pn1024/dsh-ppt-master](https://github.com/pn1024/dsh-ppt-master) — AI 驱动的演示文稿工作流：从 PDF、DOCX、网址或 Markdown 生成可编辑 PPTX 与 SVG 快照，支持原生 PPTX 模板填充与成品演示文稿增强。
-- [pn1024/dsh-skill-hub](https://github.com/pn1024/dsh-skill-hub) — 技能市场插件，聚合 SkillHub 与 ClawHub 双源搜索，支持站内 README 预览、一键安装卸载与聊天栏技能选择器。
 - [qkycir-123/dsh-run2skill](https://github.com/qkycir-123/dsh-run2skill) — 将 DSH 会话中明确表达的经验整理为可审核的原生 Skill 草稿，并仅在用户确认后保存。
 - [QWE13-ART/dsh-skill-folder](https://github.com/QWE13-ART/dsh-skill-folder) — 折叠 DSH 技能目录提示面：KV 缓存稳定渲染 + BM25/bge-m3 混合技能检索 + 可选自动路由提示。
 - [redfox-data/redfox-community-dsh](https://github.com/redfox-data/redfox-community-dsh) — 100+ 多平台社媒数据技能 + 40 个原生 MCP 工具（数据 API、AI 搜索、AI 生成），一键安装。
@@ -3536,6 +3535,7 @@ dsh plugin --profile web add dshmarket
 - [Oscar-Williams/dsh-deepatlas](https://github.com/Oscar-Williams/dsh-deepatlas) — 任务感知的 DSH 插件导航：聚合 GitHub topic 与社区清单建立本地索引，按 28 类中英能力检索；提供 commit 级静态风险审计、用户确认后的锁定版本安装、组合验证与恢复流程。
 - [oxlyn/dsh-plugin-mgr](https://github.com/oxlyn/dsh-plugin-mgr) — 设置页卡片式插件管理：经 profile 补丁层启停插件（跨重启保留）、安装来源详情、npm 更新检查与一键更新、卸载、搜索与加载失败标识。
 - [PetCT/dsh-plugin-marketplace](https://github.com/PetCT/dsh-plugin-marketplace) — 在 DeepSeek Harness 设置页内浏览、搜索、星标排序、收藏并一键下载社区插件。
+- [pn1024/dsh-skill-market](https://github.com/pn1024/dsh-skill-market) — 技能市场插件，聚合 SkillHub 与 ClawHub 双源搜索，支持站内 README 预览、一键安装与卸载、已装技能列表，以及聊天栏技能选择器。
 - [qinyre/dsh-plugin-install](https://github.com/qinyre/dsh-plugin-install) — 设置 → 插件里的「安装」标签页：按 npm spec、`github:user/repo` 或本地路径安装、更新、卸载任意插件，走的都是 `dsh plugin add` 这条 CLI 路径；更新检查对照 npm latest 或 GitHub HEAD，带降级保护与装后版本核对，每次 add/remove 均附带 pnpm 11 发布冷静期豁免；服务重启在 DSH Desktop 由壳层执行，独立 `dsh web` 下由中转进程接力并交接回原终端。
 - [Relistencode/dsh-extension-hub](https://github.com/Relistencode/dsh-extension-hub) — 设置页一体化扩展中心：管理技能/MCP/插件，内置插件市场（精选目录+GitHub 搜索、npm 一键安装），并提供附加功能区统一安装/停用/卸载、一起更新附属功能。
 - [sandbaseai/dsh-plugin-store](https://github.com/sandbaseai/dsh-plugin-store) — 在 DSH 设置中加入原生插件商店，支持目录搜索、标签筛选、排序、安装与已安装插件管理。
