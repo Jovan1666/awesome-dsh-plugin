@@ -84,6 +84,7 @@ dsh plugin --profile web add dshmarket
 - [CAI-MH/dsh-quality-review](https://github.com/CAI-MH/dsh-quality-review) — 每轮回复结束时用独立审查模型审核输出，判定不合格则引导 agent 修复，每轮最多追问 2 次；可注入 SOP 文件夹标准作为额外审核维度。
 - [FuRongJun-1999/dsh-memory](https://github.com/FuRongJun-1999/dsh-memory) — 白箱AGI架构探索：元认知（自我认知循环）、持续学习（知识飞轮）、世界模型（条件空间+语义时空图）、自我改进（自举纪律）、零LLM白箱管线与可审计信任护栏。
 - [Jonah-Wu23/dsh-gungnir#dsh-plugin](https://github.com/Jonah-Wu23/dsh-gungnir/tree/main/packages/dsh-plugin) — 面向 DeepSeek Harness 的证据驱动目标校验插件。通过 /ultragoal 锁定目标，并依据命令退出码与生成产物验证完成状态，防止模型虚报任务完成。
+- [kenz1117/dsh-engram](https://github.com/kenz1117/dsh-engram) — 跨会话长期记忆插件，以「记忆宫殿」隐喻重构 agent 长期记忆：双层 SQLite 分库（用户级 + 按 git origin 隔离的项目级）、FTS5 + 本地向量 RRF 融合与新鲜度/命中排序 boost、从会话日志自动摄取（含末轮）、来源审计链、巩固蒸馏与衰减遗忘，以及设置页「记忆库」面板（走廊拓扑、导览管家、翻新清单）。
 - [yunxiyang/dsh-loop-continue](https://github.com/yunxiyang/dsh-loop-continue) — 续跑「叙述了下一步动作却没调用工具」就结束的 agent 轮次：插件在 agent/turn-stopping 回放该轮日志，让裁判模型回答一次 true/false，命中的话把同一轮再推进一步。
 
 ### 🎨 UI 增强
@@ -1474,7 +1475,6 @@ dsh plugin --profile web add dshmarket
 - [JohnXu22786/context-pruner](https://github.com/JohnXu22786/context-pruner) — 面向 DeepSeek Harness 长会话的上下文分诊插件：通过官方 ctx.compaction 接缝，用确定性规则筛查并裁剪过期、重复、失败与超大的上下文内容。
 - [JohnXu22786/memory-standard](https://github.com/JohnXu22786/memory-standard) — DeepSeek Harness 记忆标准协议（mm）：分层 MEMORY.md 与硬性预算、冻结快照、mm:// URI 互认、会话日志摄取，附带 mem_* 工具与独立 CLI。
 - [JunNanLYS/dsh-layered-memory](https://github.com/JunNanLYS/dsh-layered-memory) — dsh 长期记忆：对话自动蒸馏为原子事实、场景摘要与用户画像，每步模型调用前自动注入相关记忆。开箱零配置——BM25 + 向量混合检索，可选本地离线嵌入，chat/work 双族隔离。
-- [kenz1117/dsh-engram](https://github.com/kenz1117/dsh-engram) — 跨会话长期记忆：用户/项目双层 SQLite 分库、FTS5 与离线本地向量混合检索、9 个 engram_* 工具、逐轮自动摄取、蒸馏飞轮、来源审计，以及设置页中英双语的记忆库管理面板。
 - [KLRSL/dsh-biomemory](https://github.com/KLRSL/dsh-biomemory) — 为 DeepSeek Harness 打造的生物仿生记忆系统：纯 Markdown 数据层、memory 工具、冻结快照注入、分级审批门、结构化审计、记忆代谢（dream）、记忆钉、语义检索、/memory 命令与跨会话召回。
 - [lanyun077/dsh-project](https://github.com/lanyun077/dsh-project) — 把多个文件夹与会话收纳为「项目」，共享 PROJECT.md 记忆与 AGENTS.md 指令并注入每个会话，附带项目树侧边栏。
 - [LAYZR114/dsh-project-memory](https://github.com/LAYZR114/dsh-project-memory) — 北极星记忆：DeepSeek Harness 本地优先项目记忆插件。每项目一份 .dsh-memory.json（按 cwd 隔离），提供 memory_read/recall/write/update/delete 工具、/memory 命令与设置页；分级注入（用户画像常驻 + 场景触发记忆带 P1/P2/P3 等级）、语义召回（IDF+同义词层）、底线记忆硬守卫机制（识别禁止语义→授权→拦截 AI 删除；用户可确认绕过）。
