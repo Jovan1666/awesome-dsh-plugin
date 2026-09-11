@@ -1451,6 +1451,7 @@ dsh plugin --profile web add dshmarket
 - [gezi-wen/sage-mem](https://github.com/gezi-wen/sage-mem) — 基于文件的跨会话记忆：纯 Markdown 记忆文件，检索结果自动注入；格式与 Claude Code 的 CLAUDE.md 及记忆文件兼容，迁移即手工复制文件。
 - [GIT121995/dsh-memory-gate](https://github.com/GIT121995/dsh-memory-gate) — 有界本地记忆 + CBDC 权威门控：SQLite + FTS5 claims，作用域召回并给出可解释的采用/核验/忽略决策与完整审计轨迹，/memory 命令，每次注入 ≤3 条/1200 字符，不增加额外模型调用。
 - [giter00/dsh-headroom](https://github.com/giter00/dsh-headroom) — 面向 DeepSeek Harness 的自动上下文压缩插件：在工具输出进入模型前压缩，并通过 CCR 检索工具保持所有有损压缩可逆。
+- [greyoak111/siyuan-codex-bridge](https://github.com/greyoak111/siyuan-codex-bridge) — 把 DeepSeek Harness 接到本机思源笔记桌面端：桥接它自带的 MCP 端点，把笔记工具注册为 mcp__siyuan__<tool>，附带笔记使用技能，并在每次调用上执行只读/创作/完整三级策略。
 - [guo6x/dsh-palate](https://github.com/guo6x/dsh-palate) — 给 DSH agent 的积累型设计品味语料库：喂好坏例子、提炼原则，用学到的判断评审新设计，而不是套固定规则。
 - [hellosky983/dsh-qrcode](https://github.com/hellosky983/dsh-qrcode) — DeepSeek Harness 离线二维码（SVG/PNG/ASCII）与条码（Code128/EAN-13）生成器，无网络、无 shell。
 - [hellosky983/dsh-skillradar](https://github.com/hellosky983/dsh-skillradar) — 扫描当前会话可见的技能，按与最近对话的相关性排序推荐。
