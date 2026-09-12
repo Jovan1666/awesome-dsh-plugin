@@ -2127,6 +2127,7 @@ dsh plugin --profile web add dshmarket
 - [CREAIT-nl/dsh-plugins#web-fetch](https://github.com/CREAIT-nl/dsh-plugins/tree/main/web-fetch) — ctx.web 接口的本地受控抓取提供方——dsh 自带完整的 web_fetch 工具，却没有随附后端。每一跳重定向都会重新解析并对照非公网地址段校验，另有流式大小上限与内容类型白名单。
 - [CREAIT-nl/dsh-plugins#web-search-searxng](https://github.com/CREAIT-nl/dsh-plugins/tree/main/web-search-searxng) — 把 web_search 指向自建的 SearXNG 实例而非原生搜索路由：自动翻页直到满足 maxResults，并在引擎失败时报告覆盖不全，避免把稀少的结果误读成网上本就没有内容。
 - [DDDMUC/dsh-free-search](https://github.com/DDDMUC/dsh-free-search) — DSH 免费搜索插件：7 个引擎（DuckDuckGo/Bing/SearXNG 免费 + Exa/Perplexity/DeepSeek 付费）、自动回退、设置页 UI（API key 输入 + 官网链接）、web_fetch、引擎测试工具。
+- [delef/dsh-free-web-search](https://github.com/delef/dsh-free-web-search) — 免费网页搜索，支持 10 个引擎（Bing/DuckDuckGo/SearXNG/AnySearch 免费，Exa/Tavily/Keenable/Perplexity/DeepSeek 付费）、自动回退、按时间筛选的高级搜索、平台搜索（GitHub/Reddit）、网页内容抓取、LRU 缓存和设置界面。基本使用无需 API 密钥。
 - [EdwinDigital/dsh-web-search-microsoft-webiq](https://github.com/EdwinDigital/dsh-web-search-microsoft-webiq) — 基于 Microsoft Web IQ 的网页搜索提供方，接入内置 web_search 工具，并提供 API Key、端点、语言、地区、摘要长度与 SafeSearch 的设置卡片。
 - [elves-ai/dsh-web-search-firecrawl](https://github.com/elves-ai/dsh-web-search-firecrawl) — 基于 Firecrawl 的网页搜索提供方：替换内置 web_search 的后端，并提供 API Key、结果数量等字段的设置卡片。
 - [fno2010/dsh-web-search-ext](https://github.com/fno2010/dsh-web-search-ext) — 面向内置 web_search 工具的多后端搜索提供方（Exa + Firecrawl）：自动故障切换、按后端 429 冷却、无密钥匿名可用。
