@@ -448,5 +448,7 @@
  "https://github.com/polaris-smart/dsh-devices": "2026-08-19",
  "https://github.com/ding112/MoneyPal/tree/main/packages/dsh-moneypal": "2026-09-07",
  "https://github.com/pn1024/dsh-skill-market": "2026-09-04",
- "https://github.com/Dayi-Z/dsh-learn-wiki": "2026-08-29"
+ "https://github.com/Dayi-Z/dsh-learn-wiki": "2026-08-29",
+ "https://github.com/baosfeng/my-dsh-plugins/tree/main/plugins/dsh-my-notify": "2026-08-26",
+ "https://github.com/baosfeng/my-dsh-plugins/tree/main/plugins/dsh-my-guardian": "2026-08-26"
 }
