@@ -178,6 +178,27 @@ jobs:
               // not allowed to veto the re-run. Self-limiting: the re-run
               // restamps the check, so a PR that is genuinely broken fails
               // again with a current timestamp and is skipped from then on.
+              //
+              // KNOW WHAT THE RE-RUN CAN AND CANNOT DO. `reRunWorkflow` replays
+              // the run's stored `head_sha`. For a `pull_request` event that is
+              // the merge commit GitHub resolved when the run was FIRST created,
+              // so the replay checks out the base as it stood then — not main as
+              // it stands now. Measured on #4725: attempt 2 started 2026-09-13
+              // against a head_sha dated 2026-09-09 and printed "3432 entries",
+              // the count from that day, then failed on the same #4731 bug that
+              // main had already fixed.
+              //
+              // Consequence, and it is the whole reason this paragraph exists:
+              // for a pull request whose merge commit falls INSIDE a bad window
+              // on main, a re-run cannot produce a true verdict. It re-fails,
+              // now with today's timestamp, and afterwards reads as "checked
+              // today, broken today" when it is neither. Only a new event — an
+              // author push, or a maintainer merging locally — resolves those.
+              // The re-run is still worth spending once, because the gate is a
+              // separate App check that DOES re-evaluate against current data,
+              // and refreshing the gate verdict is most of the value. Do not
+              // read a red `check` here as a statement about the submission
+              // without looking at what tree it ran on.
               const checkRanAt = Date.parse(check?.completed_at ?? '')
               const checkStale = checkChangedAt && (!checkRanAt || checkRanAt < checkChangedAt)
               if (check && check.conclusion !== 'success' && !checkStale) continue
