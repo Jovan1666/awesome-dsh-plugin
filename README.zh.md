@@ -509,6 +509,7 @@ dsh plugin --profile web add dshmarket
 - [Rudyy898/dsh-drag-path](https://github.com/Rudyy898/dsh-drag-path) — 像 Codex/Claude 一样：拖入任意格式文件或文件夹，真实绝对路径立即插入输入框，不用一个个打字。工作区优先智能定位、大小校验、同名弹候选选择器，支持批量拖入与粘贴，兼容 Windows/macOS。
 - [Ruiming-cn/dsh-ask-in-sidebar](https://github.com/Ruiming-cn/dsh-ask-in-sidebar) — 选中助手回答中的文本，在临时右侧面板向侧边栏助手提问：基于主对话 LLM 历史快照回答，支持流式 Markdown、可折叠思考与多轮追问，不打扰主对话。
 - [Ruiming-cn/dsh-better-at](https://github.com/Ruiming-cn/dsh-better-at) — DSH Web 输入框 `@` 文件/会话引用加速：预加载索引、浏览器本地按键过滤、保留原生 mention 序列化。
+- [ruisenbai/dsh-turn-fold](https://github.com/ruisenbai/dsh-turn-fold) — 流式回复期间将推理与工具调用折叠为收起的步骤栏，回合完成后整轮收拢为一条摘要栏；步骤栏显示原生工具图标、文件名、编辑增删行数与失败计数，已完成回合从记录的 Session 事件恢复耗时、首字延迟、Token 用量、生成速度与缓存命中率，偏好由 Host 持久保存。仅改变浏览器呈现，需要 DSH 0.1.5-alpha.1。
 - [runcat-tommy/dsh-chinese-poetry](https://github.com/runcat-tommy/dsh-chinese-poetry) — 免 token 诗词查询插件，在会话页头新增「诗词」标签页，支持搜索、筛选、飞花令、每日一首、收藏、简繁、节日专题与分享卡片图；AI 解读复用 DSH 会话。
 - [runcat-tommy/dsh-panda-calendar](https://github.com/runcat-tommy/dsh-panda-calendar) — 会话页头的「熊猫日历」标签页：公历/农历、干支、生肖、24 节气、传统与外国节日、中国法定节假日（含调休）、多城市天气、时间戳转换（秒/毫秒 ↔ 年月日时分秒，可选时区）与内置离线的「历史上的今天」，数据免费、无需 API Key。
 - [s3yf1337/dsh-desktop#bundle](https://github.com/s3yf1337/dsh-desktop/tree/main/bundle) — dsh 桌面配置：原生 Tauri 窗口承载 harness Web 界面，支持托盘、原生通知、文件管理器面板与一键更新。
@@ -664,6 +665,7 @@ dsh plugin --profile web add dshmarket
 - [Yujm888/dsh-turn-rail](https://github.com/Yujm888/dsh-turn-rail) — Codex 风格自动隐藏右缘轮次导航：靠边浮现、单轮 tooltip、会话内搜索、长会话 30 轮滚动窗口。
 - [yumm007/dsh-reveal-files](https://github.com/yumm007/dsh-reveal-files) — 把每个产物文件卡片变成按文件操作的下拉菜单：打开文件、拷贝路径、在系统文件浏览器中定位，或打开终端并进入其目录。
 - [Yur0918/dsh-sidepanel](https://github.com/Yur0918/dsh-sidepanel) — DSH Web 界面的 Codex 式右侧面板——会话产物浏览（文件树、扫描收录、预览、访达定位）+ 继承当前会话上下文的侧聊，支持模型选择器、拟人化定时调用、发送吸顶与智能滚动。
+- [Yur0918/dsh-soul](https://github.com/Yur0918/dsh-soul) — DeepSeek Harness 个性化设置：9 种回复风格、自定义指令、人设卡、会话级切换、带审计的长期记忆。
 - [Yuuhann1999/dsh-bloub-mood](https://github.com/Yuuhann1999/dsh-bloub-mood) — 动态心情图标：favicon、侧栏字标与首页标题随会话状态切换 bloub 表情动画（执行中 / 等输入 / 完成 / 空闲），8 种形状、12 种颜色与自定义文字均可在设置页配置。
 - [YZz-S/dsh-workspace-files-explorer](https://github.com/YZz-S/dsh-workspace-files-explorer) — 悬浮工作区文件树浏览器：带行号的代码语法高亮与 Markdown 富文本预览。
 - [zclDragon/dsh-side-chat](https://github.com/zclDragon/dsh-side-chat) — Codex 风格 /side 侧边对话插件：在当前对话旁开一个浮动分叉面板，继承上下文、不打断主任务。
@@ -1193,6 +1195,7 @@ dsh plugin --profile web add dshmarket
 - [zhangyqjiaoshou-oss/dsh-model-sync](https://github.com/zhangyqjiaoshou-oss/dsh-model-sync) — 一键同步 / 自动同步供应商模型列表，与 /v1/models 保持一致。
 - [zhubaohi/dsh-qwen38-compaction-fix](https://github.com/zhubaohi/dsh-qwen38-compaction-fix) — 针对 NInfer 托管的 qwen3.8-27b 网关的压缩修复：在 dsh 上下文压缩与会话标题调用中关闭思考，避免 xhigh 推理耗尽全部输出预算；同一思路适用于其他启动方式，本包仅面向 NInfer。
 - [Zn-Dk/dsh-zhipu-toolkit](https://github.com/Zn-Dk/dsh-zhipu-toolkit) — 智谱 BigModel GLM 双端点模型目录（Coding Plan 与普通 API），支持实时模型发现与实测校准的思考档位映射，提供凭据、端点与默认推理档的可视化设置卡片。
+- [zpis666/dsh-context-budget](https://github.com/zpis666/dsh-context-budget) — 在模型设置页为每个 pi-ai 路由新增上下文窗口与压缩阈值字段，并在输入框右下角按厂商提供思考强度选择器，写入 llm-pi-ai 容量、reasoningEfforts 与 compaction-basic 补丁行。
 
 ### 🆔 身份与通信
 
@@ -1207,6 +1210,7 @@ dsh plugin --profile web add dshmarket
 - [sryimnoob123/dsh-global-prompt](https://github.com/sryimnoob123/dsh-global-prompt) — 设置面板管理全局与各工作区 AGENTS.md，支持身份与人设注入、运行时上下文开关和结果通知。
 - [Tkingxiao/I-am-Yuike](https://github.com/Tkingxiao/I-am-Yuike) — 通过自带插件去除 harness 前置与后置注入提示词，仅使用预设原生提示词运行，实现软破限与猫娘人格模拟：将猫娘 Yuike 预设幂等部署到 ~/.dsh/.agent-presets/yuike/，不覆盖已编辑的预设。
 - [tnnevol/fn-os-apps#dsh-codex-auth-plugin](https://github.com/tnnevol/fn-os-apps/tree/main/plugins/dsh-codex-auth-plugin) — 为 DeepSeek Harness 提供 ChatGPT OAuth 登录和 Codex 账号管理，包括模型目录和用量展示。
+- [UnknowCao/dsh-outlook](https://github.com/UnknowCao/dsh-outlook) — 零凭据 Outlook 自动化：13 个工具通过 COM 直接驱动本地桌面 Outlook 客户端——搜信/读信/草稿/回复转发/日历/通讯录/会议室/忙闲查询——外加侧边栏新邮件角标。无需 Graph API 注册、无需 SMTP 密码；任何外发动作都过三层人工审批门。
 - [w4xxx/dsh-xia-plugins#packages/gameassist-roster](https://github.com/w4xxx/dsh-xia-plugins/tree/main/packages/gameassist-roster) — 每日轮值二次元陪伴角色：按本地日期从 JSON 角色卡确定性选角，支持换角/重抽工具与 voice-map 路由。
 - [wutian122/dsh-remote-shell](https://github.com/wutian122/dsh-remote-shell) — 打包 remote-shell 技能，提供安全的 SSH、SFTP、Telnet、WinRM 远程操作，内置加密凭证库，登录与执行脚本不接受明文密码。
 - [xxww0098/dsh-plugin-oauth-subs](https://github.com/xxww0098/dsh-plugin-oauth-subs) — 通过 OAuth 和本地代理，将 ChatGPT Codex、xAI Grok、智谱 GLM、AWS Kiro、Google Antigravity 与 Cursor 订阅接入 DeepSeek Harness。
@@ -1982,6 +1986,7 @@ dsh plugin --profile web add dshmarket
 - [songer522/dsh-launcher](https://github.com/songer522/dsh-launcher) — DSH Web 服务的 macOS 菜单栏应用，以及它所读取的 Host 插件：插件把运行中服务的端口、PID 与带 token 的 URL 写入 ~/.config/dsh-launcher/runtime.json，并在停止时删除，因此即使服务器是从终端启动的，也能在状态栏完成启动、打开、重启与停止。
 - [springbrand-lab/dsh-oauth-mcp-client](https://github.com/springbrand-lab/dsh-oauth-mcp-client) — 面向 Streamable HTTP 服务的 OAuth 2.1 MCP 客户端：在设置页添加连接，通过浏览器登录（PKCE + 动态客户端注册），其工具随即注册进 DSH；令牌存于凭据服务，连接写入 profile。
 - [SPYQWER1/dsh-codex-tools](https://github.com/SPYQWER1/dsh-codex-tools) — 基于 Codex 的 `web_search`、`image_gen` 与 `image_vision` 工具，复用 ChatGPT OAuth 登录态为 DeepSeek Harness 提供网页搜索、生图与识图能力。
+- [sryimnoob123/dsh-tool-pwsh-safe](https://github.com/sryimnoob123/dsh-tool-pwsh-safe) — 把 PowerShell 脚本 base64 编码后执行，引号、$、反斜杠、中文全部原样传递，免去转义地狱。走与内置 pwsh 工具相同的沙箱通道。
 - [STARDUSTLC666/dsh-calendar](https://github.com/STARDUSTLC666/dsh-calendar) — CalDAV 日历插件：查/建/改/删/搜日程与健康自检，Google/iCloud/Nextcloud/自定义端点，RRULE 重复事件展开。
 - [STARDUSTLC666/dsh-cite](https://github.com/STARDUSTLC666/dsh-cite) — 参考文献工具：DOI 精确查询与 Crossref 题录检索，GB/T 7714 / APA / MLA / Chicago 格式化，BibTeX 生成、有界并发 DOI 校验与健康自检。
 - [STARDUSTLC666/dsh-codex-port](https://github.com/STARDUSTLC666/dsh-codex-port) — Codex 官方插件一键移植为 DSH 技能（codex_list/port/status/health，实测 186 插件/583 技能，移植 577 个 0 失败）。
@@ -3563,7 +3568,7 @@ dsh plugin --profile web add dshmarket
 - [yuunnn/dsh-on-imessage](https://github.com/yuunnn/dsh-on-imessage) — 在 iPhone 信息里直接和本机 DeepSeek Harness（dsh）对话：切换工作区/会话、开新会话、原生信息气泡回复，无需额外 App、服务器或云服务。
 - [Z-6354/dsh-mobile-hanui](https://github.com/Z-6354/dsh-mobile-hanui) — DSH Web 界面的移动端适配：窄屏下把桌面三栏布局改造成触屏友好的手机布局（覆盖式抽屉、可拖拽悬浮按钮、全屏弹窗、上滑加载历史），1024px 断点内生效，桌面端零影响。 — 基于 dsh-mobile-gate 的完整移动端 PWA：安全远程访问网关 + 可安装到主屏（manifest + service worker）+ 离线可用 + 触屏手势（下拉刷新/边缘返弹/捏合缩放字体）+ agent 完成推送 + 触屏优先布局，桌面零影响。
 - [zdx8637-gitdog/dshmobile#dshmobile-plugin](https://github.com/zdx8637-gitdog/dshmobile/tree/main/plugins) — 通过自建中继从手机访问 DSH（WSS 由你自己的 TLS 终止代理提供）：含桥接守护与扫码登录的 bundle 插件、原生 Android 应用，并支持服务端设备吊销。
-- [zexadev/dsh-tether](https://github.com/zexadev/dsh-tether) — 用 Android/iOS 手机远程使用电脑上的 dsh 完整网页界面,经 iroh 跨网点对点直连,中间不经过任何服务器。
+- [zexadev/dsh-tether](https://github.com/zexadev/dsh-tether) — 用 Android/iOS 手机远程使用电脑上的 dsh 完整网页界面,经 iroh 跨网点对点打洞直连,不用架任何服务器;打不通才退回 relay,relay 只见密文。
 - [zhaenggg/dsh-ssh-remote](https://github.com/zhaenggg/dsh-ssh-remote) — SSH 远程执行插件集：把会话工作区指向 ssh:// 目录，文件读写、命令与 shell 全部在远程主机上执行。
 - [ZhangFengshun/dsh-remote-ssh](https://github.com/ZhangFengshun/dsh-remote-ssh) — 类 VSCode Remote-SSH 的 DSH 插件：SSH 连接超算/服务器，内置文件页签直读远程文件、终端页签自动 SSH，远程工作区配单往返合并读与结果缓存，含 12 个会话感知的 remote_ssh_* 模型工具。
 - [zhu1090093659/dsh-web-ui#packages/dsh-ssh](https://github.com/zhu1090093659/dsh-web-ui/tree/main/packages/dsh-ssh) — SSH 远程运维面板：Web 终端、SFTP 传输、本地端口转发与一条命令并发集群执行，Agent 与面板共用同一份主机配置。
