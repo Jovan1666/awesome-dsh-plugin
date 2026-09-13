@@ -1,5 +1,5 @@
-url: https://github.com/agentscope-ai/ReMe/tree/main/typescript
-name: agentscope-ai/ReMe#typescript
+url: https://github.com/agentscope-ai/ReMe/tree/main/integrations/dsh
+name: agentscope-ai/ReMe#dsh
 category: memory
 description:
   en: 'Connects DeepSeek Harness to ReMe''s local-first, self-evolving personal knowledge base: automatically captures completed main-agent conversations as user-owned Markdown memory, searches conversations and source material through reme_search with BM25, optional embeddings, and wikilink expansion, and schedules daily memory consolidation.'
