@@ -234,6 +234,7 @@ dsh plugin --profile web add dshmarket
 - [drscrewdriver/dsh-input-traffic](https://github.com/drscrewdriver/dsh-input-traffic) — 三档（now/next/later）输入规划 dock：以红/黄/绿色优先级条取代忙碌 Enter 排队栏，普通 Enter 排入 later，支持多行原位编辑、拖拽排序与会话级冻结/恢复；冻结按钮经 stopNextTurn/resume RPC + 输入框锁定，桥接另一独立插件 [dsh-session-guard](https://github.com/drscrewdriver/dsh-session-guard)（可在 dsh-market 安装）实现按会话真实冻结锁定，并配合其高峰全局自动暂停，在 DeepSeek 高价时段停止会话、错峰自动恢复。
 - [dsh-blue/blue#blue](https://github.com/dsh-blue/blue/tree/master/packages/bundle/blue) — 插件树式终端界面：流式 markdown 会话流、工具卡片、模糊命令补全与主题热切换，每个界面组件都是可热替换的 Cordis 插件。
 - [dsh-niao/dsh-niao-quick-open](https://github.com/dsh-niao/dsh-niao-quick-open) — DeepSeek Harness 界面增强插件：工作区一键打开（复制路径、访达显示、自动发现编辑器打开）、用户消息导航条、会话待办标记、单列表增强与硬性重启按钮。
+- [du-u-uck/DSH-Prompt-Optimization](https://github.com/du-u-uck/DSH-Prompt-Optimization) — 在 DSH 输入框旁添加一键提示词优化按钮，支持撤回，并可在设置中单独指定优化模型。
 - [dygin/dsh-recover-context](https://github.com/dygin/dsh-recover-context) — 回退到任意一条提问之前，或编辑上一条问题重新提交；被丢弃轮次产生的工作区文件会一并还原。
 - [e2mcc/dsh-popout-sidebar](https://github.com/e2mcc/dsh-popout-sidebar) — 可弹出式侧边栏：侧边栏展示产物与文件树，支持多种文件预览形式；并可弹出为独立浏览器标签页（可拖至另一显示器）；兼容其他sidebar插件，可以同时显示。
 - [EastMG/dsh-gacha-calendar](https://github.com/EastMG/dsh-gacha-calendar) — 二游卡池/活动排期速查：侧边栏按钮展示 11 款二游的当期卡池与活动起止（含倒计时），支持自动刷新与各游戏独立来源切换。
@@ -1649,6 +1650,7 @@ dsh plugin --profile web add dshmarket
 - [1321928757/dsh-mysql](https://github.com/1321928757/dsh-mysql) — DeepSeek Harness 的 MySQL 连接插件：在设置页配置多套连接（每连接可配表白名单与写权限），输入栏一键切换当前会话的连接，并为所有 Agent 预设提供 mysql_query / mysql_tables / mysql_execute 工具。
 - [1byteone/dsh-plugin-nlbi](https://github.com/1byteone/dsh-plugin-nlbi) — 自然语言查询 + 商业智能报表：Text2SQL、图表、报表收藏、Schema/数据面板与侧栏工作台，基于 DSH 的 MySQL 连接层。
 - [1na-ko/dsh-hdc-bridge](https://github.com/1na-ko/dsh-hdc-bridge) — 鸿蒙设备桥：hdc 截图/装包/日志/崩溃/UI 自动化闭环（配 read_image 看图），官方优先版本化 API 知识层（SDK .d.ts + 离线随包文档），以及 DevEco CLI 构建/签名/lint 通道。
+- [2286893544/feishu-dsh-plugin](https://github.com/2286893544/feishu-dsh-plugin) — 飞书（Lark）集成：25 个工具，覆盖群消息与聊天记录、云文档（含知识库页面、自动生成的图表与图片）、多维表格记录、电子表格区间读写与文档授权，基于企业自建应用。
 - [863683348/dsh-plugin-academic-writing](https://github.com/863683348/dsh-plugin-academic-writing) — 为 DSH agent 提供学术写作工具包：论文大纲、标题与摘要骨架、GB/T 7714 / APA / MLA 引文格式化、措辞质检与投稿前清单。
 - [863683348/dsh-plugin-education](https://github.com/863683348/dsh-plugin-education) — 为 DSH agent 提供教育工具包：按学段的教案骨架、测验题与答案校验、分析式评分量规、Anki/markdown 闪卡与可读性分级。
 - [863683348/dsh-plugin-finance-data](https://github.com/863683348/dsh-plugin-finance-data) — 为 DSH agent 提供金融数据工具包：数字与货币格式化（含中文万/亿单位）、收益与年化计算、估值与盈利比率、现值/终值、风险指标与数据质量清单。
@@ -2192,6 +2194,7 @@ dsh plugin --profile web add dshmarket
 - [ankye/dsh_use_browser#use-browser](https://github.com/ankye/dsh_use_browser/tree/main/packages/use-browser) — 通用浏览器自动化：browser_open、browser_click、browser_type、browser_extract、browser_screenshot、browser_eval 六个工具，@e 元素引用，Playwright 无头与 CDP（连接本机 Chrome）双后端。
 - [anweat/dsh-browser](https://github.com/anweat/dsh-browser) — 自包含浏览器运行时：Playwright（chromium）+ OpenCLI 作为插件本地依赖（全局复用回退），提供 `browser` 服务与 9 个交互式浏览器工具。
 - [anweat/dsh-web-search-pro](https://github.com/anweat/dsh-web-search-pro) — 增强型、可持久化的网页搜索：多引擎路由（DeepSeek/Exa/DDG/Bing/Jina + GitHub/B站/YouTube/V2EX/小红书/Twitter/Reddit/RSS）、SQLite+LRU 缓存、userscript 风格抽取、Playwright 渲染。
+- [ArcaneOrion/dsh-tavily-web](https://github.com/ArcaneOrion/dsh-tavily-web) — Tavily 检索与网页抓取：tavily_search 带最多八把 API key 的轮询池，按 key 对 401/403/429 退避，单个账号额度耗尽不再等于工具失效；web_fetch 经 curl 抓取单页，返回 HTTP 状态与去标签正文。
 - [Baisbt/dsh-plugin-webrelay](https://github.com/Baisbt/dsh-plugin-webrelay) — 通过同源反向代理把外部 AI 对话站点嵌进 DSH 右侧面板（DOM 适配器写在配置里，站点改版无需改代码），并在输入框旁加一个按钮：要么用宿主模型改写草稿，要么跑一轮闭环——压缩对话、优化、发送到嵌入站点、捕获回复、整理成终稿写回输入框。
 - [big0lives/dsh-web-window-companion](https://github.com/big0lives/dsh-web-window-companion) — 在独立浏览器 profile 的 Edge/Chrome 应用模式窗口中打开 dsh web 界面，关闭窗口即优雅停止服务。
 - [BitDG/dsh-plugins#reference-library](https://github.com/BitDG/dsh-plugins/tree/main/plugins/reference-library) — 在原生 @ 引用菜单中提供 CodePen、Pinterest、Z-Library 与 GitHub 数据卡片，并支持 Pinterest 分页和 Z-Library 排序。
@@ -3558,6 +3561,7 @@ dsh plugin --profile web add dshmarket
 - [JUANWANG-BUAA/dsh-full-remote](https://github.com/JUANWANG-BUAA/dsh-full-remote) — 远程访问 DeepSeek Harness 且服务端 API 完整：转发时改写 Host/Origin，恢复其他方案必定 403 的 settings.* / credentials.* / host.listDirectory。令牌门、按设备会话、可选首访审批。
 - [Junkrat9527/dsh-desktop-automation](https://github.com/Junkrat9527/dsh-desktop-automation) — macOS 桌面控制插件：agent 像人一样操作非浏览器应用（剪映/PS/WPS/原生客户端）——14 个工具覆盖鼠标/键盘/滚动/应用/窗口/截图，并整合视觉闭环（desktop_see 识图 + desktop_locate UI 定位坐标，复用 dsh 既有视觉凭据）。服务 GUI 会话按需拉起，非登录自启。
 - [JUNQINGV587/dsh-ssh-hub](https://github.com/JUNQINGV587/dsh-ssh-hub) — DSH Web GUI 多服务器 SSH 终端面板：浮动终端窗口支持标签页、并排组合、广播、宿主侧持久会话，以及密码/私钥/SSH Agent 认证。
+- [kinderao/dsh-pocket-relay](https://github.com/kinderao/dsh-pocket-relay) — 手机与远程访问 DSH Web 界面：局域网扫码即用，或用自建 relay 中继服务端（替代 cloudflared 隧道）随时随地连回电脑；每台设备独立凭据，可配对、查看与单独撤销；多台电脑共用一个中继并自动热备。
 - [KyoMio/dsh-zen-remote](https://github.com/KyoMio/dsh-zen-remote) — 手机优先的移动端界面重排 + 配对码网关：经自建反代或 Cloudflare Tunnel 把 DSH 变成可安装、带推送的 PWA。
 - [Leon0555/dsh-lan-access](https://github.com/Leon0555/dsh-lan-access) — 局域网访问：Web GUI 绑定 0.0.0.0 + crypto.randomUUID polyfill（修复非安全上下文下 RPC 崩溃）。
 - [liguobao/deepseek-harness-remote](https://github.com/liguobao/deepseek-harness-remote) — DeepSeek Harness 多端远程访问：从手机、平板、浏览器或另一台电脑继续进行中的会话，端到端加密通道（Noise IK + 自适应 Relay/WebRTC 传输），设备授权管理；远程端仅开放 ApiProxy 能力，支持 dsh-file-viewer 只读文件预览，不提供 Shell、远程桌面或写入权限。
@@ -3600,6 +3604,7 @@ dsh plugin --profile web add dshmarket
 - [TZHR-invest/dsh-plugins#dsh-lan-gateway](https://github.com/TZHR-invest/dsh-plugins/tree/main/packages/dsh-lan-access) — 完整的 Web GUI 局域网/远程访问方案：0.0.0.0 绑定、crypto.randomUUID polyfill、令牌门卫（401 登录页 + WebSocket 拦截，回环豁免）、特权围栏与设置持久化放行，附带幂等安装器与升级恢复。
 - [wangzhishou/onebox-dsh-bridge](https://github.com/wangzhishou/onebox-dsh-bridge) — DeepSeek Harness 的 Android 客户端实现:扫码配对 + 端到端加密云端中继,把本机 dsh web 桥接到万宝盒 App。
 - [Wayne036/dsh-plugin-login-gate](https://github.com/Wayne036/dsh-plugin-login-gate) — 密码登录的 HTTPS 闸门，让局域网设备安全地通过网络访问 DeepSeek Harness 的 Web 界面。
+- [Wazzfhaha/dsh-multi-end](https://github.com/Wazzfhaha/dsh-multi-end) — 通过 SSH 将远端 DSH 工作区和会话接入同一个原生 DSH 界面。
 - [wenbin-wb/dsh-bridge](https://github.com/wenbin-wb/dsh-bridge) — DeepSeek Harness 远程与移动端接入插件：提供局域网扫码直连、Cloudflare 与自建公网隧道，以及微信、QQ、飞书、Telegram 机器人交互，内置安全认证与访问控制。
 - [wentao75/dsh-remote-auth](https://github.com/wentao75/dsh-remote-auth) — DSH 远程授权页：以可点击链接或二维码呈现当前进程的浏览器会话 URL，可选主机/网段白名单与 PIN 门禁。
 - [whoisjiahao/dsh-feishu-channel](https://github.com/whoisjiahao/dsh-feishu-channel) — 在飞书聊天里驱动 DeepSeek Harness agent：流式富卡片实时展示思考与工具步骤，按 DeepSeek 峰谷牌价计量每轮费用，一键审批、按模型能力透传图片，扫码即用、无需公网。
