@@ -1302,6 +1302,7 @@ dsh plugin --profile web add dshmarket
 - [dsboylw/LazyNoobsCockloft#dsh-session-notes](https://github.com/dsboylw/LazyNoobsCockloft/tree/main/dsh-session-notes) — 会话备注插件：10 色标签，置顶全链路（总览列表/会话菜单/编辑框），可实时筛选的全部备注总览，会话快速切换菜单，无备注也能直写的常驻底部栏——彩色工作区徽章、截断+悬停看全文、复制按钮遍布。
 - [dylan121322/dsh-session-unarchive](https://github.com/dylan121322/dsh-session-unarchive) — 从 Web GUI 侧栏查看已归档会话，并一键恢复到原工作区。
 - [Earnest02522/dsh-archive-manager](https://github.com/Earnest02522/dsh-archive-manager) — 归档会话管理器：按工作区分组查看已归档的会话，支持恢复（取消归档）与打开会话转录目录。
+- [Enosensu/dsh-fork-relink](https://github.com/Enosensu/dsh-fork-relink) — fork 伴随插件:官方 fork 发生后,自动把原会话的直接子 agent 记录头帧 parentSession 重链到新会话(仅重写头帧,其余帧字节原样,先备份到回收站),fork 出的对话完整保留子 agent 面板、代理路由与 descriptor 信息;按 fork 子会话 seed 的引用过滤,整棵子 agent 树统一跟随。零 UI、零路由、零依赖,与 AI 结对开发。
 - [EvilIrving/dsh-context-proxy](https://github.com/EvilIrving/dsh-context-proxy) — 按需取回薄层：context_query / context_slice / context_grep 三个工具读取已持久化的历史，引用可回放。
 - [falling-ts/dsh-force-compact](https://github.com/falling-ts/dsh-force-compact) — llama-cpp qwen3.8-27b 低上下文时，强制上下文压缩插件，提示模型使用效率和使用流畅度，外加完善的压缩提示。
 - [fallow5/dsh-pin-sessions](https://github.com/fallow5/dsh-pin-sessions) — 把会话置顶到 Web 侧边栏顶部：独立置顶面板、归档区、原生三点菜单集成。
