@@ -598,6 +598,7 @@ dsh plugin --profile web add dshmarket
 - [wild-River2016/dsh-xiaohe-canvas](https://github.com/wild-River2016/dsh-xiaohe-canvas) — 将 DeepSeek Harness 接入小禾画布，支持在对话中创建节点、构建画布流程并触发 AI 生图和视频。
 - [winditer/dsh-prompt-optimizer](https://github.com/winditer/dsh-prompt-optimizer) — 在输入框按 ✨ 或 Alt+O 一键把草稿润色成更清晰、更结构化的 prompt；默认零配置复用当前会话模型（SSE 真流式、推理过程先出），也可自配任意 OpenAI 兼容端点。
 - [winditer/dsh-temp-chat](https://github.com/winditer/dsh-temp-chat) — DSH 页面悬浮的半透明 DeepSeek 鲸鱼小精灵：点击打开可拖动、可最小化的临时聊天浮窗，支持跟随会话模型或自定义 OpenAI 兼容端点实时流式输出。
+- [windrover/dsh-minimal-UI-panels](https://github.com/windrover/dsh-minimal-UI-panels) — 给 dsh web 客户端加四个右侧栏面板——产物浏览、长期记忆、终端、记事本——两两配成一个标签、中间可拖拽分栏，因此两个窗格就能同时看到四个面板。宿主侧一并提供：9 个 memory_* 工具、artifacts_list、/memory 命令，以及 /api/artifacts/* 与 /api/terminal-notes/* 路由。终端每行执行一条 bash 命令，带 120 秒期限与终止按钮。需要 dsh 0.1.5 或更新版本——右侧栏正是在那一版取代了旧的 details 列。
 - [WindyPro-rourou/dsh-code-studio](https://github.com/WindyPro-rourou/dsh-code-studio) — DSH Web UI 的文件修改监视器与代码工作台。Agent 修改代码时实时浮现逐行 Diff，内置语法高亮编辑器，支持一键还原、修改历史、工作区切换与按会话隔离。
 - [Wine-Red/dsh-codex-timeline](https://github.com/Wine-Red/dsh-codex-timeline) — 左侧用户轮次导航轨道：随阅读位置高亮，悬停预览单轮指标与模型回答摘要，支持键盘和点击跳转及本地会话搜索。
 - [Winter-And-You-Gone/dsh-deep-verbs](https://github.com/Winter-And-You-Gone/dsh-deep-verbs) — 把内置 'Deep diving...' 思考状态行扩展为 53 条 deep 系英/中双语短语池：回合开场随机一条，随新思考段/工具调用事件轮换（最短间隔 3 秒），点击状态行切换中英文。
@@ -1493,7 +1494,7 @@ dsh plugin --profile web add dshmarket
 - [GIT121995/dsh-memory-gate](https://github.com/GIT121995/dsh-memory-gate) — 有界本地记忆 + CBDC 权威门控：SQLite + FTS5 claims，作用域召回并给出可解释的采用/核验/忽略决策与完整审计轨迹，/memory 命令，每次注入 ≤3 条/1200 字符，不增加额外模型调用。
 - [giter00/dsh-headroom](https://github.com/giter00/dsh-headroom) — 面向 DeepSeek Harness 的自动上下文压缩插件：在工具输出进入模型前压缩，并通过 CCR 检索工具保持所有有损压缩可逆。
 - [GodCC6/dsh-claude-memory](https://github.com/GodCC6/dsh-claude-memory) — 只读桥接 Claude Code 已有项目记忆到 DSH：按 git 仓库根解析、注入前脱敏、按需检索工具，零依赖。
-- [greyoak111/siyuan-codex-bridge](https://github.com/greyoak111/siyuan-codex-bridge) — 把 DeepSeek Harness 接到本机思源笔记桌面端：桥接它自带的 MCP 端点，把笔记工具注册为 mcp__siyuan__<tool>，附带笔记使用技能，并在每次调用上执行只读/创作/完整三级策略。
+- [greyoak111/siyuan-codex-bridge](https://github.com/greyoak111/siyuan-codex-bridge) — 把 DeepSeek Harness 接到本机思源笔记桌面端：把笔记工具注册为 mcp__siyuan__<tool>，额外把思源里配置好的 AI 与其 agent 回路也做成一个工具（按档位门禁），附带笔记使用技能，并在每次调用上执行只读/创作/完整三级策略；思源关闭时工具列表依然可用。
 - [guo6x/dsh-palate](https://github.com/guo6x/dsh-palate) — 给 DSH agent 的积累型设计品味语料库：喂好坏例子、提炼原则，用学到的判断评审新设计，而不是套固定规则。
 - [hellosky983/dsh-qrcode](https://github.com/hellosky983/dsh-qrcode) — DeepSeek Harness 离线二维码（SVG/PNG/ASCII）与条码（Code128/EAN-13）生成器，无网络、无 shell。
 - [hellosky983/dsh-skillradar](https://github.com/hellosky983/dsh-skillradar) — 扫描当前会话可见的技能，按与最近对话的相关性排序推荐。
@@ -2068,6 +2069,7 @@ dsh plugin --profile web add dshmarket
 - [Xiamu-ssr/snowmountain-market](https://github.com/Xiamu-ssr/snowmountain-market) — 将 Wind 七个金融 MCP 域和 Wind Alice 接入 DSH，并仅在宿主凭证边界内解析 WIND_API_KEY。
 - [xiaoshi7915/dsh-kb-manager](https://github.com/xiaoshi7915/dsh-kb-manager) — 本地知识库管理：多格式导入、CJK 感知分块、sqlite-vec 向量 + BM25 混合检索与 bge-reranker-base 重排序、快照恢复、kbpack 导入导出与跨库检索，提供 22 个 agent 工具与 Web 面板。
 - [xiaoyuink/dsh-image-create](https://github.com/xiaoyuink/dsh-image-create) — 在 DSH 内直接文生图/图生图：对接 OpenAI 兼容图像接口，提供 Agent 生图工具、多供应商自动降级，以及带生成历史的侧栏工作台。
+- [xie129716/computer-user-vision](https://github.com/xie129716/computer-user-vision) — computer-user 分叉的 Windows 桌面操控插件：13 个 computer_* 工具。模型支持图像输入时截图直接作为图片返回，附精确的图像→屏幕映射，无需外接 OCR；控件以 UI Automation 引用返回，点击落在精确矩形上；Ctrl+Alt+Esc 可阻断所有调用。
 - [xiehuan123/dsh-deepread](https://github.com/xiehuan123/dsh-deepread) — 五种模式精读图书与文章（快速/深度/知识地图/费曼/全书），输出观点—证据—数据报告、四档置信度、Mermaid/XMind 思维导图，支持批量对比、预算预检与后台任务进度透明，可导出 MD/MM/HTML。
 - [xing666173/dsh-vision-hub#file-drop](https://github.com/xing666173/dsh-vision-hub/tree/main/file-drop) — 拖拽上传 PDF/Word/Excel/图片等文件:落盘为本地路径引用,对话里不塞 base64 大文本。
 - [XMoon/dsh-profile-settings](https://github.com/XMoon/dsh-profile-settings) — 为 DeepSeek Harness 提供按 profile 分层的设置覆盖：全局 settings.yaml 仍为基线，每个 profile 可用自己的 profiles/<name>/settings.patch.yml 覆盖任意设置命名空间——对象段递归合并，数组与标量整体替换，!unset 显式屏蔽继承值。覆盖层对现有插件透明（照常读 ctx.settings），写入只落在 profile 覆盖层；官方 schema 语义、revision、expectedRevision 冲突检测、watcher 与事件均不改动。附带 settings 命令族（get/set/unset/mask/unmask/promote/demote/migrate/diff/layers），并在 Web 设置面板经 loopback RPC 通道提供 Profile Settings 区块。
@@ -2277,6 +2279,7 @@ dsh plugin --profile web add dshmarket
 - [good-boy4069/dsh-vision-guard](https://github.com/good-boy4069/dsh-vision-guard) — 纯文本路由的透明图片护栏：贴图不再 400 卡死会话，附带 vision_analyze 工具（OCR/PDF/docx/pptx/视频）。
 - [GooDAnDReaDY/dsh-vision-bridge](https://github.com/GooDAnDReaDY/dsh-vision-bridge) — 将图片交给所选的视觉模型处理（自动改写、显式工具或混合模式），使纯文本聊天模型也能处理包含图片的对话。
 - [GOU-GEE/deepseek-vision#plugins/dsh-plugin-deepseek-vision](https://github.com/GOU-GEE/deepseek-vision/tree/main/plugins/dsh-plugin-deepseek-vision) — 面向纯文本 DeepSeek 的视觉 MCP + DSH 插件：analyze_image / analyze_clipboard / compare_images / vision_status 四个工具、可视化配置页、默认免费 GLM-4.6V-Flash、结果缓存与限流容错，Key 不入日志。
+- [grelvan/dsh-ocr-local](https://github.com/grelvan/dsh-ocr-local) — 纯文本路由的本地 OCR 兜底：会话模型明确声明不接受图片时，把附件的图片存入本地缓存并注入路径，模型调 ocr_image 用 PP-OCRv5 + ONNX Runtime 在纯 CPU 上离线识别，无需 API key，图片不出本机；模型能看图时静默。
 - [GXX182/dsh-vision-bridge](https://github.com/GXX182/dsh-vision-bridge) — 将会话图片转交可配置视觉服务，并向符合条件的 DeepSeek Harness 模型路由返回纯文本分析。
 - [haiziyao/dsh-vision-mix](https://github.com/haiziyao/dsh-vision-mix) — 把文本、识图和生图 API 组合成一个 Mix 模型并按对话内容自动路由：纯文本走聊天模型，用户图片和 Agent 截图走识图模型，后续可继续追问同一张图；还支持图片生成与编辑及会话级调用记录。
 - [Harvey-Will/dsh-vision-analysis](https://github.com/Harvey-Will/dsh-vision-analysis) — DeepSeek Harness 图像理解插件：8 种分析模式（描述、OCR、图表取数、UI 评审、目标检测、对比、代码生成、诊断），支持任意 OpenAI/Anthropic 兼容视觉 API，内置免费视觉模型与限流自动切换。
