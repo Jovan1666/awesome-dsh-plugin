@@ -261,6 +261,7 @@ dsh plugin --profile web add dshmarket
 - [Frog755/dsh-wallpaper](https://github.com/Frog755/dsh-wallpaper) — DSH Web 持久化背景图/视频插件：在 设置 -> 通用 中提供壁纸卡片，可选本地图片或 MP4（最大 300 MB），调节表层透明度与模糊；检测到 ffmpeg/ffprobe 时在本机把视频压缩为 H.264；媒体保存到 ~/.dsh/wallpapers；并将 Web 服务固定到 9191 端口以便重启后恢复壁纸。
 - [FuqiangCraft/dsh-desktop#packages/dsh-desktop-plugin](https://github.com/FuqiangCraft/dsh-desktop/tree/main/packages/dsh-desktop-plugin) — 桌面级增强套件：原生提问/审批交互通知、屏幕截图工具、多智能体平铺网格视图与轻量级 Tauri 桌面外壳。
 - [future007s/dsh-peak-indicator](https://github.com/future007s/dsh-peak-indicator) — 会话头部徽标：显示 DeepSeek 高峰/闲时状态、当前模型 token 单价，并按真实用量统计会话与每轮费用。
+- [fyisgod/dsh-selection-tools](https://github.com/fyisgod/dsh-selection-tools) — 在任意 Windows 应用里划词，用 Harness 自己的 agent 解释或翻译（自动带上选区所在的上下文段落），结果落在可拖动、可缩放的原生置顶浮窗里。
 - [g-yixuan/dsh-sidenote](https://github.com/g-yixuan/dsh-sidenote) — Codex 风格侧边聊天 + 划选注释的 DSH 插件。
 - [garrisonz/dsh-sidebar-width](https://github.com/garrisonz/dsh-sidebar-width) — 调整 Web UI 左侧会话列表栏宽度：调低 264px 拖动下限，可选调整拖动上限与展开默认宽度，启动时自动修补 ui-layout bundle。
 - [gbeta/dsh-token-speed](https://github.com/gbeta/dsh-token-speed) — 可拖拽环形表盘，实时显示模型输出速度（tok/s），点击展开每步详情（精确速度、TTFT、缓存命中率、缓存读写、推理/输入 token、模型、累计 token）。
@@ -953,6 +954,7 @@ dsh plugin --profile web add dshmarket
 - [GptsApp/dsh-stylevault](https://github.com/GptsApp/dsh-stylevault) — 为 DeepSeek Harness 提供 30 套经典开源主题配色（Catppuccin、Nord、Tokyo Night、Gruvbox、Solarized 等），映射官方 ThemeService token；带 Style Settings 面板，可实时调整颜色/字体/圆角，并支持 JSON 导出/导入分享配置。
 - [hanyi7867069-create/dsh-moonrise](https://github.com/hanyi7867069-create/dsh-moonrise) — 月升暗色主题——深蓝夜色打底、琥珀月光点缀。
 - [HaoyueQin/deepseek-harness-background](https://github.com/HaoyueQin/deepseek-harness-background) — DSH Web 自定义背景插件：上传本地图片或粘贴图片链接作为全界面背景，可调不透明度、明暗自适应遮罩、面板透明度、毛玻璃与壁纸模糊，实时预览、设置持久化；另附可选的 DeepSeek 官网风格会话时间线导航轨，支持重点书签与快速跳转。
+- [HarmlessFunny/dsh-background-by-model](https://github.com/HarmlessFunny/dsh-background-by-model) — 按模型切换 DSH Web 界面外观：有序规则列表按当前会话的模型名匹配，每条规则自带壁纸、主题色、布局模式、取景与背景透明度、模糊；另有主背景、左侧栏、右侧栏、卡片面板、输入框与控件、设置面板、对话文本框、轨迹页的分区透明度与毛玻璃模糊。
 - [HeShen-1/deepseek-whale-wallpaper](https://github.com/HeShen-1/deepseek-whale-wallpaper) — DSH Web 动态点阵鲸鱼壁纸：约 1,750 个呼吸的 WebGL2 粒子，指针液态涡流交互，明暗双主题，带 Canvas2D 回退。
 - [Isilsolme/dsh-anthropic-fonts](https://github.com/Isilsolme/dsh-anthropic-fonts) — Anthropic Sans/Serif/Mono 字体：界面 Sans、对话 Serif、代码 Mono，中文回退思源字体。
 - [jiangwangyang/dsh-theme-blackhole](https://github.com/jiangwangyang/dsh-theme-blackhole) — DeepSeek Harness（dsh）Web UI 的黑洞主题插件。
@@ -1023,7 +1025,7 @@ dsh plugin --profile web add dshmarket
 - [Ultronen/dsh-liquid-glass](https://github.com/Ultronen/dsh-liquid-glass) — 一键让整个 DeepSeek Harness 界面通透起来：透明度滑块随心调，背景图自由换。
 - [w4xxx/dsh-xia-plugins#packages/client-game-assistant](https://github.com/w4xxx/dsh-xia-plugins/tree/main/packages/client-game-assistant) — DSH Web 界面的樱花主题与陪伴功能：审批/任务/回答提醒、消息朗读、语音设置。
 - [Waldsatte/dsh-theme-taojian](https://github.com/Waldsatte/dsh-theme-taojian) — 陶笺：奶油纸浅色主题，陶橙强调色，界面思源宋，代码 Cascadia Mono。非官方，与 Anthropic、DeepSeek 无关。
-- [webkubor/dsh-bloom-theme](https://github.com/webkubor/dsh-bloom-theme) — Bloom 莫兰迪主题：九款变体（雾蓝 mist、朱砂 cinnabar、花瓣 petal、涟漪 ripple、鼠尾草 sage、暖石 stone、青金 lapis、琥珀 amber、极光 aurora）基于 OKLCH 调色，明暗切换不跳变，顶栏一键切换，18 组「主色 + 底色」实测全部达到 WCAG AA。
+- [webkubor/dsh-bloom-theme](https://github.com/webkubor/dsh-bloom-theme) — Bloom 莫兰迪主题：十款变体（雾蓝 mist、朱砂 cinnabar、花瓣 petal、涟漪 ripple、鼠尾草 sage、暖石 stone、青金 lapis、琥珀 amber、极光 aurora、薰衣草 lavender）基于 OKLCH 调色，明暗切换不跳变，顶栏一键切换，20 组「主色 + 底色」实测全部达到 WCAG AA。
 - [Wedomizing/Dsh_genshin_nicole_skin](https://github.com/Wedomizing/Dsh_genshin_nicole_skin) — 原神·尼可 PV 背景皮肤：14 张去字幕画面定时轮播淡入淡出，支持暂停与上一张/下一张切换。
 - [Willmylife/dsh-dynamic-wallpaper](https://github.com/Willmylife/dsh-dynamic-wallpaper) — 动态壁纸插件：8 种内置 Canvas 壁纸（粒子、流星雨、星际穿梭、波光、雨幕、气泡、字符雨、极光）加自定义视频背景，支持速度/密度/遮罩/模糊调节，配置持久化。
 - [wsxwj123/dsh-plugins#dsh-appearance-gallery](https://github.com/wsxwj123/dsh-plugins/tree/main/packages/dsh-appearance-gallery) — 15 个精选主题家族 + 9 个完整 dsh-web-ui 皮肤复刻合并为单一插件、设置页单一入口，支持 CSS-only 自定义主题 JSON、受控自定义皮肤包导入（可直接选文件夹）、试穿、应用、删除与恢复默认。npm 包名 `dsh-appearance-gallery`。
@@ -1097,6 +1099,7 @@ dsh plugin --profile web add dshmarket
 - [GodD6366/dsh-sub2api](https://github.com/GodD6366/dsh-sub2api) — 将 sub2api 网关接入 DeepSeek Harness：用一个 base URL 统一管理 OpenAI / Claude / Grok / Gemini 等多供应商路由，支持按 key 发现模型、用量查询与全局视觉/图像生成工具。
 - [GooDAnDReaDY/dsh-clinebot](https://github.com/GooDAnDReaDY/dsh-clinebot) — DeepSeek Harness 的 ClineBot/ClinePass 集成：专属设置页、实时配额仪表板、界面内密钥保存、精选与自定义模型选择，以及 /cline 命令。
 - [GooDAnDReaDY/dsh-key-rotation](https://github.com/GooDAnDReaDY/dsh-key-rotation) — 为每个提供方维护 API Key 池并自动创建克隆路由，在配额或限流错误时切换到下一个 Key，主动探测冷却中的 Key 以便恢复，并在设置中提供 Key 池、冷却时间与切换状态码的编辑界面。
+- [GooDAnDReaDY/dsh-model-search](https://github.com/GooDAnDReaDY/dsh-model-search) — 在 DeepSeek Harness WebUI 中通过原生设置卡搜索和选择模型。
 - [GooDAnDReaDY/dsh-model-sync](https://github.com/GooDAnDReaDY/dsh-model-sync) — 自动从服务商同步 API Key 提供方的模型列表，无需手动维护。
 - [GooDAnDReaDY/dsh-subscriptions](https://github.com/GooDAnDReaDY/dsh-subscriptions) — 通过 OAuth 将 ChatGPT Codex、Claude、Grok 与 Antigravity 订阅注册为 DeepSeek Harness 的 LLM 提供方，无需为其配置 API Key。
 - [HaoyueQin/dsh-better-reasoning-effort](https://github.com/HaoyueQin/dsh-better-reasoning-effort) — 为第三方供应商模型按模型配置思考强度与输入模态：知识库与原始 /models 端点取证融合建议并标注置信度，在官方「模型」页卡片内直接编辑。
@@ -2188,6 +2191,7 @@ dsh plugin --profile web add dshmarket
 - [ankye/dsh_use_browser#use-browser](https://github.com/ankye/dsh_use_browser/tree/main/packages/use-browser) — 通用浏览器自动化：browser_open、browser_click、browser_type、browser_extract、browser_screenshot、browser_eval 六个工具，@e 元素引用，Playwright 无头与 CDP（连接本机 Chrome）双后端。
 - [anweat/dsh-browser](https://github.com/anweat/dsh-browser) — 自包含浏览器运行时：Playwright（chromium）+ OpenCLI 作为插件本地依赖（全局复用回退），提供 `browser` 服务与 9 个交互式浏览器工具。
 - [anweat/dsh-web-search-pro](https://github.com/anweat/dsh-web-search-pro) — 增强型、可持久化的网页搜索：多引擎路由（DeepSeek/Exa/DDG/Bing/Jina + GitHub/B站/YouTube/V2EX/小红书/Twitter/Reddit/RSS）、SQLite+LRU 缓存、userscript 风格抽取、Playwright 渲染。
+- [Baisbt/dsh-plugin-webrelay](https://github.com/Baisbt/dsh-plugin-webrelay) — 通过同源反向代理把外部 AI 对话站点嵌进 DSH 右侧面板（DOM 适配器写在配置里，站点改版无需改代码），并在输入框旁加一个按钮：要么用宿主模型改写草稿，要么跑一轮闭环——压缩对话、优化、发送到嵌入站点、捕获回复、整理成终稿写回输入框。
 - [big0lives/dsh-web-window-companion](https://github.com/big0lives/dsh-web-window-companion) — 在独立浏览器 profile 的 Edge/Chrome 应用模式窗口中打开 dsh web 界面，关闭窗口即优雅停止服务。
 - [BitDG/dsh-plugins#reference-library](https://github.com/BitDG/dsh-plugins/tree/main/plugins/reference-library) — 在原生 @ 引用菜单中提供 CodePen、Pinterest、Z-Library 与 GitHub 数据卡片，并支持 Pinterest 分页和 Z-Library 排序。
 - [bpc-oss/chrome-faithful#dsh-plugin-chrome-faithful](https://github.com/bpc-oss/chrome-faithful/tree/main/packages/dsh-plugin-chrome-faithful) — 按精确 Profile 名控制你真实已登录的 Chrome 浏览器：MCP 服务器 + MV3 扩展 + 认证本地桥接，提供标签页、定位器、文件注入、媒体导出与持久滚动采集，不使用调试 Profile 或远程调试端口。
@@ -3062,7 +3066,7 @@ dsh plugin --profile web add dshmarket
 - [STARDUSTLC666/dsh-slack](https://github.com/STARDUSTLC666/dsh-slack) — Slack 双向通信（notify/channels/inbox/reply/health 五工具），Socket Mode 免公网回调。
 - [stuarthu/dsh-update-notifier](https://github.com/stuarthu/dsh-update-notifier) — 每小时检查 npm 上已安装插件的新版本，并询问升级其中哪些。
 - [suuuuuu-1/dsh-discord](https://github.com/suuuuuu-1/dsh-discord) — DeepSeek Harness 的 Discord 原生远程控制器：通过私信、需提及机器人的服务器频道及 Thread 操作持久化的编程 Agent Session，并支持斜杠命令、进度更新、工具审批、结构化问题、图片和文本附件。
-- [sxl19951101/dsh-done-sound](https://github.com/sxl19951101/dsh-done-sound) — DeepSeek Harness Web GUI 的不同触发情况可分别设置音频提醒：支持正常完成、中断、出错、等待确认、自动重连成功五种场景，每种场景都有独立音频配置和默认音效；出错后自动重连，等待时长可自定义（10-300 秒）；附带社区音色库下载。
+- [sxl19951101/dsh-done-sound](https://github.com/sxl19951101/dsh-done-sound) — DeepSeek Harness Web GUI 的不同触发情况可分别设置音频提醒：支持正常完成、中断、出错、等待确认、自动重连成功五种场景，每种场景都有独立音频配置和默认音效；出错后自动重连，等待时长可自定义（10-300 秒）；附带社区音色库下载；已适配 DSH 0.1.5-rc.2。
 - [TelosmaYLX/dsh-session-notify](https://github.com/TelosmaYLX/dsh-session-notify) — 会话轮次结束时推送浏览器系统通知与页内提示，内置 5 种语言模板与自定义预设。
 - [temotee2103/dsh-overdrive#gateway-core](https://github.com/temotee2103/dsh-overdrive/tree/main/packages/gateway-core) — dsh-overdrive 聊天网关的 DSH 侧远程会话驱动：把 Telegram / Discord / Slack / WhatsApp / 飞书 / 钉钉 / 企业微信 的会话、轨迹回放与一键审批接入 Harness。需配套运行 @dsh-overdrive/gateway。
 - [THEWOLFWALKER/dsh-notifier](https://github.com/THEWOLFWALKER/dsh-notifier) — DSH 多渠道通知与手机控制插件：一个 `notify()` API 接入 27 个渠道，支持事件推送、手机审批与提问、手机任务接管（`/tasks` · `/use`）、图片入会话、六条入站控制通道、本机 Web 管理台、双语消息（`lang` 切换 zh/en）、多 agent 路由和零运行时依赖。
@@ -3446,6 +3450,7 @@ dsh plugin --profile web add dshmarket
 - [moon09300731/dsh-approval-gate](https://github.com/moon09300731/dsh-approval-gate) — DeepSeek Harness 自动审批门控：Flash 预判写入/命令是否不可回补，安全操作自动批准、危险操作转人工（fail-safe）。另含文件改动对比（unified diff）与一键撤销、按会话隔离的快照管理（v0.5.1：通过工具调用参数回溯精确保存快照，覆盖人工审批场景）。
 - [MoonlitDropOfBlood/dsh-agent-approval](https://github.com/MoonlitDropOfBlood/dsh-agent-approval) — 由独立审批子代理裁决每次沙箱提权，可配置审批模型并带审计记录。
 - [MrWeiCodes/dsh-permgate](https://github.com/MrWeiCodes/dsh-permgate) — 细粒度权限网关：按分类（工作区外目录/命令/读写文件/子代理/重复操作）逐项审查工具调用，全局/项目双级白黑名单、快捷工具默认值、自定义规则，中英文审批弹窗（内联 diff 详情、自定义拒绝意见）与底层沙箱升级流程。
+- [NanmiCoder/dsh-auto-mode](https://github.com/NanmiCoder/dsh-auto-mode) — 在 Workspace Write 与 Full access 之间增加 Auto 权限档：日常操作留在官方 workspace-write 沙箱内，由当前会话模型复核升权与破坏性调用，精确的越界访问按次放行一次，意图不明时询问，命中关键路径则拒绝。
 - [NattoCB/dsh-safe-delete](https://github.com/NattoCB/dsh-safe-delete) — 工具守卫将 agent 执行的 rm 目标移入 macOS 废纸篓而非直接删除，shell 感知词法器覆盖复合与伪装命令；设置页通用设置中可随时关闭。
 - [NEVSTOP-LAB/dsh-approval-mode](https://github.com/NEVSTOP-LAB/dsh-approval-mode) — 在权限下拉框旁增加「审批模式」开关：默认审批保留逐次确认，绕过审批自动放行所有工具调用，同时保持 Workspace Write 权限。
 - [omdsh-dev/dsh-security-audit](https://github.com/omdsh-dev/dsh-security-audit) — 本机安全审计：配置/插件来源/会话/网络暴露面，只读脱敏风险报告。
@@ -3535,6 +3540,7 @@ dsh plugin --profile web add dshmarket
 - [flyhigao/dsh-produced-file-paths](https://github.com/flyhigao/dsh-produced-file-paths) — 在远程 Web 中显示并复制 DSH 每轮产出文件的绝对路径。
 - [godchen520/dsh-web-remote](https://github.com/godchen520/dsh-web-remote) — 手机/外网远程访问 DSH：Cloudflare Quick Tunnel 公网链接 + 局域网 HTTP/HTTPS 直连（自动生成自签名证书）、token 鉴权、gzip 压缩、常驻手机图标面板（一键复制/二维码），并内置 NapCat QQ 机器人取链接通道。
 - [GooDAnDReaDY/dsh-lanmode](https://github.com/GooDAnDReaDY/dsh-lanmode) — 为 DeepSeek Harness 网页 UI 提供局域网与反向代理访问：在非 localhost 页面返回设置服务，补齐浏览器在纯 HTTP 下限制的 Web API，并可自行开启监听端口。
+- [GooDAnDReaDY/dsh-remote-workspace](https://github.com/GooDAnDReaDY/dsh-remote-workspace) — 支持冲突感知镜像同步、端口转发和原生 Web UI 的 SSH/SFTP 远程工作区。
 - [huanlanmie/dsh-mobile-access](https://github.com/huanlanmie/dsh-mobile-access) — 受 PIN 保护的 DeepSeek Harness 移动端对话界面，在独立端口上通过局域网或自备隧道访问。
 - [hutao562/dsh-remote-dsh](https://github.com/hutao562/dsh-remote-dsh) — 在侧边栏顶部加一行，点击后整页切换成另一台 DSH 主机的 Web GUI（通过回环端口访问），并在该行显示那台主机的会话状态（运行中、有新活动、正等你回答）。
 - [IceApriler/dsh-remote-mobile](https://github.com/IceApriler/dsh-remote-mobile) — 远程与移动端安全网关：零改动 DSH 底层代码开放 Tailscale/局域网访问，支持扫码配对、RSA 加密、防暴力破解与移动端样式片段；与其他远程插件共存时自动让出共享配对服务，避免启动崩溃。
