@@ -1062,6 +1062,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [zhuifengqug/pixel-skin](https://github.com/zhuifengqug/pixel-skin) - Pokémon-style skin for DSH Web with GBA frames, HP-bar status, effort level panel, and customizable color palettes.
 - [zhxqc/dsh-oh-my-theme](https://github.com/zhxqc/dsh-oh-my-theme) - Web theme and file workspace plugin with global typography controls, @file mentions, a project file tree, Markdown preview, and a resizable side panel.
 - [ZJUZhiyuCai/dsh-ivory](https://github.com/ZJUZhiyuCai/dsh-ivory) - Warm light and dark theme for DSH Web with responsive layout, bilingual settings, safe Markdown preview, per-block copy controls, and no telemetry.
+- [zmm863-commits/dsh-client-ui-paopaocat](https://github.com/zmm863-commits/dsh-client-ui-paopaocat) - Fantasy glassmorphism skin for the DSH Web UI: a moonlit nether-forest scene with drifting teal clouds, red spider lilies spreading from the lower-left and a sleeping cat in the corner, drawn over a WebGL2 fluid background with its own wallpaper and video backgrounds. Ships two switchable variants (pale / saturated blue), three bundled background tracks plus uploads kept in local IndexedDB, and cat-paw, fish, bubble and starlight decorations. One switch restores the stock interface exactly.
 
 ### Models & Providers
 
@@ -2403,6 +2404,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [yxqfg/phone-lens#phone-lens](https://github.com/yxqfg/phone-lens/tree/main/packages/phone-lens) - Turn a phone camera into a live viewfinder and photo input for your dsh session, over LAN or USB.
 - [zhiwuli0228/dsh-image-router](https://github.com/zhiwuli0228/dsh-image-router) - Digests the images in a prompt with a vision model before admission, so any model — a text-only one included — can read them without the session ever switching models, and adds a describe_image tool for image paths.
 - [zhu1090093659/dsh-web-ui#packages/dsh-tool-describe-image](https://github.com/zhu1090093659/dsh-web-ui/tree/main/packages/dsh-tool-describe-image) - A `describe_image` vision tool for text-only models: images (local path, URL, attachment) go to a configurable OpenAI-compatible vision endpoint and only the returned text enters the session.
+- [zmm863-commits/dsh-agnes-studio](https://github.com/zmm863-commits/dsh-agnes-studio) - AI image and video studio as a floating DSH panel, so creation runs alongside the conversation instead of replacing it: text-to-image, image-to-image and multi-image composition at 1K-4K across eight aspect ratios; text-to-video and image-to-video with first-frame control at 4-12 seconds; short-drama mode that imports a script (.txt/.md/.json), breaks it into storyboard shots for preview and batch generation; and a prompt-expert workspace. Zero runtime dependencies.
 
 ### Voice & Audio
 
