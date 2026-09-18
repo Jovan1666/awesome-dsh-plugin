@@ -2,6 +2,6 @@ url: https://github.com/Wazzfhaha/dsh-multi-end
 name: Wazzfhaha/dsh-multi-end
 category: remote
 description:
-  en: 'Connect remote DSH workspaces and conversations to a single native DSH interface over SSH.'
-  zh: '通过 SSH 将远端 DSH 工作区和会话接入同一个原生 DSH 界面。'
-tarball: https://github.com/Wazzfhaha/dsh-multi-end/releases/download/v0.0.6/dsh-ssh-workspaces-0.0.6.tgz
+  en: Remote SSH multi-host management for DSH. Access remote workspaces and sessions in one native sidebar, with tasks running on their original machines.
+  zh: DSH 多端管理：通过 SSH 远程连接多台机器，在同一原生侧栏管理工作区与会话，任务在所属机器运行。
+tarball: https://github.com/Wazzfhaha/dsh-multi-end/releases/download/v0.0.7/dsh-ssh-workspaces-0.0.7.tgz
