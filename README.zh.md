@@ -213,6 +213,7 @@ dsh plugin --profile web add dshmarket
 - [cyjyyd/dsh-ssh-tui](https://github.com/cyjyyd/dsh-ssh-tui) — 给跳板机和高延迟 SSH 用的 DeepSeek Harness 终端：纯 ANSI、增量重绘，不需要浏览器。
 - [cyrus123456/dsh-johari-cognition-quadrant-dialog-composer](https://github.com/cyrus123456/dsh-johari-cognition-quadrant-dialog-composer) — 乔哈里认知四象限对话梳理工具——在输入框上方添加按钮，弹出 2×2 象限面板（我知道/不知道 × AI知道/不知道），将对话上下文梳理为结构化 Prompt 并写回输入框。
 - [daetz-coder/dsh-multi-chat](https://github.com/daetz-coder/dsh-multi-chat) — 在 DSH Web 界面里并排运行、监控多个对话实例：多窗口墙 + 自动发现 + 单窗控制，内置带口令认证的局域网网关，手机/平板也能看。
+- [damlys99/dsh-queue-reorder](https://github.com/damlys99/dsh-queue-reorder) — 在官方队列 dock 内直接重排忙碌时排队的消息：每一行带拖拽手柄与上下移动按钮，移动在宿主端以一次带并发校验的 inbox splice 完成。只装饰官方 dock 而不替换它，因此预览、行内编辑、插话、删除与附件保持原样。队列已变化、该行不是用户消息（例如目标轮次提示）、或队列属于子代理会话时，移动会被拒绝。
 - [DamonKoy/dsh-web-ui#dsh-aionui-panel](https://github.com/DamonKoy/dsh-web-ui/tree/main/packages/dsh-aionui-panel) — dsh web GUI 右侧面板系统：像素级还原 AionUi 的资源树 + 预览（文件树、差异视图、预览）。
 - [DamonKoy/dsh-web-ui#dsh-liangshen](https://github.com/DamonKoy/dsh-web-ui/tree/main/packages/dsh-liangshen) — dsh web GUI 的梁神 agent 预设：两阶段锚定标准预设。
 - [DamonKoy/dsh-web-ui#dsh-task-board](https://github.com/DamonKoy/dsh-web-ui/tree/main/packages/dsh-task-board) — dsh web GUI 任务看板：侧边栏入口 + 多列看板视图，本地持久化。
@@ -376,6 +377,7 @@ dsh plugin --profile web add dshmarket
 - [levodoubt/dsh-longtext-input](https://github.com/levodoubt/dsh-longtext-input) — 在输入框工具栏新增「长文本」按钮：在编辑器浮层里写或粘贴正文，保存后写入 <工作区>/.dsh-longtext/<时间戳>_<标题>.md，并把该文件的 @ 路径引用追加到输入框，让正文不进入对话。
 - [LHF198/dsh-prompt-optimizer](https://github.com/LHF198/dsh-prompt-optimizer) — 在发送前优化当前聊天输入，采用前先对比原文与优化结果。
 - [lhuans/dsh-genui](https://github.com/lhuans/dsh-genui) — 通过 schemaJson 代码块在 DSH 回复内渲染 OpenTiny GenUI 图表、表单、计算器等迷你应用，用户操作自动回传对话。
+- [Li-Mingshuang/dsh-audio-control](https://github.com/Li-Mingshuang/dsh-audio-control) — Web 界面里的悬浮音频控制面板：控制 Windows 媒体会话（SMTC）的播放/暂停/上一首/下一首与系统主音量/静音，由注册路由的主机半调用 PowerShell 助手实现。
 - [liguobao/dsh-file-viewer](https://github.com/liguobao/dsh-file-viewer) — Web 客户端只读文件预览面板，支持图片、PDF、CSV/TSV、文本、源代码、Markdown、JSON 与 YAML 渲染、大文件分段读取，以及面向非本地内容的 provider API。
 - [lihang-lh/dsh-moon-light](https://github.com/lihang-lh/dsh-moon-light) — DSH Web 界面边缘的跑马灯氛围光环：随会话状态自动变色（运行中绿色流动、完成粉色、有待处理黄色警告），设置面板可调颜色、光圈宽度、转速与闪动频率。
 - [lihang-lh/dsh-task-panel](https://github.com/lihang-lh/dsh-task-panel) — DSH Web 侧边栏任务面板：发布任务、自动蒸馏历史会话，由子代理分阶段（规划/开发/复核）执行，并在面板内验收。
@@ -1159,6 +1161,7 @@ dsh plugin --profile web add dshmarket
 - [MoRanYue/dsh-openrouter-providers](https://github.com/MoRanYue/dsh-openrouter-providers) — 配置 OpenRouter 请求使用的提供商列表与量化位数上限，注入 provider.only/order（allow_fallbacks）与 provider.quantizations 路由参数。
 - [Mu-scorpio/dsh-reasoning-effort](https://github.com/Mu-scorpio/dsh-reasoning-effort) — 为 DeepSeek Harness 配置 Provider 与模型的推理强度映射，并提供按 Provider 分组的模型选择器和输入框滑块。
 - [Mutx163/dsh-model-memory](https://github.com/Mutx163/dsh-model-memory) — 为自定义 API 模型提供推理强度分级管理与跨会话偏好记忆：在「设置 → 模型」中内联切换 low/medium/high/max，配置写入为原子操作。
+- [Neptune810/dsh-model-router](https://github.com/Neptune810/dsh-model-router) — 按步骤设置 DeepSeek flash 模型的思考等级：短小的廉价请求关闭思考，普通请求用 low，工程类工作用 high，只有反复出现工具失败才继续升档。模型本身不会改变，max 档需要手动开启。
 - [nickhelion/dsh-plugins#qwen-token-plan-cn-responses](https://github.com/nickhelion/dsh-plugins/tree/main/packages/qwen-token-plan-cn-responses) — 面向 DeepSeek Harness 的千问 Token Plan 个人版 Responses API 提供方，保留 Qwen 服务端内置工具与 DSH 本地函数工具，多轮文本/推理/工具调用历史与图片附件均被支持，官方模型目录按 npm 版本冻结快照发布。
 - [nobu121/dsh-opencode-session](https://github.com/nobu121/dsh-opencode-session) — 为 OpenCode / OpenCode Go 提供商请求自动附加每个会话稳定的 x-opencode-session 请求头，修复 400 MissingSessionID 错误，同时保持会话亲和与提示缓存路由。
 - [NOirBRight/dsh-llm-codex](https://github.com/NOirBRight/dsh-llm-codex) — ChatGPT Codex 订阅聊天：官方 OAuth 登录，Sol/Terra/Luna 目录含 Fast 行，实时额度，以及可选的搜索与 view_image 工具。
@@ -1264,6 +1267,7 @@ dsh plugin --profile web add dshmarket
 - [123dbl/dsh-side-session](https://github.com/123dbl/dsh-side-session) — 主会话进行中也能一键新开独立的可续聊旁会话：从输入框 ＋ 命令菜单选 side-chat 即开即用，主会话不受影响。
 - [dsh-undo-plugin](https://github.com/23swccp/dsh-undo/tree/master/packages/bundle-rollback) — 对话与工作区撤销：通过 /undo 节点轴、会话头部按钮或消息下方图标回滚到任意已发送 prompt 之前；插件私有 Shadow Git 快照恢复文件，被回滚回合不会进入模型上下文，误操作还能“撤回回滚”。附带归档会话管理与工具卡片分类配色。
 - [3403473060/dsh-inline-images](https://github.com/3403473060/dsh-inline-images) — 对话内联图片：LLM 回复中输出的本地图片路径在消息正文直接渲染为图片（9 种格式、点击放大灯箱、可调尺寸）。
+- [9Ashwin/dsh-session-rename](https://github.com/9Ashwin/dsh-session-rename) — 给模型一个 rename_session 工具，让 agent 在对话中直接重命名会话。
 - [AKS1st/dsh-archived-conversations](https://github.com/AKS1st/dsh-archived-conversations) — 侧边栏底部的已归档对话列表，可只读预览最近消息；针对产品刻意隐藏且无法重新打开的归档会话。
 - [alchemistwu/dsh-tool-call-guard](https://github.com/alchemistwu/dsh-tool-call-guard) — 在 wire 层中性化 arguments 为非法 JSON 的 tool call，避免一次模型畸形输出让 session 在严格 OpenAI 兼容服务端上永久 400。
 - [Anionex/dsh-turn-rewind](https://github.com/Anionex/dsh-turn-rewind) — 对话回退：基于持久 Change Ledger 回滚会话与工作区状态。
@@ -1474,6 +1478,7 @@ dsh plugin --profile web add dshmarket
 - [xing666173/dsh-vision-hub#bridge-preview](https://github.com/xing666173/dsh-vision-hub/tree/main/bridge-preview) — 图片桥接内联预览:对话中 \[图片: 路径] 标记渲染后自动显示图片,长指令不留在对话里。
 - [xingyingyuzhui/dsh-session-actions](https://github.com/xingyingyuzhui/dsh-session-actions) — 会话行菜单增强：置顶会话、复制会话 ID、导出结构化 Markdown、弹窗确认后永久删除会话。
 - [xohmai/dsh-session-delete](https://github.com/xohmai/dsh-session-delete) — 真正删除会话：回收站可还原、归档清理、设置页批量删除。
+- [y2zyyr/smart-session-title](https://github.com/y2zyyr/smart-session-title) — 会话标题 provider 替换插件：先把过长或代码密集的首条 Prompt 压缩再调用模型（实测 DSH 版本的内建 provider 在超过 4096 bytes 时直接拒绝、不调用模型），遇到纯问候则等待真正的任务。默认使用该会话自身的 provider 与 model，保护人工标题；标题规则支持字数上限、可选日期前后缀、风格、语言与排除词，并可按会话锁定标题。还可批量重优化历史会话标题，进度浮层在关闭设置页后继续运行。
 - [yamingmou/dsh-retrace](https://github.com/yamingmou/dsh-retrace) — 撤回/编辑重发/重新生成，加上单会话版本化：每次回退的时间线、产物回退（git 优先、快照兜底）、分叉图、会话谱系，以及实时看门狗（并发写入第一时间快照日志）。编辑前自动停止运行中的 agent（官方 cancel/whenIdle），回退不会损坏持久化日志、也不会破坏 /compact。
 - [yangyizhu8/dsh-session-handoff](https://github.com/yangyizhu8/dsh-session-handoff) — 会话工作移交：会话行菜单一键移交，新会话按八节交接包复刻老会话的记忆、任务与铁律，原始上下文经按需回读保持轻量。
 - [yangyizhu8/dsh-unread-mark](https://github.com/yangyizhu8/dsh-unread-mark) — 会话行未读标记：会话菜单新增「标记未读」「取消标记」，在会话标题前钉一个刷新与点开都不会消失的红点（与系统绿点区分），绿点存在时两项禁用，标记经服务端持久化。
@@ -1908,7 +1913,7 @@ dsh plugin --profile web add dshmarket
 - [leaforbook/dsh-mcp-lazy](https://github.com/leaforbook/dsh-mcp-lazy) — MCP 懒加载路由：自动发现可接管的 MCP，冷态只在工具目录里留一个共享路由，某轮需要哪个服务器才展开它的工具 Schema、轮次结束再收起，让装了很多 MCP 不再每次请求都吃上下文。命名异常、重名或状态不确定的 MCP 不接管；出现任何不确定即恢复原工具可见性，执行、权限与进程生命周期仍归原 MCP。也支持显式的连接层懒加载，含连接保温、有限重连、stdio 与 Streamable HTTP。
 - [LeemanCheung/dsh-agent-preset-recommender](https://github.com/LeemanCheung/dsh-agent-preset-recommender) — 有界、隐私安全的本地扫描器：汇总 Codex、Claude Code、WorkBuddy、CodeBuddy 元数据，原子保存密钥化聚合证据，并确定性推荐 DSH 内置 preset 与可选能力；不保留正文、不联网、不修改 preset。
 - [lemonxiny55/dsh-code-index](https://github.com/lemonxiny55/dsh-code-index) — 结构化仓库索引：基于 tree-sitter 的跨 8 种语言（含 C/C++）符号搜索、注入系统提示词且按 import-graph PageRank 排序的限量自动更新仓库地图，并新增 code_refs 函数级调用图与可选启用的 code_health 环依赖 / 孤儿模块检查。
-- [lemonxiny55/dsh-lint-loop](https://github.com/lemonxiny55/dsh-lint-loop) — 零配置 lint 反馈闭环：由仓库已有的 eslint / biome / ruff 驱动（从配置文件自动探测、优先解析仓库本地 node_modules/.bin、不捆绑任何 linter）提供 lint_diagnostics / lint_workspace_errors / lint_fix 工具，并订阅 harness 的 fs/observed 事件自动注入「本次编辑引入的发现增量」——为 dsh Agent 带来编辑→lint→一键自动修复的闭环体验。
+- [lemonxiny55/dsh-lint-loop](https://github.com/lemonxiny55/dsh-lint-loop) — 零配置 lint 反馈闭环，覆盖 JS/TS、Python、Go 与 Rust：由仓库自带的 eslint / biome / ruff / golangci-lint / cargo clippy 驱动（从配置文件自动探测、优先解析仓库本地 node_modules/.bin、不捆绑任何 linter）提供 lint_diagnostics / lint_workspace_errors / lint_fix 工具，并订阅 harness 的 fs/observed 事件自动注入「本次编辑引入的发现增量」，带完成门禁——为 dsh Agent 带来编辑→lint→一键自动修复的闭环体验。
 - [lemonxiny55/dsh-lsp-diagnostics](https://github.com/lemonxiny55/dsh-lsp-diagnostics) — 实时 LSP 诊断闭环：通过无头 stdio 语言服务器（TypeScript/JavaScript + Python）提供 lsp_diagnostics / lsp_workspace_errors / lsp_hover 工具，并订阅 harness 的 fs/observed 事件自动注入「本次编辑引入的诊断增量」——为 dsh Agent 带来 Cursor 式的编辑→诊断→修复体验。
 - [lengquan88/dsh-dual-auto](https://github.com/lengquan88/dsh-dual-auto) — 双模型 Auto 路由插件：低成本模型直返 / 高成本模型升级 + 逃逸学习闭环（直返答错自动学习指纹，同指纹下次强制升级），状态持久化并与 Python ModelRouter 互通。
 - [Letter2025/dsh-tool-search](https://github.com/Letter2025/dsh-tool-search) — Hermes 风格工具搜索与瘦身：渐进式披露，语义搜索/查看/调用长尾工具，核心工具保持直通。
